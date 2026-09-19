@@ -2,15 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Empanadazas® | Portal Mayorista B2B Oficial</title>
-    <meta name="description" content="Venta mayorista de empanadas crudas congeladas en cajas cerradas de 30 unidades. Abastecimiento oficial a comercios, pizzerías y franquicias.">
-
-    <!-- OPEN GRAPH / PREVISUALIZACIÓN WHATSAPP & REDES -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Empanadazas® | Portal Mayorista B2B Oficial">
-    <meta property="og:description" content="Empanadas crudas congeladas x 30 unidades. Calidad estándar 2kg reales por docena. Abastecimiento gastronómico directo de fábrica.">
-    <meta property="og:image" content="./empanadazas-icon.png">
+    <meta name="description" content="Venta mayorista de empanadas crudas congeladas en cajas cerradas de 30 unidades y línea de empanadas chicas individuales.">
 
     <meta name="theme-color" content="#131412">
     <meta name="mobile-web-app-capable" content="yes">
@@ -18,10 +12,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" href="./empanadazas-icon.png" type="image/png">
 
+    <!-- ACELERADORES DE CARGA INMEDIATA DE IMÁGENES -->
+    <link rel="preconnect" href="https://images.loveat.la" crossorigin>
+    <link rel="dns-prefetch" href="https://images.loveat.la">
+
     <!-- TIPOGRAFÍAS CORPORATIVAS OFICIALES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=block" rel="stylesheet">
 
     <style>
         :root {
@@ -69,7 +67,7 @@
             background: transparent;
             color: var(--text-light);
             min-height: 100vh;
-            padding-bottom: calc(140px + env(safe-area-inset-bottom, 20px));
+            padding-bottom: 140px;
             overflow-x: hidden;
             position: relative;
             letter-spacing: -0.015em;
@@ -80,8 +78,8 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             z-index: -2;
             background: radial-gradient(circle at 50% 20%, #20221E 0%, #151614 60%, #0E0F0D 100%);
             overflow: hidden;
@@ -94,7 +92,6 @@
             left: 50%;
             transform: translateX(-50%);
             width: 850px;
-            max-width: 100vw;
             height: 700px;
             background: radial-gradient(ellipse at 50% 30%, rgba(247, 194, 104, 0.20) 0%, rgba(215, 139, 40, 0.08) 45%, transparent 75%);
             filter: blur(75px);
@@ -107,7 +104,7 @@
             left: -20%;
             width: 140%;
             height: 140%;
-            opacity: 0.08;
+            opacity: 0.10;
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='450' height='180' viewBox='-40 -40 440 160'%3E%3Cpath fill='%23EAE6D2' d='M41.38,54.78c-.74,8.44-1.47,16.68-2.22,25.24-1.05-.36-1.87-.38-2.11-.76-4.92-7.76-6.48-16.24-4.64-25.19,1.31-6.37,3.05-12.66,4.8-18.94.32-1.15,1.59-2.85,2.41-2.85,1.22,0,3.01,1.02,3.54,2.11,2.08,4.26,3.77,8.72,5.57,13.11.64,1.57,1.2,3.18,2.51,4.72,1.01-4.22,1.87-8.48,3.08-12.63.73-2.49,1.73-5,3.1-7.19,1.51-2.42,3.84-2.3,5.46.09.9,1.33,1.56,2.88,2.04,4.41,2.48,8.01,4.89,16.05,7.29,24.08.39,1.32.71,2.67.97,4.02.49,2.5-.1,4.58-2.75,5.42-2.71.85-3.95-1.01-4.76-3.1-1.73-4.42-3.33-8.89-5.75-13.42-.41,2.07-.82,4.14-1.22,6.21-.33,1.72-.35,3.58-1.06,5.13-.71,1.57-1.99,3.85-3.22,3.98-1.76.19-4.4-.76-5.44-2.15-2.83-3.76-5.02-8-7.61-12.3Z'/%3E%3Cpath fill='%23EAE6D2' d='M149.66,61.16c-.66,1.75-1.19,3.15-1.72,4.55-.66-1.43-1.36-2.84-1.96-4.29-1.3-3.13-2.55-6.27-3.82-9.41-.55.14-1.1.28-1.64.42.36,3.22.89,6.43,1.02,9.66.15,3.81,0,7.64-.16,11.46-.02.55-.69,1.25-1.24,1.53-.28.14-1.27-.42-1.41-.83-2.1-6.41-5-12.72-5.94-19.31-1.34-9.4-1.33-19-1.6-28.53-.04-1.33,1.38-3.47,2.56-3.84,1.1-.34,3.39.82,4.08,1.97,1.52,2.54,2.28,5.53,3.5,8.27,1.91,4.3,3.95,8.54,5.94,12.8.37-.1.73-.2,1.1-.3.11-.75.34-1.51.31-2.26-.21-6.65-.63-13.3-.59-19.94,0-1.45,1.27-3.58,2.54-4.18,2.28-1.09,3.5,1.02,3.82,2.92,1.07,6.41,1.89,12.86,2.83,19.29.91,6.19,1.95,12.37,2.73,18.57.18,1.43,0,3.76-.86,4.27-1.23.73-3.35.55-4.85.04-1.71-.57-3.16-1.92-4.63-2.87Z'/%3E%3Cpath fill='%23EAE6D2' d='M228.22,29.83c.07,12.02-9.64,23.38-20.92,27.85-1.32.52-2.99.44-4.45.27-2.88-.33-3.58-2.17-2.62-4.83.67-1.83,1.09-4.02.76-5.89-1.01-5.67-2.35-11.28-3.77-16.86-.32-1.24-1.29-2.59-2.35-3.31-2.56-1.74-2.86-3.64-1.08-5.99,3.69-4.89,17.89-9.71,23.76-8.1,6.34,1.74,10.67,8.57,10.68,16.87ZM208.98,48.12c6.31-4.28,9.73-9.07,10.21-15.41.23-2.98-.2-6.29-1.33-9.03-1.41-3.41-4.92-3.8-8.05-2.62-1.84.69-4.74,2.67-4.62,3.79.83,7.51,2.35,14.95,3.79,23.28Z'/%3E%3Cpath fill='%23EAE6D2' d='M280.5,15.47c-4.39,1.71-8.03,3.25-11.76,4.49-1.41.47-3.06.22-4.59.3-.11-1.77-.13-3.67.43-5.28.39-1.12,1.73-2.3,2.91-2.71,6.37-2.21,12.78-4.35,19.28-6.13,1.49-.41,4.45.23,4.85,1.18.69,1.63.52,4.25-.38,5.82-4.48,7.8-9.33,15.39-14.04,23.05.21.27.41.54.62.81,2.74-.92,5.43-2.06,8.23-2.69,2.63-.59,5.48-1.15,8.05-.7,1.52.27,3.31,2.32,3.83,3.94.4,1.23-.57,3.83-1.69,4.47-3.89,2.21-4.32,5.42-3.95,9.29.09.9-.66,1.88-1.03,2.82-.56-.94-1.61-1.86-1.62-2.81-.17-10.13-2.45-9.51-10.43-6.56-3.41,1.26-6.75,2.77-10.25,3.67-1.55.4-3.42-.45-5.14-.73.35-1.59.34-3.4,1.12-4.75,4.78-8.37,9.73-16.63,14.61-24.95.29-.5.42-1.09.96-2.54Z'/%3E%3Cpath fill='%23EAE6D2' d='M11.77,72.92c4.01-2.67,7.13-4.85,10.36-6.84,1.46-.9,3.15-1.41,4.73-2.1.52,1.69,1.57,3.42,1.46,5.07-.25,3.51-1.07,6.98-1.73,10.46-.07.39-.54.91-.91.99-.39.08-1.11-.16-1.28-.48-.52-.97-.85-2.05-1.41-3.5-3.06,1.24-5.97,2.55-8.97,3.62-6.75,2.4-9.51.91-10.42-6.07-1.01-7.82-1.58-15.71-2.35-23.56-.13-1.37-.09-2.8-.5-4.09-1.53-4.78-.92-6.48,3.86-7.7,4.84-1.23,9.79-2.1,14.74-2.8,2.44-.34,5.14.23,5.23,3.42.09,2.98-2.3,3.85-4.86,4.18-1.74.22-3.48.42-5.21.73q-6.44,1.19-5.04,8.29c2.11-.7,4.14-1.64,6.26-1.97,1.38-.22,2.9.44,4.35.71-.41,1.63-.31,3.79-1.34,4.76-1.67,1.57-3.98,2.62-6.19,3.39-2.14.75-2.65,1.89-2.26,3.93.5,2.68.84,5.39,1.48,9.55Z'/%3E%3Cpath fill='%23EAE6D2' d='M115.95,60.71c-.5-1.38-1.01-2.76-1.62-4.44-2.61.7-5.31,1.23-7.83,2.21-.93.36-1.5,1.78-2.1,2.79-.83,1.38-1.23,3.19-2.38,4.16-.95.8-2.87,1.13-4.05.74-.78-.25-1.17-2.12-1.45-3.34-.37-1.59-.67-3.25-.62-4.86.04-1.28.5-2.62,1.05-3.8,1.02-2.19,2.56-4.19,3.33-6.45,2.35-6.87,4.36-13.87,6.71-20.74.47-1.37,1.79-3.3,2.84-3.38,1.17-.09,3.01,1.35,3.66,2.6,5.35,10.21,10.54,20.5,15.65,30.83.69,1.4,1.1,3.2.9,4.72-.16,1.25-1.23,3.04-2.24,3.32-.98.27-2.92-.76-3.56-1.77-1.83-2.92-3.22-6.11-4.78-9.2-.45.02-.9.04-1.35.06-.36,2.09-.71,4.18-1.07,6.28-.37.09-.74.18-1.11.27ZM111.07,39.24l-.97.18c-.8,3.45-1.61,6.89-2.56,10.98,2.91-.98,5.18-1.75,7.86-2.66-1.56-3.06-2.94-5.78-4.33-8.5Z'/%3E%3Cpath fill='%23EAE6D2' d='M180.92,52.93c-.32-1.18-.64-2.36-1.06-3.93-2.72.76-5.41,1.32-7.91,2.32-.92.37-1.44,1.79-2.11,2.75-1.05,1.51-1.85,3.28-3.18,4.46-.71.62-2.59.66-3.44.14-.78-.47-1.01-2.03-1.23-3.16-.3-1.5-.5-3.05-.46-4.57.04-1.43.21-2.95.74-4.26.81-1.98,2.27-3.72,2.96-5.73,2.46-7.24,4.61-14.58,7.07-21.81,1.21-3.57,3.23-3.92,5.68-1.13,1.14,1.31,2.13,2.81,2.93,4.35,3.97,7.69,7.89,15.4,11.74,23.14,1.06,2.12,2.34,4.35,2.54,6.62.15,1.74-.72,4.4-2.04,5.26-2.22,1.45-3.46-.87-4.4-2.71-1.35-2.61-2.68-5.24-4.01-7.86-.38.04-.76.08-1.14.13-.5,2.15-1.01,4.29-1.51,6.44-.38-.15-.77-.3-1.15-.46ZM180.83,40.83c-1.77-3.41-3.28-6.3-4.78-9.18-.27.05-.54.09-.81.14-.73,3.59-1.47,7.17-2.33,11.38,2.86-.84,5.06-1.49,7.92-2.34Z'/%3E%3Cpath fill='%23EAE6D2' d='M248.48,40.04c-.28,2.14-.56,4.28-.83,6.41-.32.08-.64.16-.96.24-.58-1.46-1.16-2.92-1.84-4.64-2.49.57-5.11.92-7.5,1.85-1.01.4-1.62,1.99-2.28,3.12-.74,1.28-1.01,3.12-2.08,3.85-1.13.77-3.02.83-4.45.55-.52-.1-.78-2.04-.99-3.17-.25-1.38-.46-2.8-.44-4.2.02-1.4.08-2.91.6-4.18.87-2.11,2.43-3.95,3.14-6.09,2.34-7,4.33-14.12,6.66-21.12,1.31-3.92,3.47-4.17,6.04-.88,1,1.28,1.87,2.68,2.6,4.13,4.33,8.62,8.62,17.25,12.87,25.92.65,1.33,1.53,2.9,1.33,4.22-.24,1.62-1.49,3.09-2.3,4.63-1.38-.95-3.18-1.61-4.05-2.9-1.65-2.44-2.77-5.24-4.11-7.89-.47.05-.94.1-1.41.14ZM245.65,33.6c-1.58-3.15-2.96-5.9-4.34-8.65-.26.07-.53.14-.79.21-.78,3.41-1.56,6.81-2.49,10.88,2.9-.93,5.08-1.63,7.62-2.44Z'/%3E%3Cpath fill='%23EAE6D2' d='M319.98,32.19c-.32,2.02-.63,4.03-.95,6.05-.3.08-.59.15-.89.23-.56-1.41-1.12-2.83-1.76-4.43-1.89.48-3.8,1.02-5.73,1.42-2.19.45-3.54,1.54-3.86,3.9-.15,1.08-.48,2.55-1.24,3.05-1.29.84-3,1.35-4.52,1.32-.45,0-.95-2.26-1.26-3.53-.25-1.01.04-2.22-.38-3.12-1.13-2.35-.64-4.1.93-6.16,1.28-1.69,1.8-4,2.48-6.1,2.17-6.66,4.08-13.4,6.45-19.99,1.43-3.96,3.56-4.07,6.14-.65.9,1.19,1.68,2.51,2.35,3.85,3.86,7.73,7.72,15.47,11.48,23.25,1.03,2.13,2.19,4.38,2.39,6.66.13,1.4-1.18,3.27-2.38,4.28-.43.36-2.95-.84-3.65-1.9-1.68-2.56-2.85-5.46-4.22-8.22-.46.03-.91.06-1.37.09ZM309.65,28.5c3.12-1.13,5.28-1.92,7.81-2.84-1.58-3.19-2.96-5.98-4.34-8.76-.31.05-.62.1-.93.15-.76,3.45-1.53,6.91-2.54,11.45Z'/%3E%3Cpath fill='%23EAE6D2' d='M92.45,26.31c7.81,0,11.12,4.35,8.21,10.14-2.09,4.15-5.57,7.59-8.49,11.31-.61.78-1.4,1.48-2.24,2-5.92,3.71-7.39,8.39-4.72,15.14,1.22,3.09.21,7.09.09,10.67-.01.39-.86,1.12-1.21,1.06-.63-.1-1.44-.55-1.73-1.09-6.26-11.72-8.26-24.65-10.51-37.5-.14-.81.24-2.13.85-2.6,6.27-4.74,12.97-8.57,19.76-9.13ZM81.84,46.91c4.24-3.52,8.82-6.05,10.03-11.82-8.41-.18-12.14,4.15-10.03,11.82Z'/%3E%3Cpath fill='%23EAE6D2' d='M340.93,47.54c-.76-2.38-1.17-4.98-2.4-7.09-1.21-2.08-3.84-3.43-4.75-5.56-.62-1.47.03-4.35,1.19-5.49,1.72-1.69,4.08-.88,5.31,1.38,1.48,2.73,3.75,1.93,5.51.98,1.93-1.04,3.58-2.74,4.98-4.46.2-.25-1.5-2.79-2.72-3.29-3.23-1.32-6.69-2.08-10.04-3.12-4.11-1.27-7.85-2.99-8.41-7.98-.48-4.24,2.11-8.27,7-10.61,4.28-2.05,8.79-3.03,13.51-1.67,3.41.98,5.01,3.44,3.82,6.13-1.35,3.06-3.79,2.29-6.41,1.78-2.31-.45-4.84-.26-7.19.14-.9.15-2.16,1.65-2.18,2.56-.02.85,1.24,2.14,2.21,2.5,2.45.91,5.08,1.32,7.6,2.09,2.03.62,4.12,1.22,5.94,2.26,5.97,3.41,7.25,10.79,2.35,15.63-2.68,2.65-6.16,4.74-9.64,6.25-2.85,1.24-4.93,2.19-4.16,5.74.11.5-.29,1.11-.46,1.68-.36.05-.72.1-1.08.16Z'/%3E%3C/svg%3E");
             background-repeat: round;
             background-size: 280px auto;
@@ -115,11 +112,6 @@
             mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 10%, rgba(0,0,0,0.4) 60%, transparent 95%);
             -webkit-mask-image: radial-gradient(ellipse 60% 60% at 50% 50%, black 10%, rgba(0,0,0,0.4) 60%, transparent 95%);
             animation: giftWrapDrift 65s infinite linear;
-            will-change: background-position;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            .stencil-gift-wrap { animation: none; }
         }
 
         @keyframes giftWrapDrift {
@@ -134,9 +126,8 @@
             z-index: 1000;
             background: rgba(18, 19, 16, 0.96);
             backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
             border-bottom: 1.5px solid var(--border-card);
-            padding: 8px 14px;
+            padding: 10px 18px;
             display: flex;
             justify-content: center;
             width: 100%;
@@ -162,16 +153,16 @@
         }
 
         .logo-circle-svg {
-            width: 38px;
-            height: 38px;
+            width: 40px;
+            height: 40px;
             filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));
             flex-shrink: 0;
         }
 
         .brand-title-vector {
-            height: 20px;
+            height: 22px;
             width: auto;
-            max-width: 170px;
+            max-width: 180px;
             filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
         }
 
@@ -180,9 +171,9 @@
         }
 
         .b2b-pill-tag {
-            font-size: 0.65rem;
+            font-size: 0.66rem;
             font-weight: 900;
-            padding: 4px 10px;
+            padding: 4px 12px;
             border-radius: 999px;
             background: rgba(247, 194, 104, 0.16);
             color: var(--bronze-bright);
@@ -199,9 +190,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 2px;
+            gap: 4px;
             width: 100%;
-            max-width: 520px;
+            max-width: 600px;
             background: rgba(26, 28, 23, 0.95);
             border: 1px solid var(--border-card);
             border-radius: 999px;
@@ -215,11 +206,11 @@
             border: none;
             color: var(--text-muted);
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(0.68rem, 2.2vw, 0.80rem);
+            font-size: clamp(0.68rem, 2.2vw, 0.78rem);
             font-weight: 800;
             letter-spacing: 0.04em;
             text-transform: uppercase;
-            padding: 6px 8px;
+            padding: 7px 8px;
             border-radius: 999px;
             cursor: pointer;
             transition: all 0.2s var(--spring);
@@ -237,7 +228,7 @@
         /* DESKTOP HEADER SLIM */
         @media (min-width: 900px) {
             .master-header {
-                padding: 8px 24px;
+                padding: 7px 24px;
             }
             .header-inner-container {
                 flex-wrap: nowrap;
@@ -250,7 +241,7 @@
             }
             .nav-tabs-bar {
                 order: 2;
-                flex: 0 1 450px;
+                flex: 0 1 540px;
                 width: auto;
                 margin: 0;
             }
@@ -266,7 +257,7 @@
             width: 100%;
             max-width: 1080px;
             margin: 0 auto;
-            padding: 16px 14px;
+            padding: 20px 16px;
             animation: fadeInView 0.28s var(--spring) forwards;
         }
 
@@ -281,23 +272,22 @@
         .b2b-hero-banner {
             background: linear-gradient(135deg, rgba(35, 37, 30, 0.95) 0%, rgba(22, 23, 19, 0.95) 100%);
             border: 1.5px solid var(--border-card);
-            border-radius: 18px;
-            padding: 14px 16px;
+            border-radius: 20px;
+            padding: 16px 20px;
             margin-bottom: 16px;
             display: flex;
             flex-direction: column;
-            gap: 6px;
+            gap: 8px;
             box-shadow: var(--shadow-card);
             text-align: center;
         }
 
         .b2b-hero-title {
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(1.1rem, 3.8vw, 1.5rem);
+            font-size: clamp(1.2rem, 4vw, 1.55rem);
             font-weight: 900;
             color: var(--brand-cream);
             text-transform: uppercase;
-            line-height: 1.2;
         }
         .b2b-hero-title span { color: var(--bronze-bright); }
 
@@ -305,21 +295,58 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px 12px;
+            gap: 12px;
             flex-wrap: wrap;
-            font-size: 0.78rem;
+            font-size: 0.82rem;
             color: var(--brand-cream-muted);
             font-weight: 600;
         }
 
         .bullet-dot { color: var(--bronze-bright); font-weight: 900; }
 
+        /* BANNER CROSS-SECTION ELEGANTE */
+        .cross-link-card {
+            background: rgba(26, 28, 23, 0.92);
+            border: 1px dashed var(--bronze-bright);
+            border-radius: 14px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+        .cross-link-card:hover {
+            background: rgba(36, 38, 30, 0.98);
+            border-color: var(--border-hover);
+        }
+        .cross-link-text {
+            font-size: 0.80rem;
+            font-weight: 700;
+            color: var(--brand-cream-muted);
+        }
+        .cross-link-text strong {
+            color: var(--bronze-bright);
+        }
+        .cross-link-btn {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.74rem;
+            font-weight: 800;
+            color: #12130F;
+            background: var(--bronze-bright);
+            padding: 5px 12px;
+            border-radius: 8px;
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
         /* CONTROLES DEL CATÁLOGO */
         .catalog-controls {
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-bottom: 16px;
+            gap: 12px;
+            margin-bottom: 20px;
         }
 
         .search-bar-wrap {
@@ -334,10 +361,10 @@
             background: rgba(22, 23, 19, 0.92);
             border: 1.5px solid var(--border-card);
             border-radius: 14px;
-            padding: 11px 40px 11px 42px;
+            padding: 12px 42px 12px 44px;
             color: var(--brand-cream);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 16px; /* Evita autozoom en iOS */
+            font-size: 0.92rem;
             outline: none;
             transition: border-color 0.2s ease;
             background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="%23F7C268" viewBox="0 0 24 24"><path d="M10 2a8 8 0 1 0 5.293 14.707l4.387 4.386a1 1 0 0 0 1.414-1.414l-4.386-4.387A8 8 0 0 0 10 2zm-6 8a6 6 0 1 1 12 0 6 6 0 0 1-12 0z"/></svg>');
@@ -372,7 +399,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: 8px;
+            gap: 10px;
             flex-wrap: wrap;
         }
 
@@ -381,8 +408,7 @@
             gap: 6px;
             overflow-x: auto;
             scrollbar-width: none;
-            -webkit-overflow-scrolling: touch;
-            padding: 2px 4px 4px 0;
+            padding-bottom: 2px;
             flex: 1;
         }
         .category-chips-scroll::-webkit-scrollbar { display: none; }
@@ -393,14 +419,13 @@
             color: var(--text-muted);
             font-size: 0.72rem;
             font-weight: 800;
-            padding: 6px 12px;
+            padding: 7px 14px;
             border-radius: 999px;
             cursor: pointer;
             white-space: nowrap;
             text-transform: uppercase;
             letter-spacing: 0.04em;
             transition: all 0.2s ease;
-            flex-shrink: 0;
         }
 
         .cat-chip.active, .cat-chip:hover {
@@ -416,7 +441,6 @@
             border-radius: 10px;
             padding: 2px;
             gap: 2px;
-            flex-shrink: 0;
         }
 
         .btn-view-mode {
@@ -425,7 +449,7 @@
             color: var(--text-muted);
             font-size: 0.72rem;
             font-weight: 800;
-            padding: 5px 9px;
+            padding: 5px 10px;
             border-radius: 8px;
             cursor: pointer;
             text-transform: uppercase;
@@ -439,14 +463,14 @@
         /* GRILLA DE PRODUCTOS */
         .products-b2b-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-            gap: 14px;
+            grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+            gap: 16px;
         }
 
         .product-b2b-card {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
-            border-radius: 16px;
+            border-radius: 18px;
             overflow: hidden;
             display: flex;
             flex-direction: column;
@@ -469,7 +493,7 @@
 
         .card-img-wrap {
             width: 100%;
-            height: 160px;
+            height: 165px;
             position: relative;
             background: #181916;
             overflow: hidden;
@@ -481,6 +505,7 @@
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
+            background-color: #1b1d19;
         }
 
         .product-b2b-card:hover .card-img {
@@ -489,22 +514,26 @@
 
         .box-badge-floating {
             position: absolute;
-            top: 8px;
-            left: 8px;
+            top: 10px;
+            left: 10px;
             background: rgba(18, 19, 15, 0.92);
             backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
             border: 1px solid var(--bronze-bright);
             color: var(--bronze-bright);
-            font-size: 0.64rem;
+            font-size: 0.65rem;
             font-weight: 800;
-            padding: 3px 7px;
+            padding: 3px 8px;
             border-radius: 6px;
             text-transform: uppercase;
         }
+        .box-badge-floating.unit-mode {
+            border-color: #4ADE80;
+            color: #86EFAC;
+            background: rgba(14, 26, 17, 0.92);
+        }
 
         .card-body {
-            padding: 12px 14px;
+            padding: 14px 16px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -514,23 +543,22 @@
 
         .product-name-b2b {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.08rem;
+            font-size: 1.12rem;
             font-weight: 800;
             color: var(--brand-cream);
-            line-height: 1.22;
+            line-height: 1.2;
         }
 
         .product-desc-b2b {
-            font-size: 0.77rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
-            line-height: 1.38;
+            line-height: 1.4;
             font-weight: 500;
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
             overflow: hidden;
-            min-height: 32px;
-            margin-top: 2px;
+            min-height: 34px;
         }
 
         .card-footer-b2b {
@@ -539,18 +567,16 @@
             justify-content: space-between;
             padding-top: 10px;
             border-top: 1px solid rgba(229, 169, 82, 0.16);
-            gap: 8px;
         }
 
         .pricing-wrap {
             display: flex;
             flex-direction: column;
-            flex-shrink: 0;
         }
 
         .price-box-val {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.22rem;
+            font-size: 1.25rem;
             font-weight: 900;
             color: var(--bronze-bright);
             line-height: 1;
@@ -558,7 +584,7 @@
         }
 
         .price-unit-sub {
-            font-size: 0.67rem;
+            font-size: 0.68rem;
             font-weight: 700;
             color: var(--text-muted);
             text-transform: uppercase;
@@ -580,7 +606,7 @@
             background: transparent;
             border: none;
             color: var(--brand-cream);
-            width: 32px;
+            width: 34px;
             height: 100%;
             font-size: 18px;
             font-weight: 900;
@@ -589,7 +615,6 @@
             align-items: center;
             justify-content: center;
             transition: background 0.15s ease, color 0.15s ease;
-            user-select: none;
         }
 
         .step-btn-b2b:hover {
@@ -600,10 +625,10 @@
         .step-btn-b2b:active { filter: brightness(0.85); }
 
         .step-input-b2b {
-            width: 40px;
+            width: 44px;
             text-align: center;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 16px;
+            font-size: 0.95rem;
             font-weight: 900;
             color: var(--brand-cream);
             border: none;
@@ -636,9 +661,9 @@
         }
 
         .products-b2b-grid.mode-list .card-img-wrap {
-            width: 65px;
-            height: 65px;
-            min-width: 65px;
+            width: 70px;
+            height: 70px;
+            min-width: 70px;
             border-radius: 12px;
         }
 
@@ -650,7 +675,6 @@
             align-items: center;
             justify-content: space-between;
             width: 100%;
-            gap: 12px;
         }
 
         .products-b2b-grid.mode-list .product-desc-b2b { display: none; }
@@ -658,73 +682,37 @@
         .products-b2b-grid.mode-list .card-footer-b2b {
             border-top: none;
             padding-top: 0;
-            gap: 14px;
+            gap: 16px;
         }
 
-        /* ADAPTACIÓN MÓVIL (GRILLA 2 COLUMNAS ULTRA FLUIDA) */
+        /* ADAPTACIÓN MÓVIL */
         @media (max-width: 680px) {
             .products-b2b-grid {
                 grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
+                gap: 10px;
             }
-            .card-img-wrap { height: 110px; }
-            .card-body { padding: 8px 10px 10px; gap: 6px; }
-            .product-name-b2b { font-size: 0.92rem; line-height: 1.2; }
-            .product-desc-b2b { font-size: 0.70rem; min-height: 26px; -webkit-line-clamp: 2; margin-top: 0; }
-            
-            /* En móvil, organizamos el pie en vertical para que el stepper no se comprima */
-            .card-footer-b2b {
-                flex-direction: column;
-                align-items: stretch;
-                padding-top: 6px;
-                gap: 6px;
-            }
-            .pricing-wrap {
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: baseline;
-                width: 100%;
-            }
-            .price-box-val { font-size: 1.05rem; }
-            .price-unit-sub { font-size: 0.60rem; }
-            
-            .b2b-stepper {
-                width: 100%;
-                justify-content: space-between;
-                height: 32px;
-            }
-            .step-btn-b2b { width: 34px; font-size: 16px; }
-            .step-input-b2b { width: 34px; font-size: 14px; }
-            .box-badge-floating { font-size: 0.55rem; padding: 2px 5px; top: 6px; left: 6px; }
-
-            /* Ajustes en modo lista en móvil */
-            .products-b2b-grid.mode-list .card-footer-b2b {
-                flex-direction: row;
-                align-items: center;
-                gap: 8px;
-            }
-            .products-b2b-grid.mode-list .pricing-wrap {
-                flex-direction: column;
-                align-items: flex-start;
-                width: auto;
-            }
-            .products-b2b-grid.mode-list .b2b-stepper {
-                width: auto;
-            }
+            .card-img-wrap { height: 115px; }
+            .card-body { padding: 10px; gap: 8px; }
+            .product-name-b2b { font-size: 0.95rem; }
+            .product-desc-b2b { font-size: 0.72rem; min-height: 30px; -webkit-line-clamp: 2; }
+            .price-box-val { font-size: 1.1rem; }
+            .price-unit-sub { font-size: 0.62rem; }
+            .b2b-stepper { height: 32px; }
+            .step-btn-b2b { width: 28px; }
+            .step-input-b2b { width: 36px; font-size: 0.88rem; }
+            .box-badge-floating { font-size: 0.58rem; padding: 2px 6px; }
         }
 
-        /* HUD INFERIOR FLOTANTE - RESPONSIVE 100% SIN DESBORDES */
+        /* HUD INFERIOR FLOTANTE */
         .b2b-bottom-hud {
             position: fixed;
             bottom: 0;
             left: 0;
-            right: 0;
-            width: 100%;
+            width: 100vw;
             background: rgba(16, 17, 14, 0.98);
             backdrop-filter: blur(18px);
-            -webkit-backdrop-filter: blur(18px);
             border-top: 1.5px solid var(--border-card);
-            padding: 10px 16px max(10px, env(safe-area-inset-bottom, 12px));
+            padding: 12px 18px;
             z-index: 2000;
             box-shadow: 0 -10px 35px rgba(0, 0, 0, 0.85);
             display: flex;
@@ -733,7 +721,7 @@
 
         .hud-content-wrap {
             width: 100%;
-            max-width: 980px;
+            max-width: 960px;
             display: flex;
             align-items: center;
             justify-content: space-between;
@@ -745,7 +733,6 @@
             flex-direction: column;
             flex: 1;
             gap: 5px;
-            min-width: 0;
         }
 
         .hud-text-row {
@@ -755,13 +742,6 @@
             font-size: 0.80rem;
             font-weight: 800;
             font-variant-numeric: tabular-nums;
-            gap: 8px;
-        }
-
-        #hudBoxText {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .track-bar {
@@ -800,23 +780,16 @@
             50% { filter: brightness(1.25); }
         }
 
-        .hud-action-group {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            flex-shrink: 0;
-        }
-
         .hud-total-info {
             display: flex;
             flex-direction: column;
             text-align: right;
-            min-width: 110px;
+            min-width: 130px;
         }
 
         .total-amount-b2b {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.40rem;
+            font-size: 1.45rem;
             font-weight: 900;
             color: var(--bronze-bright);
             line-height: 1;
@@ -837,16 +810,13 @@
             font-size: 0.85rem;
             font-weight: 900;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 13px 20px;
+            letter-spacing: 0.06em;
+            padding: 14px 22px;
             border-radius: 12px;
             border: none;
             cursor: not-allowed;
             white-space: nowrap;
             transition: all 0.25s var(--spring);
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
 
         .btn-order-trigger.unlocked {
@@ -861,49 +831,24 @@
             transform: translateY(-1px);
         }
 
-        /* REORGANIZACIÓN INTELIGENTE DEL HUD EN MÓVIL (< 680px) */
-        @media (max-width: 680px) {
-            .b2b-bottom-hud {
-                padding: 8px 12px max(8px, env(safe-area-inset-bottom, 10px));
-            }
-            .hud-content-wrap {
-                flex-direction: column;
-                gap: 7px;
-            }
-            .hud-progress-col {
-                width: 100%;
-            }
-            .hud-action-group {
-                width: 100%;
-                justify-content: space-between;
-                gap: 12px;
-            }
-            .hud-total-info {
-                min-width: auto;
-                text-align: left;
-            }
-            .total-amount-b2b { font-size: 1.22rem; }
-            .total-sub-b2b { font-size: 0.62rem; }
-            .btn-order-trigger {
-                flex: 1;
-                max-width: 65%;
-                padding: 11px 12px;
-                font-size: 0.80rem;
-                letter-spacing: 0.02em;
-            }
+        @media (max-width: 600px) {
+            .b2b-bottom-hud { padding: 10px 14px; }
+            .hud-content-wrap { gap: 10px; }
+            .hud-total-info { min-width: 100px; }
+            .total-amount-b2b { font-size: 1.25rem; }
+            .btn-order-trigger { padding: 12px 14px; font-size: 0.78rem; }
         }
 
         /* AVISOS VISUALES HTML */
         .b2b-alert-banner {
             position: fixed;
-            top: 16px;
+            top: 20px;
             left: 50%;
             transform: translateX(-50%) translateY(-70px);
             background: rgba(26, 22, 17, 0.98);
             backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
             border-radius: 999px;
-            padding: 9px 16px;
+            padding: 10px 18px 10px 16px;
             display: flex;
             align-items: center;
             gap: 10px;
@@ -912,7 +857,7 @@
             transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
             opacity: 0;
             pointer-events: none;
-            max-width: 92vw;
+            max-width: 90vw;
             cursor: pointer;
         }
 
@@ -946,7 +891,7 @@
         }
 
         .alert-text {
-            font-size: 0.80rem;
+            font-size: 0.82rem;
             font-weight: 700;
             line-height: 1.3;
         }
@@ -959,7 +904,7 @@
             font-weight: 800;
             cursor: pointer;
             opacity: 0.7;
-            margin-left: 4px;
+            margin-left: 6px;
             padding: 2px 4px;
             display: flex;
             align-items: center;
@@ -983,18 +928,18 @@
         .info-card-luxury {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
-            border-radius: 18px;
-            padding: 20px;
+            border-radius: 20px;
+            padding: 24px;
             box-shadow: var(--shadow-card);
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            margin-bottom: 16px;
+            gap: 14px;
+            margin-bottom: 18px;
         }
 
         .info-card-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             font-weight: 900;
             color: var(--brand-cream);
             text-transform: uppercase;
@@ -1002,53 +947,53 @@
         .info-card-title span { color: var(--bronze-bright); }
 
         .info-card-text {
-            font-size: 0.85rem;
-            line-height: 1.55;
+            font-size: 0.88rem;
+            line-height: 1.6;
             color: var(--brand-cream-muted);
             font-weight: 500;
         }
 
         .features-grid-b2b {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 10px;
-            margin-top: 4px;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 12px;
+            margin-top: 6px;
         }
 
         .feature-box {
             background: rgba(20, 22, 18, 0.95);
             border: 1px solid var(--border-card);
-            border-radius: 12px;
-            padding: 12px 14px;
+            border-radius: 14px;
+            padding: 14px;
             display: flex;
             flex-direction: column;
             gap: 4px;
         }
 
         .feature-title {
-            font-size: 0.85rem;
+            font-size: 0.88rem;
             font-weight: 800;
             color: var(--bronze-bright);
             text-transform: uppercase;
         }
 
         .feature-desc {
-            font-size: 0.76rem;
+            font-size: 0.78rem;
             color: var(--text-muted);
-            line-height: 1.38;
+            line-height: 1.4;
         }
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 12px;
         }
 
         .gallery-item {
-            border-radius: 12px;
+            border-radius: 14px;
             overflow: hidden;
             border: 1.5px solid var(--border-card);
-            height: 160px;
+            height: 180px;
             background: #181916;
             box-shadow: var(--shadow-card);
             cursor: zoom-in;
@@ -1065,24 +1010,24 @@
 
         .contact-grid-row {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 14px;
             align-items: stretch;
         }
 
         .contact-card-agent {
             background: rgba(22, 24, 19, 0.94);
             border: 1.5px solid var(--border-card);
-            border-radius: 16px;
-            padding: 16px;
+            border-radius: 18px;
+            padding: 18px;
             display: flex;
             flex-direction: column;
-            gap: 8px;
+            gap: 10px;
             height: 100%;
         }
 
         .agent-role {
-            font-size: 0.65rem;
+            font-size: 0.68rem;
             font-weight: 800;
             color: var(--bronze-bright);
             text-transform: uppercase;
@@ -1091,7 +1036,7 @@
 
         .agent-name {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 900;
             color: var(--brand-cream);
         }
@@ -1100,11 +1045,11 @@
             background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
             color: #032311;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.80rem;
+            font-size: 0.82rem;
             font-weight: 800;
             text-decoration: none;
-            padding: 11px 14px;
-            border-radius: 10px;
+            padding: 11px 16px;
+            border-radius: 12px;
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -1120,28 +1065,27 @@
             inset: 0;
             background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
             z-index: 3000;
             display: none;
             align-items: center;
             justify-content: center;
-            padding: 12px;
+            padding: 16px;
         }
         .modal-overlay.active { display: flex; }
 
         .modal-sheet {
             background: rgba(22, 23, 19, 0.98);
             border: 1.5px solid var(--bronze-bright);
-            border-radius: 20px;
-            padding: 18px 16px;
+            border-radius: 22px;
+            padding: 22px;
             width: 100%;
-            max-width: 540px;
-            max-height: 90vh;
+            max-width: 560px;
+            max-height: 92vh;
             overflow-y: auto;
             box-shadow: 0 25px 60px rgba(0,0,0,0.9), 0 0 30px var(--neon-glow);
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
 
         .modal-top {
@@ -1149,12 +1093,12 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid var(--border-card);
-            padding-bottom: 8px;
+            padding-bottom: 10px;
         }
 
         .modal-top-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.20rem;
+            font-size: 1.30rem;
             font-weight: 900;
             color: var(--brand-cream);
         }
@@ -1166,27 +1110,26 @@
             font-size: 20px;
             font-weight: 900;
             cursor: pointer;
-            padding: 4px;
         }
 
         .summary-recap-box {
             background: rgba(14, 15, 13, 0.9);
             border: 1px solid var(--border-card);
             border-radius: 12px;
-            padding: 10px 12px;
-            max-height: 130px;
+            padding: 12px 14px;
+            max-height: 180px;
             overflow-y: auto;
-            font-size: 0.78rem;
+            font-size: 0.80rem;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 6px;
             font-variant-numeric: tabular-nums;
         }
 
         .form-grid-2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 8px;
+            gap: 10px;
         }
 
         .f-group {
@@ -1196,7 +1139,7 @@
         }
 
         .f-label {
-            font-size: 0.67rem;
+            font-size: 0.68rem;
             font-weight: 800;
             color: var(--bronze-bright);
             text-transform: uppercase;
@@ -1215,70 +1158,37 @@
             padding: 10px 12px;
             color: var(--brand-cream);
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 16px; /* Evita zoom automático en Safari iOS */
+            font-size: 0.85rem;
             outline: none;
             transition: border-color 0.2s ease, box-shadow 0.2s ease;
         }
         .f-input:focus { border-color: var(--bronze-bright); }
 
-        .pay-options-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-        }
-
-        .pay-card-choice {
-            background: rgba(14, 15, 13, 0.85);
-            border: 1.5px solid var(--border-card);
-            border-radius: 10px;
-            padding: 10px 8px;
-            cursor: pointer;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            gap: 3px;
-            transition: all 0.2s ease;
-        }
-
-        .pay-card-choice.selected {
-            border-color: var(--accent-green);
-            background: rgba(34, 197, 94, 0.12);
-        }
-
-        .bank-transfer-details {
+        .coordination-notice-box {
             background: rgba(18, 20, 15, 0.95);
-            border: 1.5px dashed var(--bronze-bright);
-            border-radius: 10px;
-            padding: 10px 12px;
+            border: 1px dashed var(--bronze-bright);
+            border-radius: 12px;
+            padding: 12px 14px;
             display: flex;
             flex-direction: column;
-            gap: 5px;
+            gap: 4px;
             font-size: 0.78rem;
+            color: var(--brand-cream-muted);
+            line-height: 1.4;
         }
-
-        .btn-copy-alias {
-            background: var(--bronze-bright);
-            color: #12130F;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 8px;
-            font-weight: 800;
-            font-size: 0.70rem;
-            cursor: pointer;
-            align-self: flex-start;
-            margin-top: 3px;
-            text-transform: uppercase;
+        .coordination-notice-box strong {
+            color: var(--bronze-bright);
         }
 
         .btn-dispatch-order {
             background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
             color: #02200D;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.90rem;
+            font-size: 0.92rem;
             font-weight: 900;
             text-transform: uppercase;
-            padding: 13px;
-            border-radius: 10px;
+            padding: 15px;
+            border-radius: 12px;
             border: none;
             cursor: pointer;
             box-shadow: 0 4px 18px var(--accent-green-glow);
@@ -1289,11 +1199,11 @@
             display: none;
             background: rgba(20, 22, 17, 0.98);
             border: 1.5px solid var(--accent-green);
-            border-radius: 16px;
-            padding: 18px 14px;
+            border-radius: 18px;
+            padding: 20px;
             text-align: center;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
         }
 
         /* LIGHTBOX */
@@ -1302,29 +1212,30 @@
             inset: 0;
             background: rgba(0, 0, 0, 0.92);
             backdrop-filter: blur(14px);
-            -webkit-backdrop-filter: blur(14px);
             z-index: 5000;
             display: none;
             align-items: center;
             justify-content: center;
-            padding: 14px;
+            padding: 16px;
+            cursor: zoom-out;
             user-select: none;
         }
         .lightbox-overlay.active { display: flex; }
 
         .lightbox-content-box {
             position: relative;
-            max-width: 92vw;
+            max-width: 90vw;
             max-height: 85vh;
             display: flex;
             flex-direction: column;
             align-items: center;
+            cursor: default;
         }
 
         .lightbox-img {
             max-width: 100%;
-            max-height: 70vh;
-            border-radius: 14px;
+            max-height: 75vh;
+            border-radius: 16px;
             border: 2px solid var(--border-hover);
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.9), 0 0 25px var(--neon-glow);
             object-fit: contain;
@@ -1333,9 +1244,9 @@
         }
 
         .lightbox-caption {
-            margin-top: 10px;
+            margin-top: 12px;
             font-family: 'Outfit', sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 800;
             color: var(--brand-cream);
             text-align: center;
@@ -1344,15 +1255,15 @@
 
         .lightbox-close-btn {
             position: absolute;
-            top: -36px;
+            top: -42px;
             right: 0;
             background: rgba(30, 32, 26, 0.85);
             border: 1px solid var(--border-card);
             color: var(--brand-cream);
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
-            font-size: 16px;
+            font-size: 18px;
             font-weight: 900;
             cursor: pointer;
             display: flex;
@@ -1367,8 +1278,8 @@
             background: rgba(22, 24, 19, 0.88);
             border: 1.5px solid var(--border-card);
             color: var(--bronze-bright);
-            width: 40px;
-            height: 40px;
+            width: 44px;
+            height: 44px;
             border-radius: 50%;
             font-size: 20px;
             font-weight: 900;
@@ -1377,15 +1288,14 @@
             align-items: center;
             justify-content: center;
         }
-        .lightbox-nav-prev { left: -50px; }
-        .lightbox-nav-next { right: -50px; }
+        .lightbox-nav-prev { left: -55px; }
+        .lightbox-nav-next { right: -55px; }
 
         @media (max-width: 680px) {
-            .lightbox-nav-prev { left: 4px; }
-            .lightbox-nav-next { right: 4px; }
-            .lightbox-close-btn { top: -34px; right: 2px; }
+            .lightbox-nav-prev { left: 8px; top: auto; bottom: -50px; transform: none; }
+            .lightbox-nav-next { right: 8px; top: auto; bottom: -50px; transform: none; }
+            .lightbox-close-btn { top: -38px; right: 4px; }
             .form-grid-2 { grid-template-columns: 1fr; }
-            .pay-options-row { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -1415,7 +1325,7 @@
                         <path fill="#FEFAE4" d="M350.36,240.01s0-.02-.01-.04l-.05-.15c-.06-.18-.1-.32-.15-.45-.58-1.6-1.42-3.06-2.49-4.34-1.34-1.6-2.47-3.38-3.36-5.28-.09-.19-.17-.38-.25-.58l-.14-.32c-.07-.16-.15-.35-.23-.53-.05-.13-.11-.28-.16-.44l-.12-.32c-.08-.21-.16-.44-.24-.67-1.63-5.01-1.66-10.31-.08-15.32,0,0,0-.02,0-.03h0s0-.04.01-.06c.03-.13.07-.27.11-.4l.06-.21c.07-.23.13-.43.17-.63.04-.16.06-.33.09-.5l.14-.82c.04-.3.06-.65.08-1l.02-.29c.02-.32.02-.7,0-1.13,0-.05,0-.16,0-.25-.07-1.56-.42-3.18-1.03-4.74-.01-.04-.03-.08-.04-.11l-.04-.09c-.32-.77-.7-1.51-1.12-2.2-.24-.38-.47-.72-.72-1.05-.28-.37-.52-.66-.75-.92-.07-.06-.14-.14-.21-.21-.23-.25-.46-.5-.71-.73l-.56-.48c-.18-.15-.28-.25-.39-.33-.23-.18-.47-.34-.71-.5-.18-.12-.29-.2-.4-.28l-.07-.05c-.22-.13-.6-.35-.98-.55-5.04-2.63-9.02-7.02-11.22-12.35-1-2.42-1.6-4.98-1.81-7.6-.03-.42-.08-.83-.15-1.25l-.08-.39c-.06-.29-.11-.56-.17-.83-.02-.09-.05-.18-.07-.26l-.06-.21c-.06-.23-.13-.46-.21-.7-.05-.16-.11-.32-.18-.49-.08-.2-.17-.42-.26-.64-.07-.17-.14-.32-.21-.46-.1-.21-.21-.43-.33-.64l-.07-.13c-.07-.12-.11-.21-.16-.29-.13-.22-.27-.44-.41-.65l-.25-.38c-.22-.31-.45-.62-.68-.9-.53-.64-1.12-1.25-1.75-1.8-.26-.22-.55-.45-.86-.68-.05-.03-.11-.07-.18-.12l-.15-.1c-.25-.17-.47-.32-.7-.46l-.37-.21c-.22-.12-.43-.24-.66-.35-.13-.06-.26-.12-.39-.18l-1.14-.46c-.22-.08-.46-.15-.71-.23l-.45-.13c-.24-.06-.52-.12-.81-.18l-.43-.09c-.32-.05-.72-.1-1.11-.14-7.29-.59-13.84-4.47-17.96-10.64l-.14-.22c-.16-.24-.43-.67-.69-1.11-.16-.28-.31-.58-.47-.87-.05-.07-.1-.15-.14-.25-.32-.65-.66-1.23-.99-1.75l-.29-.42c-.11-.16-.23-.32-.34-.47-.08-.1-.16-.2-.25-.3l-.39-.47h0s-.04-.04-.06-.07c-.23-.26-.47-.5-.71-.73-.06-.06-.16-.16-.26-.26-.18-.16-.46-.4-.74-.63l-.19-.16c-.2-.15-.5-.37-.84-.6,0,0,0,0,0,0,0,0-.17-.11-.22-.15-.15-.1-.47-.29-.83-.48l-.19-.11c-.22-.12-.55-.27-.87-.41l-.45-.19c-.14-.06-.28-.11-.43-.17-3.79-1.35-7.31-.65-8.89-.19-.17.06-.34.11-.51.16-.24.08-.38.14-.38.14v-.02c-2.16.64-4.38.98-6.65.98-5.78,0-11.35-2.1-15.7-5.9-2.53-2.22-5.74-3.46-9.03-3.49-3.24.03-6.43,1.27-8.97,3.48-4.35,3.8-9.92,5.9-15.7,5.9-2.72,0-5.39-.46-7.93-1.38-.54-.19-1.16-.32-1.85-.38-.15-.01-.28-.02-.4-.04-.36-.04-.64-.07-.92-.09h-.16s-.5,0-.5,0h-.54c-.28,0-.56.04-.84.07l-.51.05c-.2.03-.54.1-.87.17l-.3.06c-.24.05-.58.15-.92.26l-.23.07c-.24.08-.58.2-.91.34l-.46.19c-.27.12-.59.27-.88.43-.04.03-.09.05-.14.08-.34.19-.66.38-.93.55-.05.04-.1.07-.15.1-.3.2-.6.42-.87.63l-.03.03c-.35.29-.63.52-.93.8-.05.05-.1.11-.15.16-.23.23-.47.47-.7.72h0c-.04.05-.07.1-.08.1l-.25.31s-.06.07-.07.08c-.16.19-.29.34-.4.49-.05.07-.09.13-.13.19l-.42.63c-.11.16-.14.21-.18.26-.18.3-.37.63-.57,1.04l-.15.27c-.15.31-.4.78-.67,1.24-.26.44-.52.87-.77,1.23l-.03.05c-4.16,6.23-10.71,10.11-18.01,10.7-.38.03-.78.08-1.21.16l-.29.06c-.31.06-.6.12-.87.19l-.4.12c-.26.08-.5.15-.73.24-.12.05-.27.1-.41.16l-.78.33c-.05.03-.18.09-.31.15-.22.11-.44.23-.65.35l-.43.24c-.19.11-.41.26-.63.42l-.22.15h0s-.05.04-.08.06c-.34.25-.64.48-.92.73-.63.54-1.22,1.15-1.75,1.79-.24.29-.46.59-.7.94l-.2.31c-.16.24-.3.46-.43.69l-.22.41c-.12.22-.23.44-.34.66-.06.14-.13.29-.2.44-.1.23-.19.45-.27.67-.05.15-.11.31-.17.47-.08.23-.15.47-.21.71l-.14.51c-.06.23-.11.5-.16.77l-.09.47c-.06.36-.11.77-.14,1.2-.2,2.62-.81,5.18-1.81,7.6-2.2,5.33-6.18,9.72-11.22,12.35-.36.19-.72.4-1.06.61,0,0,0,0,0,0-.09.07-.2.15-.32.23-.31.21-.55.37-.78.55-.11.09-.21.18-.31.27l-.7.6c-.19.18-.42.42-.64.67-.07.07-.14.15-.26.27-.18.21-.41.49-.66.82-.02.03-.08.1-.12.15-.19.26-.41.59-.64.94-.44.7-.81,1.44-1.13,2.2l-.07.18c-.62,1.58-.97,3.22-1.04,4.88v.03c-.01.53-.01.91,0,1.33v.11c.04.43.06.78.11,1.13l.12.67s.02.1.02.11c.03.19.05.34.09.5.04.17.09.34.14.51l.1.34c.03.11.07.25.1.38l.03.13c1.57,4.95,1.55,10.26-.09,15.27-.08.24-.17.48-.25.71l-.1.29c-.05.15-.11.31-.18.47-.07.18-.15.36-.23.54l-.14.33c-.06.15-.14.34-.23.52-.9,1.91-2.03,3.69-3.36,5.29-1.07,1.28-1.91,2.75-2.5,4.35-.04.11-.07.21-.11.32l-.09.27c-.48,1.51-.72,3.04-.72,4.55,0,2.45.62,4.89,1.79,7.06.39.71.87,1.41,1.4,2.06l.17.2c1.68,1.91,4.92,4.51,10.61,5.83l.11.03c2.51.57,5.29.86,8.27.86h174.48c2.98,0,5.75-.28,8.23-.85l.16-.04c5.68-1.32,8.9-3.9,10.6-5.83,0,0,0,0,0-.01l.19-.22c.51-.63.98-1.32,1.39-2.06,1.16-2.15,1.78-4.59,1.78-7.03,0-1.5-.24-3.02-.71-4.52M316.54,226.89c-.72.93-1.8,1.47-2.98,1.47h-144.18c-1.17,0-2.26-.53-2.97-1.46-.72-.93-.96-2.11-.66-3.24,9.16-35.02,40.3-59.52,75.72-59.59,35.43.07,66.58,24.58,75.73,59.59.3,1.13.06,2.31-.66,3.24"/>
                     </g>
                 </svg>
-                <svg class="brand-title-vector" viewBox="0 0 486.27 85.89">
+                <svg class="brand-title-vector" viewBox="0 0 495 86">
                     <path fill="#FEFAE4" d="M0,1.35c10.73-.01,21.46-.02,32.19-.04,0,4.68,0,7.01,0,11.69-7.91.08-11.87.13-19.78.22,0,7.98,0,15.96,0,23.94,6.8-.22,10.2-.32,17.01-.53,0,4.7,0,7.05,0,11.76-6.8.27-10.2.41-17.01.7,0,7.98,0,15.96,0,23.94,7.9-.5,11.86-.74,19.76-1.19,0,4.68,0,7.01,0,11.69-10.72.73-21.44,1.51-32.15,2.32V1.35"/>
                     <path fill="#FEFAE4" d="M66.13,56.18c4.78-18.31,9.61-36.61,14.47-54.91,4.96,0,7.45,0,12.41,0-.02,26.25-.05,52.51-.07,78.76-4.75.23-7.13.35-11.88.59.01-14.84.02-29.68.04-44.52-3.57,15.02-7.12,30.05-10.65,45.09-3.37.19-5.05.28-8.42.47-3.65-14.93-7.28-29.87-10.88-44.81-.01,15.15-.02,30.3-.03,45.46-4.8.29-7.21.45-12.01.76.01-27.25.03-54.5.04-81.75,4.97,0,7.45,0,12.41-.01,4.82,18.3,9.67,36.6,14.56,54.88"/>
                     <path fill="#FEFAE4" d="M100.37,1.26c7.23,0,10.84,0,18.07-.01,9.42,0,17.4,6.04,16.52,16.21,0,4.63,0,6.95-.01,11.59.22,7.58-4.69,13.64-11.9,15.64-1.9.59-4.67.93-8.29,1.02-.81.02-1.21.03-2.02.05,0,11.13-.02,22.26-.03,33.39-4.96.21-7.45.31-12.41.54.02-26.14.05-52.28.07-78.42M112.77,12.32c0,7.44-.01,14.88-.02,22.31,1.14-.02,1.71-.03,2.85-.05,1.73-.03,2.91-.16,3.55-.38,2.25-.86,3.38-2.52,3.38-4.99,0-4.66,0-6.99,0-11.65,0-3.53-1.79-5.28-5.39-5.26-1.76.01-2.63.02-4.39.03"/>
@@ -1430,9 +1340,10 @@
                 </svg>
             </a>
 
-            <!-- NAVEGACIÓN CENTRADA EN DESKTOP -->
+            <!-- NAVEGACIÓN CORPORATIVA SUIZA -->
             <nav class="nav-tabs-bar">
-                <button class="nav-tab-btn active" id="tabBtn-compras" onclick="switchView('compras')">Compras</button>
+                <button class="nav-tab-btn active" id="tabBtn-compras" onclick="switchView('compras')">Cajas x30</button>
+                <button class="nav-tab-btn" id="tabBtn-chicas" onclick="switchView('chicas')">Empanadas Chicas</button>
                 <button class="nav-tab-btn" id="tabBtn-nosotros" onclick="switchView('nosotros')">Nosotros</button>
                 <button class="nav-tab-btn" id="tabBtn-galeria" onclick="switchView('galeria')">Galería</button>
                 <button class="nav-tab-btn" id="tabBtn-contacto" onclick="switchView('contacto')">Contacto</button>
@@ -1444,7 +1355,7 @@
         </div>
     </header>
 
-    <!-- SECCIÓN 1: COMPRAS -->
+    <!-- SECCIÓN 1: COMPRAS MAYORISTAS EN CAJAS DE 30 -->
     <main class="view-section active" id="view-compras">
         <div class="b2b-hero-banner">
             <h2 class="b2b-hero-title">EMPANADAS CRUDAS <span>CONGELADAS</span></h2>
@@ -1457,25 +1368,31 @@
             </div>
         </div>
 
+        <!-- LINK RÁPIDO A SECCIÓN DE EMPANADAS CHICAS -->
+        <div class="cross-link-card" onclick="switchView('chicas')">
+            <span class="cross-link-text">¿Buscás empanadas tradicionales <strong>chicas por unidad</strong> para rotisería o buffet?</span>
+            <span class="cross-link-btn">Ver Línea Chicas ➔</span>
+        </div>
+
         <div class="catalog-controls">
             <div class="search-bar-wrap">
-                <input type="text" id="b2bSearch" class="search-input" placeholder="Buscar sabor (parrillera, roquefort, matambre...)" autocomplete="off" oninput="handleSearchInput(this.value)" />
-                <button type="button" class="btn-clear-search" id="btnClearSearch" onclick="clearSearchInput()" title="Borrar búsqueda">✕</button>
+                <input type="text" id="b2bSearch" class="search-input" placeholder="Buscar sabor (ej. parrillera, roquefort, matambre, cheddar)..." autocomplete="off" oninput="handleSearchInput(this.value, 'boxes')" />
+                <button type="button" class="btn-clear-search" id="btnClearSearch" onclick="clearSearchInput('boxes')" title="Borrar búsqueda">✕</button>
             </div>
 
             <div class="filter-header-bar">
-                <div class="category-chips-scroll" id="categoryChipsContainer">
-                    <button class="cat-chip active" id="chip-todas" onclick="filterCat('todas', this)">TODOS</button>
-                    <button class="cat-chip" onclick="filterCat('mitimiti', this)">MITI-MITI® XXL</button>
-                    <button class="cat-chip" onclick="filterCat('empanadazas', this)">EMPANADAZAS XL</button>
-                    <button class="cat-chip" onclick="filterCat('empapizzas', this)">EMPAPIZZAS</button>
-                    <button class="cat-chip" onclick="filterCat('empachipa', this)">EMPACHIPÁ</button>
-                    <button class="cat-chip" onclick="filterCat('empaparri', this)">EMPAPARRI</button>
+                <div class="category-chips-scroll">
+                    <button class="cat-chip active" onclick="filterCatBoxes('todas', this)">TODOS (40+)</button>
+                    <button class="cat-chip" onclick="filterCatBoxes('mitimiti', this)">MITI-MITI® XXL</button>
+                    <button class="cat-chip" onclick="filterCatBoxes('empanadazas', this)">EMPANADAZAS XL</button>
+                    <button class="cat-chip" onclick="filterCatBoxes('empapizzas', this)">EMPAPIZZAS</button>
+                    <button class="cat-chip" onclick="filterCatBoxes('empachipa', this)">EMPACHIPÁ</button>
+                    <button class="cat-chip" onclick="filterCatBoxes('empaparri', this)">EMPAPARRI</button>
                 </div>
 
                 <div class="view-mode-toggle">
                     <button type="button" class="btn-view-mode active" id="btnModeGrid" onclick="setCatalogLayout('grid')">Grilla</button>
-                    <button type="button" class="btn-view-mode" id="btnModeList" onclick="setCatalogLayout('list')">Lista</button>
+                    <button type="button" class="btn-view-mode" id="btnModeList" onclick="setCatalogLayout('list')">Lista Rápida</button>
                 </div>
             </div>
         </div>
@@ -1483,7 +1400,30 @@
         <div class="products-b2b-grid" id="catalogGrid"></div>
     </main>
 
-    <!-- SECCIÓN 2: NOSOTROS -->
+    <!-- SECCIÓN NUEVA: EMPANADAS CHICAS INDIVIDUALES -->
+    <section class="view-section" id="view-chicas">
+        <div class="b2b-hero-banner" style="background: linear-gradient(135deg, rgba(30, 36, 26, 0.95) 0%, rgba(20, 24, 18, 0.95) 100%);">
+            <h2 class="b2b-hero-title">LÍNEA ROTISERA <span>EMPANADAS CHICAS</span></h2>
+            <div class="b2b-hero-bullets">
+                <span>Venta directa por <strong>unidad</strong></span>
+                <span class="bullet-dot">✦</span>
+                <span>Tamaño clásico tradicional</span>
+                <span class="bullet-dot">✦</span>
+                <span>Los sabores de siempre listos para hornear</span>
+            </div>
+        </div>
+
+        <div class="catalog-controls">
+            <div class="search-bar-wrap">
+                <input type="text" id="b2bSearchChicas" class="search-input" placeholder="Buscar empanada chica (ej. carne, jamón, choclo)..." autocomplete="off" oninput="handleSearchInput(this.value, 'chicas')" />
+                <button type="button" class="btn-clear-search" id="btnClearSearchChicas" onclick="clearSearchInput('chicas')" title="Borrar búsqueda">✕</button>
+            </div>
+        </div>
+
+        <div class="products-b2b-grid" id="chicasCatalogGrid"></div>
+    </section>
+
+    <!-- SECCIÓN 3: NOSOTROS -->
     <section class="view-section" id="view-nosotros">
         <div class="info-card-luxury">
             <h2 class="info-card-title">PIONEROS EN VENDERTE <span>POR KILO</span></h2>
@@ -1500,7 +1440,7 @@
             <div class="features-grid-b2b">
                 <div class="feature-box">
                     <span class="feature-title">0% Merma y Desperdicio</span>
-                    <span class="feature-desc">Cada caja cerrada de 30 unidades congeladas se hornea bajo demanda. Sin pérdidas de materia prima ni mermas en mostrador.</span>
+                    <span class="feature-desc">Cada caja de unidades congeladas se hornea bajo demanda. Sin pérdidas de materia prima ni mermas en mostrador.</span>
                 </div>
                 <div class="feature-box">
                     <span class="feature-title">Margen y Peso Estandarizado</span>
@@ -1518,7 +1458,7 @@
         </div>
     </section>
 
-    <!-- SECCIÓN 3: GALERÍA -->
+    <!-- SECCIÓN 4: GALERÍA -->
     <section class="view-section" id="view-galeria">
         <div class="info-card-luxury" style="text-align:center;">
             <h2 class="info-card-title">GALERÍA DE PRODUCTOS EN <span>ALTA DEFINICIÓN</span></h2>
@@ -1527,7 +1467,7 @@
         <div class="gallery-grid" id="galleryGridContainer"></div>
     </section>
 
-    <!-- SECCIÓN 4: CONTACTO -->
+    <!-- SECCIÓN 5: CONTACTO -->
     <section class="view-section" id="view-contacto">
         <div class="info-card-luxury">
             <h2 class="info-card-title">CANALES DE ATENCIÓN <span>B2B Y LOGÍSTICA</span></h2>
@@ -1557,7 +1497,7 @@
         </div>
     </section>
 
-    <!-- HUD INFERIOR FLOTANTE - RESPONSIVE DEFINITIVO -->
+    <!-- HUD INFERIOR FLOTANTE -->
     <footer class="b2b-bottom-hud">
         <div class="hud-content-wrap">
             <div class="hud-progress-col">
@@ -1570,37 +1510,35 @@
                 </div>
             </div>
 
-            <div class="hud-action-group">
-                <div class="hud-total-info">
-                    <span class="total-amount-b2b" id="hudTotalMoney">$0</span>
-                    <span class="total-sub-b2b">Total Mayorista</span>
-                </div>
-
-                <button class="btn-order-trigger" id="btnOrderTrigger" onclick="openCheckoutModal()" disabled>
-                    <span>Mínimo 10 Cajas</span>
-                </button>
+            <div class="hud-total-info">
+                <span class="total-amount-b2b" id="hudTotalMoney">$0</span>
+                <span class="total-sub-b2b">Total Mayorista</span>
             </div>
+
+            <button class="btn-order-trigger" id="btnOrderTrigger" onclick="openCheckoutModal()" disabled>
+                <span>Mínimo 10 Cajas</span>
+            </button>
         </div>
     </footer>
 
-    <!-- MODAL DE CHECKOUT -->
+    <!-- MODAL DE CHECKOUT SIMPLIFICADO (COORDINACIÓN POR TELÉFONO) -->
     <div class="modal-overlay" id="checkoutModal">
         <div class="modal-sheet">
             <div class="modal-top">
                 <h3 class="modal-top-title" id="checkoutModalTitle">Confirmar Pedido Mayorista</h3>
-                <div style="display:flex; align-items:center; gap:8px;">
-                    <button type="button" style="background:none; border:1px solid rgba(239,68,68,0.4); color:#F87171; font-size:0.70rem; font-weight:800; padding:4px 8px; border-radius:8px; cursor:pointer;" onclick="resetWholeCart()">Vaciar</button>
+                <div style="display:flex; align-items:center; gap:10px;">
+                    <button type="button" style="background:none; border:1px solid rgba(239,68,68,0.4); color:#F87171; font-size:0.72rem; font-weight:800; padding:4px 10px; border-radius:8px; cursor:pointer;" onclick="resetWholeCart()">Vaciar Carrito</button>
                     <button class="btn-close-x" onclick="closeCheckoutModal()">✕</button>
                 </div>
             </div>
 
             <!-- FORMULARIO DE CHECKOUT -->
-            <form id="checkoutFormWrapper" style="display:flex; flex-direction:column; gap:12px;" onsubmit="event.preventDefault(); generateOrderAndPay();">
+            <form id="checkoutFormWrapper" style="display:flex; flex-direction:column; gap:14px;" onsubmit="event.preventDefault(); generateOrderAndPay();">
                 <div class="summary-recap-box" id="summaryRecapBox"></div>
 
                 <div class="form-grid-2">
                     <div class="f-group">
-                        <label class="f-label">Razón Social o Local *</label>
+                        <label class="f-label">Razón Social o Nombre del Local *</label>
                         <input type="text" id="b2bClientName" class="f-input" placeholder="Ej: Bar Central / Pizzería Sol" required onfocus="clearFieldError(this)" />
                     </div>
                     <div class="f-group">
@@ -1609,19 +1547,14 @@
                     </div>
                 </div>
 
-                <div class="f-group">
-                    <label class="f-label">Condición Fiscal *</label>
-                    <select id="b2bFiscalType" class="f-input" style="cursor:pointer;">
-                        <option value="Factura A (Responsable Inscripto)">Factura A (Responsable Inscripto)</option>
-                        <option value="Factura B (Monotributo)">Factura B (Monotributo)</option>
-                        <option value="Consumidor Final">Consumidor Final / Sin CUIT</option>
-                    </select>
-                </div>
-
                 <div class="form-grid-2">
                     <div class="f-group">
-                        <label class="f-label">Dirección de Entrega *</label>
-                        <input type="text" id="b2bAddress" class="f-input" placeholder="Calle, altura, entrecalles, localidad..." required onfocus="clearFieldError(this)" />
+                        <label class="f-label">Condición Fiscal para Facturación *</label>
+                        <select id="b2bFiscalType" class="f-input" style="cursor:pointer;">
+                            <option value="Factura A (Responsable Inscripto)">Factura A (Responsable Inscripto)</option>
+                            <option value="Factura B (Monotributo)">Factura B (Monotributo)</option>
+                            <option value="Consumidor Final">Consumidor Final / Sin CUIT</option>
+                        </select>
                     </div>
                     <div class="f-group">
                         <label class="f-label">WhatsApp de Contacto *</label>
@@ -1629,58 +1562,33 @@
                     </div>
                 </div>
 
-                <div class="f-group">
-                    <label class="f-label">Horario de recepción / Observaciones <span>(Opcional)</span></label>
-                    <input type="text" id="b2bNotes" class="f-input" placeholder="Ej: Portón lateral de 8 a 13 hs / Local con cámara" />
-                </div>
-
-                <div class="f-group">
-                    <label class="f-label">Forma de Pago:</label>
-                    <div class="pay-options-row">
-                        <div class="pay-card-choice selected" id="optPayTransfer" onclick="selectPayMethod('transferencia')">
-                            <strong style="color:var(--brand-cream); font-size:0.84rem;">Transferencia Bancaria</strong>
-                            <span style="font-size:0.68rem; color:#4ADE80; font-weight:700;">10% OFF Bonificado</span>
-                        </div>
-                        <div class="pay-card-choice" id="optPayMP" onclick="selectPayMethod('mercadopago')">
-                            <strong style="color:var(--brand-cream); font-size:0.84rem;">Mercado Pago / Tarjetas</strong>
-                            <span style="font-size:0.68rem; color:var(--text-muted); font-weight:600;">Link enviado por WhatsApp</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bank-transfer-details" id="bankDetailsBox">
-                    <div><strong>Mi Pago:</strong> Transferencia Bancaria Inmediata</div>
-                    <div><strong>Alias Oficial:</strong> <code style="color:var(--bronze-bright); font-weight:900;">EMPANADAZAS24</code></div>
-                    <div style="font-size:0.70rem; color:var(--text-muted);">Abonás una vez confirmada la orden y enviás el comprobante a tu asesor comercial.</div>
-                    <button type="button" class="btn-copy-alias" onclick="copyAliasOfficial()">Copiar Alias</button>
-                </div>
-
-                <div id="mpNoticeBox" style="display:none; background:rgba(18,20,15,0.95); border:1.5px dashed var(--border-card); border-radius:10px; padding:10px 12px; font-size:0.78rem; color:var(--brand-cream-muted);">
-                    Al confirmar, el asesor comercial te enviará el link oficial de cobro de Mercado Pago vía WhatsApp para abonar con tarjeta de crédito, débito o dinero en cuenta.
+                <div class="coordination-notice-box">
+                    <strong>Coordinación comercial directa:</strong>
+                    <span>Una vez enviada la orden, nos comunicaremos por teléfono para coordinar la facturación, los medios de pago disponibles y la fecha/dirección estimada de entrega.</span>
                 </div>
 
                 <button type="submit" class="btn-dispatch-order" id="btnConfirmOrder">
-                    Generar Orden Mayorista
+                    Generar y Enviar Pedido
                 </button>
             </form>
 
             <!-- VOUCHER FINAL GENERADO -->
             <div class="voucher-success-box" id="voucherSuccessBox">
-                <div style="font-family:'Outfit', sans-serif; font-size:1.22rem; font-weight:900; color:var(--bronze-bright);" id="voucherCodeLabel">ORDEN CONFIRMADA</div>
-                <p style="font-size:0.80rem; color:var(--brand-cream-muted); line-height:1.45;">
-                    Tu pedido mayorista fue registrado con éxito. Enviá la orden a continuación para agendar fecha de descarga:
+                <div style="font-family:'Outfit'; font-size:1.30rem; font-weight:900; color:var(--bronze-bright);" id="voucherCodeLabel">ORDEN CONFIRMADA</div>
+                <p style="font-size:0.82rem; color:var(--brand-cream-muted); line-height:1.5;">
+                    Orden registrada con éxito. Para coordinar despacho, facturación y pago, enviá el detalle por WhatsApp a tu asesor comercial:
                 </p>
-                <div style="background:rgba(14,15,13,0.9); padding:12px; border-radius:10px; border:1px solid var(--border-card); font-size:0.80rem; text-align:left;" id="voucherDetailsRecap"></div>
+                <div style="background:rgba(14,15,13,0.9); padding:14px; border-radius:12px; border:1px solid var(--border-card); font-size:0.84rem; text-align:left;" id="voucherDetailsRecap"></div>
 
-                <div style="display:flex; flex-direction:column; gap:8px; margin-top:6px;">
+                <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
                     <button type="button" class="btn-dispatch-order" style="background:#22C55E;" onclick="sendOrderWhatsApp('pablo')">
-                        Enviar Orden a Pablo (+54 9 11 6769-9144)
+                        Enviar Pedido a Pablo (+54 9 11 6769-9144)
                     </button>
                     <button type="button" class="btn-dispatch-order" style="background:#16A34A;" onclick="sendOrderWhatsApp('albano')">
-                        Enviar Orden a Albano (+54 9 11 3879-6688)
+                        Enviar Pedido a Albano (+54 9 11 3879-6688)
                     </button>
-                    <button type="button" class="btn-copy-alias" style="align-self:center; margin-top:2px; background:rgba(255,255,255,0.1); color:var(--brand-cream);" onclick="finishOrderAndReset()">
-                        Iniciar Nuevo Pedido / Volver
+                    <button type="button" class="btn-dispatch-order" style="background:transparent; border:1px solid var(--border-card); color:var(--brand-cream-muted); font-size:0.75rem; padding:10px;" onclick="closeCheckoutModal()">
+                        Volver al Catálogo
                     </button>
                 </div>
             </div>
@@ -1692,28 +1600,24 @@
         <div class="lightbox-content-box" id="lightboxContent">
             <button type="button" class="lightbox-close-btn" onclick="closeLightbox()">✕</button>
             <button type="button" class="lightbox-nav-btn lightbox-nav-prev" id="btnPrevImage" onclick="navGallery(-1)">‹</button>
-            <img src="" class="lightbox-img" id="lightboxImage" alt="Previsualización" />
+            <img src="" class="lightbox-img" id="lightboxImage" alt="Previsualización" decoding="async" />
             <div class="lightbox-caption" id="lightboxCaption"></div>
             <button type="button" class="lightbox-nav-btn lightbox-nav-next" id="btnNextImage" onclick="navGallery(1)">›</button>
         </div>
     </div>
 
-    <!-- SCRIPT DE PRODUCTOS, PERSISTENCIA Y CHECKOUT -->
+    <!-- SCRIPTS -->
     <script>
-        // =========================================================================
-        // CONFIGURACIÓN CENTRALIZADA DE WHATSAPP
-        // =========================================================================
         const WSP_PABLO = "5491167699144";
         const WSP_ALBANO = "5491138796688";
 
         const MIN_BOXES = 10;
         const BOX_UNITS = 30;
-        let currentPayMethod = 'transferencia';
         let currentCatalogLayout = 'grid';
         let generatedOrderData = null;
         let wholesaleCart = {};
 
-        // CATÁLOGO DE PRODUCTOS OFICIALES
+        // 1. CATÁLOGO DE CAJAS X30 (B2B PRINCIPAL)
         const B2B_PRODUCTS = [
             { id: 'm_jamon_choclo', cat: 'mitimiti', name: 'Miti Jamón del Medio / Choclo Deluxe', priceBox: 48000, desc: 'Jamón del medio y Choclo Deluxe con toppings. Dos empanadas unidas.', img: 'https://images.loveat.la/media/13083/images/plates/663366' },
             { id: 'm_burger_salchicha', cat: 'mitimiti', name: 'Miti Burger Premium / Empanadaza X Salchicha', priceBox: 48000, desc: 'Burger Premium y Salchicha asada con queso Tybo y cheddar.', img: 'https://images.loveat.la/media/13083/images/plates/663367' },
@@ -1761,6 +1665,51 @@
             { id: 'pa_bondiola', cat: 'empaparri', name: 'Empasánguche de Bondiolita BBQ', priceBox: 48000, desc: 'Bondiola desmechada con barbacoa casera y queso en panificado.', img: 'https://images.loveat.la/media/13083/images/plates/663696' }
         ];
 
+        // 2. CATÁLOGO DE EMPANADAS CHICAS (INDIVIDUALES DE ROTISERÍA - CÓDIGOS Y PRECIOS REALES)
+        const CHICAS_PRODUCTS = [
+            { id: 'u_empafluo', name: 'Empafluo Chica', unitPrice: 4700, desc: 'Carne picada con salsa Empanadaza, panceta y cheddar.', img: 'https://images.loveat.la/media/13083/images/plates/663333' },
+            { id: 'u_ortix', name: 'Día del ortix Chica', unitPrice: 4700, desc: 'Bondiola braseada con salsa 4 quesos.', img: 'https://images.loveat.la/media/13083/images/plates/663337' },
+            { id: 'u_jamon', name: 'Jamón del Medio Chica', unitPrice: 4700, desc: 'Combinación clásica de jamón cocido y queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663340' },
+            { id: 'u_tortilla', name: 'Tortilla Española Chica', unitPrice: 4700, desc: 'Auténtica tortilla de papa, cebolla y morrón.', img: 'https://images.loveat.la/media/13083/images/plates/663341' },
+            { id: 'u_locura', name: 'Empalocura Chica', unitPrice: 4700, desc: 'Revuelto gramajo con papas fritas, jamón y huevo.', img: 'https://images.loveat.la/media/13083/images/plates/663342' },
+            { id: 'u_choclo_deluxe', name: 'Choclo Deluxe Chica', unitPrice: 4700, desc: 'Choclo asado envuelto en queso derretido.', img: 'https://images.loveat.la/media/13083/images/plates/663351' },
+            { id: 'u_choclo_cremoso', name: 'Choclo Cremoso Chica', unitPrice: 4700, desc: 'Humita clásica con choclo y suave salsa blanca.', img: 'https://images.loveat.la/media/13083/images/plates/663352' },
+            { id: 'u_espinacaza', name: 'Espinacaza Chica', unitPrice: 4700, desc: 'Espinacas tiernas envueltas en mozzarella y reggianito.', img: 'https://images.loveat.la/media/13083/images/plates/663353' },
+            { id: 'u_espinacaza_crem', name: 'Espinacaza Cremosa Chica', unitPrice: 4700, desc: 'Espinacas cocidas con suave y cremosa salsa blanca.', img: 'https://images.loveat.la/media/13083/images/plates/663354' },
+            { id: 'u_calabaza', name: 'Calabaza Suprema Chica', unitPrice: 4700, desc: 'Calabaza suave con queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663355' },
+            { id: 'u_fit', name: 'Fit de Vegetales Chica', unitPrice: 4700, desc: 'Zanahoria, morrón, zucchini y berenjenas salteadas.', img: 'https://images.loveat.la/media/13083/images/plates/663356' },
+            { id: 'u_wok', name: 'Wok Rice Chica', unitPrice: 4700, desc: 'Arroz frito, vegetales frescos y huevo al wok.', img: 'https://images.loveat.la/media/13083/images/plates/663357' },
+            { id: 'u_casera', name: 'Empacasera Chica', unitPrice: 4700, desc: 'Blend de carne con huevo, verdeo y aceitunas.', img: 'https://images.loveat.la/media/13083/images/plates/663360' },
+            { id: 'u_pollo_blanca', name: 'Empapollo Chica', unitPrice: 4700, desc: 'Pechuga desmechada con salsa blanca casera.', img: 'https://images.loveat.la/media/13083/images/plates/663364' },
+
+            { id: 'u_parrillera', name: 'Parrillera Chica', unitPrice: 5200, desc: 'Carne desmechada, cebolla caramelizada y morrones.', img: 'https://images.loveat.la/media/13083/images/plates/663332' },
+            { id: 'u_panceta', name: 'Empanadaza X Panceta Chica', unitPrice: 5200, desc: 'Puré de batata, cebolla caramelizada y panceta braseada.', img: 'https://images.loveat.la/media/13083/images/plates/663334' },
+            { id: 'u_pollo', name: 'Empanadaza X Pollo Chica', unitPrice: 5200, desc: 'Cubos de pollo a la crema de mostaza suave.', img: 'https://images.loveat.la/media/13083/images/plates/663335' },
+            { id: 'u_salchicha', name: 'Empanadaza X Salchicha Chica', unitPrice: 5200, desc: 'Salchichas asadas con muzzarella y savora.', img: 'https://images.loveat.la/media/13083/images/plates/663336' },
+            { id: 'u_finde', name: 'Me la di el finde Chica', unitPrice: 5200, desc: 'Carne y bondiola a la barbacoa con panceta crocante.', img: 'https://images.loveat.la/media/13083/images/plates/663338' },
+            { id: 'u_5quesos', name: '5 Quesos Chica', unitPrice: 5200, desc: 'Mozzarella, parmesano, provoleta, roquefort y cremoso.', img: 'https://images.loveat.la/media/13083/images/plates/663339' },
+            { id: 'u_piden', name: 'La piden Todos Chica', unitPrice: 5200, desc: 'Albóndigas caseras, puré de papas y tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663343' },
+            { id: 'u_mancho', name: 'Me mancho seguro Chica', unitPrice: 5200, desc: 'Carne cortada a cuchillo con pimentón y criolla.', img: 'https://images.loveat.la/media/13083/images/plates/663358' },
+            { id: 'u_cuchara', name: 'Carne cortada a cuchara Chica', unitPrice: 5200, desc: 'Tierna carne vacuna con vegetales cocidos.', img: 'https://images.loveat.la/media/13083/images/plates/663359' },
+            { id: 'u_rompe', name: 'La rompe Toda Chica', unitPrice: 5200, desc: 'Matambre y queso fundido en salsa de tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663361' },
+            { id: 'u_buena', name: 'Carne de la buena Chica', unitPrice: 5200, desc: 'Bondiola desmechada con barbacoa y panceta.', img: 'https://images.loveat.la/media/13083/images/plates/663362' },
+            { id: 'u_gold', name: 'Chicken Gold Chica', unitPrice: 5200, desc: 'Pechuga, queso cheddar, panceta y barbacoa.', img: 'https://images.loveat.la/media/13083/images/plates/663363' },
+            { id: 'u_ch_jamon', name: 'Empachipá Jamón Chica', unitPrice: 5200, desc: 'Masa de chipá rellena de jamón y queso.', img: 'https://images.loveat.la/media/13083/images/plates/663344' },
+            { id: 'u_ch_matambre', name: 'Empachipá Matambre Chica', unitPrice: 5200, desc: 'Masa de chipá con matambre, queso y tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663365' },
+
+            { id: 'u_m_jamon_choclo', name: 'Miti Jamón - Choclo Chica', unitPrice: 5500, desc: 'Jamón del medio y Choclo Deluxe unidos.', img: 'https://images.loveat.la/media/13083/images/plates/663366' },
+            { id: 'u_m_burger_salchicha', name: 'Miti Burger - Salchicha Chica', unitPrice: 5500, desc: 'Burger Premium y Salchicha Tybo unidas.', img: 'https://images.loveat.la/media/13083/images/plates/663367' },
+            { id: 'u_m_dubai', name: 'Empadubai Especial Chica', unitPrice: 5500, desc: 'Pollo tandoori y carne shawarma con queso.', img: 'https://images.loveat.la/media/13083/images/plates/664088' },
+            { id: 'u_m_parri_pollo', name: 'Miti Parrillera - Empapollo Chica', unitPrice: 5500, desc: 'Parrillera y Empapollo con salsa blanca.', img: 'https://images.loveat.la/media/13083/images/plates/664505' },
+            { id: 'u_pz_muzza', name: 'Empamuzza Chica', unitPrice: 5500, desc: 'Formato empapizza muzzarella individual.', img: 'https://images.loveat.la/media/13083/images/plates/663368' },
+            { id: 'u_pz_fuga', name: 'Empazzeta Chica', unitPrice: 5500, desc: 'Cebolla caramelizada y doble queso fundido.', img: 'https://images.loveat.la/media/13083/images/plates/663369' },
+            { id: 'u_pz_napo', name: 'Empanapo Chica', unitPrice: 5500, desc: 'Muzzarella, rodajas de tomate y toque de ajo.', img: 'https://images.loveat.la/media/13083/images/plates/663370' },
+            { id: 'u_pz_verdura', name: 'Empaverdura Chica', unitPrice: 5500, desc: 'Verduras seleccionadas y abundante queso.', img: 'https://images.loveat.la/media/13083/images/plates/663371' },
+            { id: 'u_pa_chori', name: 'Empasánguche Chori Chico', unitPrice: 5500, desc: 'Chorizo de cerdo con criolla en masa crocante.', img: 'https://images.loveat.la/media/13083/images/plates/663331' },
+            { id: 'u_pa_morci', name: 'Empasánguche Morci Chico', unitPrice: 5500, desc: 'Morcilla bombón con muzzarella y toque curry.', img: 'https://images.loveat.la/media/13083/images/plates/663695' },
+            { id: 'u_pa_bondiola', name: 'Empasánguche Bondiolita Chico', unitPrice: 5500, desc: 'Bondiola braseada a la barbacoa con queso.', img: 'https://images.loveat.la/media/13083/images/plates/663696' }
+        ];
+
         const GALLERY_ITEMS = [
             { img: 'https://images.loveat.la/media/13083/images/plates/663366', title: 'Miti Jamón del Medio & Choclo Deluxe' },
             { img: 'https://images.loveat.la/media/13083/images/plates/663332', title: 'Parrillera Criolla Braseada' },
@@ -1798,7 +1747,33 @@
                 .replace(/'/g, "&#039;");
         }
 
-        // AVISOS VISUALES HTML
+        // PRECARGADOR EN SEGUNDO PLANO PARA VISUALIZACIÓN INSTANTÁNEA
+        function preloadAllCatalogImages() {
+            const allImgs = [...B2B_PRODUCTS, ...CHICAS_PRODUCTS, ...GALLERY_ITEMS].map(p => p.img);
+            const unique = [...new Set(allImgs)];
+
+            const loadNext = (index) => {
+                if (index >= unique.length) return;
+                const img = new Image();
+                img.decoding = 'async';
+                img.src = unique[index];
+                img.onload = img.onerror = () => {
+                    if (window.requestIdleCallback) {
+                        window.requestIdleCallback(() => loadNext(index + 1));
+                    } else {
+                        setTimeout(() => loadNext(index + 1), 30);
+                    }
+                };
+            };
+
+            if (window.requestIdleCallback) {
+                window.requestIdleCallback(() => loadNext(0));
+            } else {
+                setTimeout(() => loadNext(0), 100);
+            }
+        }
+
+        // AVISOS VISUALES HTML SOFISTICADOS
         function showNotification(msg, type = 'warning') {
             const banner = document.getElementById('b2bAlertBanner');
             const iconEl = document.getElementById('alertIcon');
@@ -1830,36 +1805,6 @@
             inputEl.classList.remove('input-error');
         }
 
-        // COPIADO DE ALIAS 100% COMPATIBLE (HTTPS, HTTP Y WEBVIEWS)
-        function copyAliasOfficial() {
-            const alias = "EMPANADAZAS24";
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(alias).then(() => {
-                    showNotification("Alias EMPANADAZAS24 copiado", "success");
-                }).catch(() => {
-                    fallbackCopy(alias);
-                });
-            } else {
-                fallbackCopy(alias);
-            }
-        }
-
-        function fallbackCopy(text) {
-            try {
-                const ta = document.createElement("textarea");
-                ta.value = text;
-                ta.style.position = "fixed";
-                ta.style.opacity = "0";
-                document.body.appendChild(ta);
-                ta.select();
-                document.execCommand("copy");
-                document.body.removeChild(ta);
-                showNotification("Alias EMPANADAZAS24 copiado", "success");
-            } catch (err) {
-                showNotification("Alias oficial: EMPANADAZAS24", "info");
-            }
-        }
-
         // PERSISTENCIA EN NAVEGADOR
         function saveCartToStorage() {
             try {
@@ -1874,7 +1819,7 @@
                 if (saved) {
                     const parsed = JSON.parse(saved);
                     for (const [k, v] of Object.entries(parsed)) {
-                        const exists = B2B_PRODUCTS.some(p => p.id === k);
+                        const exists = B2B_PRODUCTS.some(p => p.id === k) || CHICAS_PRODUCTS.some(p => p.id === k);
                         const num = parseInt(v, 10);
                         if (exists && !isNaN(num) && num > 0) {
                             wholesaleCart[k] = num;
@@ -1890,19 +1835,10 @@
             wholesaleCart = {};
             saveCartToStorage();
             renderCatalog(B2B_PRODUCTS);
+            renderChicasCatalog(CHICAS_PRODUCTS);
             updateWholesaleHUD();
             closeCheckoutModal();
             showNotification("Carrito vaciado correctamente", "info");
-        }
-
-        function finishOrderAndReset() {
-            wholesaleCart = {};
-            saveCartToStorage();
-            renderCatalog(B2B_PRODUCTS);
-            updateWholesaleHUD();
-            closeCheckoutModal();
-            switchView('compras');
-            showNotification("¡Listo! Carrito renovado para tu próximo pedido.", "success");
         }
 
         function switchView(viewId) {
@@ -1935,21 +1871,23 @@
             }
         }
 
+        // RENDER CATÁLOGO CAJAS X30
         function renderCatalog(items) {
             const grid = document.getElementById('catalogGrid');
             grid.innerHTML = '';
 
-            items.forEach(prod => {
+            items.forEach((prod, idx) => {
                 const boxes = parseInt(wholesaleCart[prod.id], 10) || 0;
                 const card = document.createElement('div');
                 card.className = `product-b2b-card ${boxes > 0 ? 'has-selection' : ''}`;
                 card.id = `card_${prod.id}`;
 
-                const safeName = prod.name.replace(/'/g, "\\'");
+                // Primeras 4 con carga prioritaria, el resto asincrónica
+                const loadAttr = idx < 4 ? 'loading="eager"' : 'loading="lazy"';
 
                 card.innerHTML = `
-                    <div class="card-img-wrap" onclick="openProductLightbox('${prod.img}', '${safeName}')">
-                        <img src="${prod.img}" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" class="card-img" alt="${prod.name}" loading="lazy" />
+                    <div class="card-img-wrap" onclick="openProductLightbox('${prod.img}', '${prod.name.replace(/'/g, "\\'")}')">
+                        <img src="${prod.img}" ${loadAttr} decoding="async" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" class="card-img" alt="${prod.name}" />
                         <span class="box-badge-floating">Caja x30 u.</span>
                     </div>
                     <div class="card-body">
@@ -1963,7 +1901,7 @@
                                 <span class="price-unit-sub">$${Math.round(prod.priceBox / BOX_UNITS)} / un.</span>
                             </div>
                             <div class="b2b-stepper">
-                                <button type="button" class="step-btn-b2b" onclick="modifyBoxes('${prod.id}', -1)" aria-label="Restar una caja">−</button>
+                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', -1)">−</button>
                                 <input type="number" 
                                        class="step-input-b2b" 
                                        id="input_${prod.id}" 
@@ -1971,10 +1909,57 @@
                                        min="0" 
                                        max="999"
                                        inputmode="numeric"
-                                       aria-label="Cantidad de cajas de ${prod.name}"
                                        oninput="handleDirectInput('${prod.id}', this.value)"
                                        onblur="handleInputBlur('${prod.id}', this)" />
-                                <button type="button" class="step-btn-b2b" onclick="modifyBoxes('${prod.id}', 1)" aria-label="Sumar una caja">+</button>
+                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', 1)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        // RENDER CATÁLOGO EMPANADAS CHICAS INDIVIDUALES
+        function renderChicasCatalog(items) {
+            const grid = document.getElementById('chicasCatalogGrid');
+            grid.innerHTML = '';
+
+            items.forEach((prod, idx) => {
+                const qty = parseInt(wholesaleCart[prod.id], 10) || 0;
+                const card = document.createElement('div');
+                card.className = `product-b2b-card ${qty > 0 ? 'has-selection' : ''}`;
+                card.id = `card_${prod.id}`;
+
+                const loadAttr = idx < 4 ? 'loading="eager"' : 'loading="lazy"';
+
+                card.innerHTML = `
+                    <div class="card-img-wrap" onclick="openProductLightbox('${prod.img}', '${prod.name.replace(/'/g, "\\'")}')">
+                        <img src="${prod.img}" ${loadAttr} decoding="async" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" class="card-img" alt="${prod.name}" />
+                        <span class="box-badge-floating unit-mode">Por Unidad</span>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <h4 class="product-name-b2b">${prod.name}</h4>
+                            <p class="product-desc-b2b">${prod.desc}</p>
+                        </div>
+                        <div class="card-footer-b2b">
+                            <div class="pricing-wrap">
+                                <span class="price-box-val">${formatMoney(prod.unitPrice)}</span>
+                                <span class="price-unit-sub">Precio unitario</span>
+                            </div>
+                            <div class="b2b-stepper">
+                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', -1)">−</button>
+                                <input type="number" 
+                                       class="step-input-b2b" 
+                                       id="input_${prod.id}" 
+                                       value="${qty}" 
+                                       min="0" 
+                                       max="999"
+                                       inputmode="numeric"
+                                       oninput="handleDirectInput('${prod.id}', this.value)"
+                                       onblur="handleInputBlur('${prod.id}', this)" />
+                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', 1)">+</button>
                             </div>
                         </div>
                     </div>
@@ -1987,13 +1972,13 @@
             const container = document.getElementById('galleryGridContainer');
             container.innerHTML = GALLERY_ITEMS.map((item, index) => `
                 <div class="gallery-item" onclick="openGalleryLightbox(${index})">
-                    <img src="${item.img}" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" alt="${item.title}" loading="lazy" />
+                    <img src="${item.img}" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" alt="${item.title}" />
                 </div>
             `).join('');
         }
 
-        // CONTROL MATEMÁTICO DE CANTIDADES
-        function modifyBoxes(prodId, delta) {
+        // CONTROL DE CANTIDADES (CAJAS Y UNIDADES)
+        function modifyQty(prodId, delta) {
             if ('vibrate' in navigator) navigator.vibrate(10);
 
             const current = parseInt(wholesaleCart[prodId], 10) || 0;
@@ -2045,17 +2030,26 @@
             inputEl.value = val;
         }
 
-        // PROGRESIÓN MATEMÁTICA Y ACTUALIZACIÓN DEL HUD (COMPACTO Y ROBUSTO)
+        // PROGRESIÓN Y ACTUALIZACIÓN DEL HUD
         function updateWholesaleHUD() {
             let totalBoxes = 0;
+            let totalChicasUnits = 0;
             let totalPrice = 0;
 
             for (const [id, count] of Object.entries(wholesaleCart)) {
                 const qty = parseInt(count, 10) || 0;
                 if (qty > 0) {
-                    totalBoxes += qty;
-                    const p = B2B_PRODUCTS.find(item => item.id === id);
-                    if (p) totalPrice += (p.priceBox * qty);
+                    const boxProd = B2B_PRODUCTS.find(item => item.id === id);
+                    if (boxProd) {
+                        totalBoxes += qty;
+                        totalPrice += (boxProd.priceBox * qty);
+                    } else {
+                        const chicaProd = CHICAS_PRODUCTS.find(item => item.id === id);
+                        if (chicaProd) {
+                            totalChicasUnits += qty;
+                            totalPrice += (chicaProd.unitPrice * qty);
+                        }
+                    }
                 }
             }
 
@@ -2065,16 +2059,17 @@
             const unitsText = document.getElementById('hudUnitsText');
             const moneyText = document.getElementById('hudTotalMoney');
 
-            const isMobile = window.innerWidth <= 680;
+            // La condición de desbloqueo permite avanzar si hay al menos 10 cajas O si compraron empanadas chicas
+            const isUnlocked = totalBoxes >= MIN_BOXES || totalChicasUnits > 0;
 
-            if (totalBoxes === 0) {
+            if (totalBoxes === 0 && totalChicasUnits === 0) {
                 fill.className = 'track-fill tier-bronze';
                 fill.style.width = '0%';
                 boxText.innerText = '0 de 10 cajas mínimas';
                 btnTrigger.classList.remove('unlocked');
                 btnTrigger.disabled = true;
-                btnTrigger.innerHTML = '<span>Mínimo 10 Cajas</span>';
-            } else if (totalBoxes < MIN_BOXES) {
+                btnTrigger.innerText = 'Mínimo 10 Cajas';
+            } else if (totalBoxes < MIN_BOXES && totalChicasUnits === 0) {
                 const percent = Math.round((totalBoxes / MIN_BOXES) * 40);
                 fill.className = 'track-fill tier-bronze';
                 fill.style.width = `${percent}%`;
@@ -2082,62 +2077,69 @@
                 btnTrigger.classList.remove('unlocked');
                 btnTrigger.disabled = true;
                 const missing = MIN_BOXES - totalBoxes;
-                btnTrigger.innerHTML = isMobile 
-                    ? `<span>Faltan ${missing} cajas (Mín. 10)</span>` 
-                    : `<span>Faltan ${missing} cajas para el mínimo</span>`;
+                btnTrigger.innerText = `Faltan ${missing} cajas para el mínimo`;
             } else if (totalBoxes < 25) {
-                const progressFrom10 = (totalBoxes - 10) / 15;
+                const progressFrom10 = Math.max(0, (totalBoxes - 10) / 15);
                 const percent = Math.round(40 + (progressFrom10 * 56));
                 fill.className = 'track-fill tier-green';
                 fill.style.width = `${percent}%`;
-                const toVip = 25 - totalBoxes;
-                boxText.innerText = isMobile 
-                    ? `${totalBoxes} cajas (¡OK! Faltan ${toVip} p/ Flete Gratis)`
-                    : `${totalBoxes} cajas (¡Mínimo OK! Faltan ${toVip} p/ Flete Bonificado)`;
+                const toVip = Math.max(0, 25 - totalBoxes);
+                boxText.innerText = `${totalBoxes} cajas ${totalChicasUnits > 0 ? `+ ${totalChicasUnits} u. chicas` : ''}`;
                 btnTrigger.classList.add('unlocked');
                 btnTrigger.disabled = false;
-                btnTrigger.innerHTML = isMobile
-                    ? `<span>Confirmar (${totalBoxes} Cajas)</span>`
-                    : `<span>Confirmar Pedido (${totalBoxes} Cajas)</span>`;
+                btnTrigger.innerText = `Confirmar Pedido`;
             } else {
                 fill.className = 'track-fill tier-gold';
                 fill.style.width = '100%';
-                boxText.innerText = isMobile 
-                    ? `${totalBoxes} cajas • Nivel Distribuidor (Flete Gratis)`
-                    : `${totalBoxes} cajas • Nivel Distribuidor Pleno (Flete Bonificado)`;
+                boxText.innerText = `${totalBoxes} cajas • Nivel Pleno ${totalChicasUnits > 0 ? `(+${totalChicasUnits} u.)` : ''}`;
                 btnTrigger.classList.add('unlocked');
                 btnTrigger.disabled = false;
-                btnTrigger.innerHTML = isMobile
-                    ? `<span>Confirmar (${totalBoxes} Cajas)</span>`
-                    : `<span>Confirmar Pedido (${totalBoxes} Cajas)</span>`;
+                btnTrigger.innerText = `Confirmar Pedido`;
             }
 
-            unitsText.innerText = `${totalBoxes * BOX_UNITS} empanadas`;
+            const totalEmpanadasUnits = (totalBoxes * BOX_UNITS) + totalChicasUnits;
+            unitsText.innerText = `${totalEmpanadasUnits} empanadas seleccionadas`;
             moneyText.innerText = formatMoney(totalPrice);
         }
 
-        // BÚSQUEDA TOLERANTE A ACENTOS
-        function handleSearchInput(val) {
+        // BÚSQUEDA
+        function handleSearchInput(val, targetCatalog) {
             const query = cleanString(val);
-            const btnClear = document.getElementById('btnClearSearch');
-            btnClear.style.display = query ? 'flex' : 'none';
-
-            const filtered = B2B_PRODUCTS.filter(p => 
-                cleanString(p.name).includes(query) || cleanString(p.desc).includes(query)
-            );
-            renderCatalog(filtered);
+            if (targetCatalog === 'boxes') {
+                const btnClear = document.getElementById('btnClearSearch');
+                btnClear.style.display = query ? 'flex' : 'none';
+                const filtered = B2B_PRODUCTS.filter(p => 
+                    cleanString(p.name).includes(query) || cleanString(p.desc).includes(query)
+                );
+                renderCatalog(filtered);
+            } else {
+                const btnClear = document.getElementById('btnClearSearchChicas');
+                btnClear.style.display = query ? 'flex' : 'none';
+                const filtered = CHICAS_PRODUCTS.filter(p => 
+                    cleanString(p.name).includes(query) || cleanString(p.desc).includes(query)
+                );
+                renderChicasCatalog(filtered);
+            }
         }
 
-        function clearSearchInput() {
-            const input = document.getElementById('b2bSearch');
-            input.value = '';
-            document.getElementById('btnClearSearch').style.display = 'none';
-            input.focus();
-            renderCatalog(B2B_PRODUCTS);
+        function clearSearchInput(targetCatalog) {
+            if (targetCatalog === 'boxes') {
+                const input = document.getElementById('b2bSearch');
+                input.value = '';
+                document.getElementById('btnClearSearch').style.display = 'none';
+                input.focus();
+                renderCatalog(B2B_PRODUCTS);
+            } else {
+                const input = document.getElementById('b2bSearchChicas');
+                input.value = '';
+                document.getElementById('btnClearSearchChicas').style.display = 'none';
+                input.focus();
+                renderChicasCatalog(CHICAS_PRODUCTS);
+            }
         }
 
-        function filterCat(catName, btnEl) {
-            document.querySelectorAll('.cat-chip').forEach(b => b.classList.remove('active'));
+        function filterCatBoxes(catName, btnEl) {
+            document.querySelectorAll('#view-compras .cat-chip').forEach(b => b.classList.remove('active'));
             btnEl.classList.add('active');
 
             if (catName === 'todas') {
@@ -2216,19 +2218,28 @@
         document.getElementById('lightboxImage').addEventListener('click', (e) => {
             e.stopPropagation();
             isImageZoomed = !isImageZoomed;
-            e.target.style.transform = isImageZoomed ? 'scale(1.7)' : 'scale(1)';
+            e.target.style.transform = isImageZoomed ? 'scale(1.75)' : 'scale(1)';
             e.target.style.cursor = isImageZoomed ? 'zoom-out' : 'zoom-in';
         });
 
-        // CHECKOUT Y VALIDACIÓN CON AVISO HTML
+        // CHECKOUT
         function openCheckoutModal() {
             let totalBoxes = 0;
-            for (const count of Object.values(wholesaleCart)) {
-                totalBoxes += (parseInt(count, 10) || 0);
+            let totalChicas = 0;
+
+            for (const [id, count] of Object.entries(wholesaleCart)) {
+                const qty = parseInt(count, 10) || 0;
+                if (B2B_PRODUCTS.some(p => p.id === id)) totalBoxes += qty;
+                if (CHICAS_PRODUCTS.some(p => p.id === id)) totalChicas += qty;
             }
 
-            if (totalBoxes < MIN_BOXES) {
-                showNotification(`El pedido mínimo es de ${MIN_BOXES} cajas (llevás ${totalBoxes}).`, "warning");
+            if (totalBoxes === 0 && totalChicas === 0) {
+                showNotification("Tu carrito está vacío. Agregá productos para continuar.", "warning");
+                return;
+            }
+
+            if (totalBoxes > 0 && totalBoxes < MIN_BOXES && totalChicas === 0) {
+                showNotification(`El pedido mínimo de cajas cerradas es de ${MIN_BOXES} (llevás ${totalBoxes}).`, "warning");
                 return;
             }
 
@@ -2238,54 +2249,56 @@
 
             renderOrderSummary();
             document.getElementById('checkoutModal').classList.add('active');
-            selectPayMethod('transferencia');
         }
 
         function renderOrderSummary() {
             const recap = document.getElementById('summaryRecapBox');
             recap.innerHTML = '';
 
-            let totalBoxes = 0;
             let subtotal = 0;
+            let countLines = 0;
 
             for (const [id, count] of Object.entries(wholesaleCart)) {
                 const qty = parseInt(count, 10) || 0;
                 if (qty > 0) {
-                    totalBoxes += qty;
-                    const p = B2B_PRODUCTS.find(item => item.id === id);
-                    if (p) {
-                        const rowPrice = p.priceBox * qty;
+                    const boxProd = B2B_PRODUCTS.find(item => item.id === id);
+                    if (boxProd) {
+                        countLines++;
+                        const rowPrice = boxProd.priceBox * qty;
                         subtotal += rowPrice;
                         const div = document.createElement('div');
-                        div.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:3px; gap:8px;';
+                        div.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:3px;';
                         div.innerHTML = `
-                            <span style="overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">${qty}x ${p.name}</span>
-                            <strong style="color:var(--bronze-bright); flex-shrink:0;">${formatMoney(rowPrice)}</strong>
+                            <span>${qty}x Caja ${boxProd.name} (${qty * BOX_UNITS}u)</span>
+                            <strong style="color:var(--bronze-bright);">${formatMoney(rowPrice)}</strong>
                         `;
                         recap.appendChild(div);
+                    } else {
+                        const chicaProd = CHICAS_PRODUCTS.find(item => item.id === id);
+                        if (chicaProd) {
+                            countLines++;
+                            const rowPrice = chicaProd.unitPrice * qty;
+                            subtotal += rowPrice;
+                            const div = document.createElement('div');
+                            div.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:3px;';
+                            div.innerHTML = `
+                                <span>${qty}x ${chicaProd.name}</span>
+                                <strong style="color:var(--bronze-bright);">${formatMoney(rowPrice)}</strong>
+                            `;
+                            recap.appendChild(div);
+                        }
                     }
                 }
             }
 
-            const discount = currentPayMethod === 'transferencia' ? Math.round(subtotal * 0.10) : 0;
-            const finalTotal = subtotal - discount;
-
             const totalDiv = document.createElement('div');
-            totalDiv.style.cssText = 'margin-top:4px; font-weight:900; display:flex; flex-direction:column; gap:2px; font-size:0.85rem; color:#FEFAE4;';
+            totalDiv.style.cssText = 'margin-top:6px; font-weight:900; display:flex; flex-direction:column; gap:3px; font-size:0.92rem; color:#FEFAE4; border-top:1px solid rgba(255,255,255,0.1); padding-top:4px;';
             totalDiv.innerHTML = `
                 <div style="display:flex; justify-content:space-between;">
-                    <span>Subtotal (${totalBoxes} Cajas):</span>
-                    <span>${formatMoney(subtotal)}</span>
+                    <span>TOTAL ESTIMADO:</span>
+                    <span style="color:#4ADE80; font-size:1.05rem;">${formatMoney(subtotal)}</span>
                 </div>
-                ${discount > 0 ? `
-                <div style="display:flex; justify-content:space-between; color:#4ADE80; font-size:0.78rem;">
-                    <span>Bonificación Transferencia (10% OFF):</span>
-                    <span>-${formatMoney(discount)}</span>
-                </div>` : ''}
-                <div style="display:flex; justify-content:space-between; font-size:0.92rem; margin-top:2px; border-top:1px solid rgba(255,255,255,0.1); padding-top:4px;">
-                    <span>TOTAL A PAGAR:</span>
-                    <span style="color:#4ADE80;">${formatMoney(finalTotal)}</span>
-                </div>
+                <span style="font-size:0.68rem; color:var(--text-muted); font-weight:600;">(Facturación y medios de pago se coordinan telefónicamente)</span>
             `;
             recap.appendChild(totalDiv);
         }
@@ -2294,149 +2307,108 @@
             document.getElementById('checkoutModal').classList.remove('active');
         }
 
-        function selectPayMethod(method) {
-            currentPayMethod = method;
-            const optTransf = document.getElementById('optPayTransfer');
-            const optMP = document.getElementById('optPayMP');
-            const bankBox = document.getElementById('bankDetailsBox');
-            const mpBox = document.getElementById('mpNoticeBox');
-
-            if (method === 'transferencia') {
-                optTransf.classList.add('selected');
-                optMP.classList.remove('selected');
-                bankBox.style.display = 'flex';
-                mpBox.style.display = 'none';
-            } else {
-                optMP.classList.add('selected');
-                optTransf.classList.remove('selected');
-                bankBox.style.display = 'none';
-                mpBox.style.display = 'block';
-            }
-            renderOrderSummary();
-        }
-
         function generateOrderAndPay() {
             const inputName = document.getElementById('b2bClientName');
             const inputCuit = document.getElementById('b2bCuit');
-            const inputAddress = document.getElementById('b2bAddress');
             const inputPhone = document.getElementById('b2bPhone');
-            const inputNotes = document.getElementById('b2bNotes');
 
             const name = inputName.value.trim();
             const cuit = inputCuit.value.trim();
-            const address = inputAddress.value.trim();
             const phone = inputPhone.value.trim();
-            const notes = inputNotes.value.trim();
             const fiscalType = document.getElementById('b2bFiscalType').value;
 
-            // Validación rigurosa de campos comerciales
-            if (!name || name.length < 3) {
+            if (!name) {
                 inputName.classList.add('input-error');
                 inputName.focus();
                 showNotification("Ingresá la Razón Social o Nombre del Comercio.", "warning");
                 return;
             }
-
-            const cleanCuitDigits = cuit.replace(/\D/g, '');
-            if (!cuit || cleanCuitDigits.length < 7) {
+            if (!cuit) {
                 inputCuit.classList.add('input-error');
                 inputCuit.focus();
-                showNotification("Ingresá un CUIT o DNI válido para facturar.", "warning");
+                showNotification("Ingresá el CUIT o DNI para la facturación.", "warning");
                 return;
             }
-
-            if (!address || address.length < 5) {
-                inputAddress.classList.add('input-error');
-                inputAddress.focus();
-                showNotification("Indicá la dirección exacta de entrega con entrecalles.", "warning");
-                return;
-            }
-
-            const cleanPhoneDigits = phone.replace(/\D/g, '');
-            if (!phone || cleanPhoneDigits.length < 8) {
+            if (!phone) {
                 inputPhone.classList.add('input-error');
                 inputPhone.focus();
-                showNotification("Ingresá un WhatsApp válido de al menos 8 dígitos.", "warning");
+                showNotification("Ingresá un WhatsApp de contacto.", "warning");
                 return;
             }
 
             let structuredItems = [];
             let totalBoxes = 0;
+            let totalChicas = 0;
             let subtotal = 0;
 
             for (const [id, count] of Object.entries(wholesaleCart)) {
                 const qty = parseInt(count, 10) || 0;
                 if (qty > 0) {
-                    const p = B2B_PRODUCTS.find(item => item.id === id);
-                    if (p) {
+                    const boxProd = B2B_PRODUCTS.find(item => item.id === id);
+                    if (boxProd) {
                         totalBoxes += qty;
-                        subtotal += (p.priceBox * qty);
+                        subtotal += (boxProd.priceBox * qty);
                         structuredItems.push({
-                            name: p.name,
+                            type: 'box',
+                            name: boxProd.name,
                             boxes: qty,
                             units: qty * BOX_UNITS,
-                            subtotal: p.priceBox * qty
+                            subtotal: boxProd.priceBox * qty
                         });
+                    } else {
+                        const chicaProd = CHICAS_PRODUCTS.find(item => item.id === id);
+                        if (chicaProd) {
+                            totalChicas += qty;
+                            subtotal += (chicaProd.unitPrice * qty);
+                            structuredItems.push({
+                                type: 'unit',
+                                name: chicaProd.name,
+                                units: qty,
+                                subtotal: chicaProd.unitPrice * qty
+                            });
+                        }
                     }
                 }
             }
 
-            if (totalBoxes < MIN_BOXES) {
-                showNotification(`El pedido mínimo es de ${MIN_BOXES} cajas.`, "warning");
-                return;
-            }
-
-            const discount = currentPayMethod === 'transferencia' ? Math.round(subtotal * 0.10) : 0;
-            const finalPrice = subtotal - discount;
-            
-            // Código de orden trazable (Día, Mes y Número Único)
-            const today = new Date();
-            const dayStr = String(today.getDate()).padStart(2, '0');
-            const monthStr = String(today.getMonth() + 1).padStart(2, '0');
-            const randomCode = Math.floor(1000 + Math.random() * 9000);
-            const orderNum = `EMP-${dayStr}${monthStr}-${randomCode}`;
+            const orderNum = 'EMP-' + Math.floor(1000 + Math.random() * 9000);
 
             generatedOrderData = {
                 orderNum,
                 name,
                 cuit,
                 fiscalType,
-                address,
                 phone,
-                notes,
                 totalBoxes,
-                totalUnits: totalBoxes * BOX_UNITS,
+                totalChicas,
                 subtotal,
-                discount,
-                finalPrice,
-                items: structuredItems,
-                method: currentPayMethod
+                items: structuredItems
             };
 
             document.getElementById('checkoutFormWrapper').style.display = 'none';
             document.getElementById('voucherSuccessBox').style.display = 'flex';
             document.getElementById('checkoutModalTitle').innerText = 'Orden Registrada';
-            document.getElementById('voucherCodeLabel').innerText = `ORDEN #${orderNum}`;
+            document.getElementById('voucherCodeLabel').innerText = `ORDEN #${orderNum} CONFIRMADA`;
+
+            let volumeDetail = [];
+            if (totalBoxes > 0) volumeDetail.push(`${totalBoxes} Cajas (${totalBoxes * BOX_UNITS} unidades)`);
+            if (totalChicas > 0) volumeDetail.push(`${totalChicas} Unidades chicas`);
 
             const recapHtml = `
-                <div><strong>Comercio:</strong> ${escapeHtml(name)} (${escapeHtml(fiscalType)})</div>
-                <div><strong>Identificación:</strong> CUIT/DNI ${escapeHtml(cuit)}</div>
-                <div><strong>Entrega:</strong> ${escapeHtml(address)}</div>
-                ${notes ? `<div><strong>Observaciones:</strong> ${escapeHtml(notes)}</div>` : ''}
+                <div><strong>Comercio / Cliente:</strong> ${escapeHtml(name)}</div>
+                <div><strong>Facturación:</strong> ${escapeHtml(fiscalType)} (CUIT/DNI: ${escapeHtml(cuit)})</div>
                 <div><strong>Teléfono:</strong> ${escapeHtml(phone)}</div>
-                <div><strong>Volumen:</strong> ${totalBoxes} Cajas (${totalBoxes * BOX_UNITS} unidades)</div>
-                <div style="margin-top:4px;"><strong>Subtotal:</strong> ${formatMoney(subtotal)}</div>
-                ${discount > 0 ? `<div style="color:#4ADE80;"><strong>Bonificación Transferencia:</strong> -${formatMoney(discount)} (10% OFF)</div>` : ''}
-                <div style="margin-top:4px; font-weight:800; font-size:0.92rem; color:#4ADE80;">TOTAL: ${formatMoney(finalPrice)}</div>
-                <div style="margin-top:4px; font-size:0.72rem; color:var(--text-muted);">
-                    ${currentPayMethod === 'transferencia' ? 'Medio de Pago: Transferencia Inmediata (Alias: EMPANADAZAS24)' : 'Medio de Pago: Mercado Pago / Tarjetas (Link por WhatsApp)'}
+                <div><strong>Volumen Total:</strong> ${volumeDetail.join(' + ')}</div>
+                <div style="margin-top:6px; font-weight:800; font-size:0.95rem; color:#4ADE80;">TOTAL ESTIMADO: ${formatMoney(subtotal)}</div>
+                <div style="margin-top:6px; font-size:0.75rem; color:var(--text-muted);">
+                    Pago y facturación se definirán en la llamada de coordinación con el asesor comercial.
                 </div>
             `;
             document.getElementById('voucherDetailsRecap').innerHTML = recapHtml;
         }
 
         // =========================================================================
-        // ENVÍO EXACTO DE PEDIDO POR WHATSAPP (PLANTILLA OFICIAL)
+        // ENVÍO LIMPIO Y ESTÉTICO A WHATSAPP
         // =========================================================================
         function sendOrderWhatsApp(contactPerson) {
             if (!generatedOrderData || !generatedOrderData.items) return;
@@ -2444,57 +2416,39 @@
             const targetNumber = contactPerson === 'pablo' ? WSP_PABLO : WSP_ALBANO;
             const personName = contactPerson === 'pablo' ? 'Pablo' : 'Albano';
 
-            const itemsList = generatedOrderData.items
-                .map(it => `• x${it.boxes} cajas (${it.units} u.) - ${it.name}`)
-                .join('\n');
+            // Une todos los productos en una sola línea separados por ' + ' como pediste
+            const itemsString = generatedOrderData.items.map(it => {
+                if (it.type === 'box') {
+                    return `${it.boxes} cajas (${it.units} u.) ${it.name}: ${formatMoney(it.subtotal)}`;
+                } else {
+                    return `${it.units} u. chicas ${it.name}: ${formatMoney(it.subtotal)}`;
+                }
+            }).join(' + ');
 
-            const paymentMethodText = generatedOrderData.method === 'transferencia'
-                ? 'Transferencia Bancaria (Alias: EMPANADAZAS24)'
-                : 'Mercado Pago (Solicito link de cobro)';
+            // Armamos el texto codificando línea por línea para que WhatsApp no lo junte nunca
+            const textUrl = 
+                encodeURIComponent(`Hola ${personName}, qué tal, te paso el pedido mayorista:`) + "%0A" +
+                encodeURIComponent(`*Pedido:* #${generatedOrderData.orderNum}`) + "%0A" +
+                encodeURIComponent(`*Comercio:* ${generatedOrderData.name}`) + "%0A" +
+                encodeURIComponent(`*CUIT / DNI:* ${generatedOrderData.cuit}`) + "%0A" +
+                encodeURIComponent(`*Factura:* ${generatedOrderData.fiscalType}`) + "%0A" +
+                encodeURIComponent(`*Contacto:* ${generatedOrderData.phone}`) + "%0A%0A" +
+                encodeURIComponent(`*Detalle:* - ${itemsString}`) + "%0A" +
+                encodeURIComponent(`*Total:* ${formatMoney(generatedOrderData.subtotal)}.`) + "%0A%0A" +
+                encodeURIComponent(`Quedo a la espera para coordinar pago y entrega, ¡muchas gracias!`);
 
-            const discountText = generatedOrderData.discount > 0
-                ? `-${formatMoney(generatedOrderData.discount)} (10% OFF)`
-                : 'No Aplica';
-
-            const notesText = generatedOrderData.notes ? generatedOrderData.notes : 'Sin observaciones';
-
-            const message = 
-`¡Hola ${personName}! Te envío un nuevo pedido mayorista desde la web:
-
-*Pedido:* #${generatedOrderData.orderNum}
-*Comercio:* ${generatedOrderData.name}
-*CUIT / DNI:* ${generatedOrderData.cuit} (${generatedOrderData.fiscalType})
-*Dirección de entrega:* ${generatedOrderData.address}
-*Teléfono:* ${generatedOrderData.phone}
-*Horario / Observaciones:* ${notesText}
- 
-*DETALLE DE CAJAS:*
-${itemsList}
-
-*Subtotal:* ${formatMoney(generatedOrderData.subtotal)}
-*Descuento:* ${discountText}
-*TOTAL FINAL:* *${formatMoney(generatedOrderData.finalPrice)}*
-*Forma de pago:* ${paymentMethodText}
-
-Quedo a la espera de la confirmación y fecha estimada de entrega. ¡Muchas gracias!`;
-
-            window.open(`https://wa.me/${targetNumber}?text=${encodeURIComponent(message)}`, '_blank');
+            const url = `https://wa.me/${targetNumber}?text=${textUrl}`;
+            window.open(url, '_blank');
         }
 
         // INICIALIZACIÓN
         window.addEventListener('DOMContentLoaded', () => {
-            // Actualizamos dinámicamente el botón de TODOS con el recuento real
-            const chipTodas = document.getElementById('chip-todas');
-            if (chipTodas) chipTodas.innerText = `TODOS (${B2B_PRODUCTS.length})`;
-
             loadCartFromStorage();
             renderCatalog(B2B_PRODUCTS);
+            renderChicasCatalog(CHICAS_PRODUCTS);
             renderGallery();
             updateWholesaleHUD();
-        });
-
-        window.addEventListener('resize', () => {
-            updateWholesaleHUD();
+            preloadAllCatalogImages();
         });
     </script>
 </body>
