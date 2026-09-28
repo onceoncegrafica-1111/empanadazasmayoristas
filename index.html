@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Empanadazas® | Portal Mayorista B2B Oficial</title>
-    <meta name="description" content="Venta mayorista de empanadas crudas congeladas en cajas cerradas de 30 unidades y línea de empanadas chicas individuales.">
+    <meta name="description" content="Venta mayorista de empanadas crudas congeladas en cajas cerradas de 30 y 40 unidades sin toppings. Distribución oficial a comercios y franquicias.">
 
     <meta name="theme-color" content="#131412">
     <meta name="mobile-web-app-capable" content="yes">
@@ -184,15 +184,15 @@
             box-shadow: 0 0 10px rgba(247, 194, 104, 0.2);
         }
 
-        /* NAVEGACIÓN CORPORATIVA SUIZA */
+        /* NAVEGACIÓN CORPORATIVA SUIZA (SIN SOLAPAS INNECESARIAS) */
         .nav-tabs-bar {
             order: 3;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 4px;
+            gap: 5px;
             width: 100%;
-            max-width: 600px;
+            max-width: 580px;
             background: rgba(26, 28, 23, 0.95);
             border: 1px solid var(--border-card);
             border-radius: 999px;
@@ -206,11 +206,11 @@
             border: none;
             color: var(--text-muted);
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(0.68rem, 2.2vw, 0.78rem);
+            font-size: clamp(0.70rem, 2.3vw, 0.78rem);
             font-weight: 800;
-            letter-spacing: 0.04em;
+            letter-spacing: 0.03em;
             text-transform: uppercase;
-            padding: 7px 8px;
+            padding: 7px 10px;
             border-radius: 999px;
             cursor: pointer;
             transition: all 0.2s var(--spring);
@@ -268,7 +268,7 @@
             to { opacity: 1; transform: translateY(0); }
         }
 
-        /* BANNER INFORMATIVO */
+        /* BANNERS INFORMATIVOS CON REGLA CLARA "SIN TOPPING" */
         .b2b-hero-banner {
             background: linear-gradient(135deg, rgba(35, 37, 30, 0.95) 0%, rgba(22, 23, 19, 0.95) 100%);
             border: 1.5px solid var(--border-card);
@@ -295,51 +295,26 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 12px;
+            gap: 10px;
             flex-wrap: wrap;
             font-size: 0.82rem;
             color: var(--brand-cream-muted);
             font-weight: 600;
         }
 
-        .bullet-dot { color: var(--bronze-bright); font-weight: 900; }
-
-        /* BANNER CROSS-SECTION ELEGANTE */
-        .cross-link-card {
-            background: rgba(26, 28, 23, 0.92);
-            border: 1px dashed var(--bronze-bright);
-            border-radius: 14px;
-            padding: 10px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 16px;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-        .cross-link-card:hover {
-            background: rgba(36, 38, 30, 0.98);
-            border-color: var(--border-hover);
-        }
-        .cross-link-text {
-            font-size: 0.80rem;
-            font-weight: 700;
-            color: var(--brand-cream-muted);
-        }
-        .cross-link-text strong {
-            color: var(--bronze-bright);
-        }
-        .cross-link-btn {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.74rem;
-            font-weight: 800;
-            color: #12130F;
-            background: var(--bronze-bright);
-            padding: 5px 12px;
-            border-radius: 8px;
+        .highlight-notice-pill {
+            background: rgba(239, 68, 68, 0.16);
+            color: #F87171;
+            border: 1px solid rgba(239, 68, 68, 0.4);
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-weight: 900;
             text-transform: uppercase;
-            white-space: nowrap;
+            font-size: 0.72rem;
+            letter-spacing: 0.04em;
         }
+
+        .bullet-dot { color: var(--bronze-bright); font-weight: 900; }
 
         /* CONTROLES DEL CATÁLOGO */
         .catalog-controls {
@@ -403,6 +378,7 @@
             flex-wrap: wrap;
         }
 
+        /* CHIPS RESPONSIVE SIN CORTE DE RENGLONES */
         .category-chips-scroll {
             display: flex;
             gap: 6px;
@@ -426,6 +402,7 @@
             text-transform: uppercase;
             letter-spacing: 0.04em;
             transition: all 0.2s ease;
+            flex-shrink: 0;
         }
 
         .cat-chip.active, .cat-chip:hover {
@@ -525,11 +502,7 @@
             padding: 3px 8px;
             border-radius: 6px;
             text-transform: uppercase;
-        }
-        .box-badge-floating.unit-mode {
-            border-color: #4ADE80;
-            color: #86EFAC;
-            background: rgba(14, 26, 17, 0.92);
+            white-space: nowrap;
         }
 
         .card-body {
@@ -685,7 +658,7 @@
             gap: 16px;
         }
 
-        /* ADAPTACIÓN MÓVIL */
+        /* ADAPTACIÓN MÓVIL SIN DESBORDES */
         @media (max-width: 680px) {
             .products-b2b-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -693,13 +666,13 @@
             }
             .card-img-wrap { height: 115px; }
             .card-body { padding: 10px; gap: 8px; }
-            .product-name-b2b { font-size: 0.95rem; }
-            .product-desc-b2b { font-size: 0.72rem; min-height: 30px; -webkit-line-clamp: 2; }
-            .price-box-val { font-size: 1.1rem; }
-            .price-unit-sub { font-size: 0.62rem; }
+            .product-name-b2b { font-size: 0.92rem; }
+            .product-desc-b2b { font-size: 0.70rem; min-height: 28px; -webkit-line-clamp: 2; }
+            .price-box-val { font-size: 1.05rem; }
+            .price-unit-sub { font-size: 0.60rem; }
             .b2b-stepper { height: 32px; }
             .step-btn-b2b { width: 28px; }
-            .step-input-b2b { width: 36px; font-size: 0.88rem; }
+            .step-input-b2b { width: 36px; font-size: 0.86rem; }
             .box-badge-floating { font-size: 0.58rem; padding: 2px 6px; }
         }
 
@@ -924,7 +897,7 @@
             40%, 80% { transform: translateX(4px); }
         }
 
-        /* SECCIONES NOSOTROS, GALERÍA Y CONTACTO */
+        /* SECCIONES GALERÍA Y CONTACTO */
         .info-card-luxury {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
@@ -951,36 +924,6 @@
             line-height: 1.6;
             color: var(--brand-cream-muted);
             font-weight: 500;
-        }
-
-        .features-grid-b2b {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 12px;
-            margin-top: 6px;
-        }
-
-        .feature-box {
-            background: rgba(20, 22, 18, 0.95);
-            border: 1px solid var(--border-card);
-            border-radius: 14px;
-            padding: 14px;
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .feature-title {
-            font-size: 0.88rem;
-            font-weight: 800;
-            color: var(--bronze-bright);
-            text-transform: uppercase;
-        }
-
-        .feature-desc {
-            font-size: 0.78rem;
-            color: var(--text-muted);
-            line-height: 1.4;
         }
 
         .gallery-grid {
@@ -1019,24 +962,24 @@
             background: rgba(22, 24, 19, 0.94);
             border: 1.5px solid var(--border-card);
             border-radius: 18px;
-            padding: 18px;
+            padding: 22px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 12px;
             height: 100%;
         }
 
         .agent-role {
-            font-size: 0.68rem;
-            font-weight: 800;
+            font-size: 0.70rem;
+            font-weight: 900;
             color: var(--bronze-bright);
             text-transform: uppercase;
-            letter-spacing: 0.06em;
+            letter-spacing: 0.08em;
         }
 
         .agent-name {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             font-weight: 900;
             color: var(--brand-cream);
         }
@@ -1045,10 +988,10 @@
             background: linear-gradient(135deg, #22C55E 0%, #16A34A 100%);
             color: #032311;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.82rem;
-            font-weight: 800;
+            font-size: 0.86rem;
+            font-weight: 900;
             text-decoration: none;
-            padding: 11px 16px;
+            padding: 13px 18px;
             border-radius: 12px;
             display: inline-flex;
             align-items: center;
@@ -1143,12 +1086,6 @@
             font-weight: 800;
             color: var(--bronze-bright);
             text-transform: uppercase;
-        }
-
-        .f-label span {
-            color: var(--text-muted);
-            font-weight: 600;
-            text-transform: none;
         }
 
         .f-input {
@@ -1317,7 +1254,7 @@
     <!-- MASTER HEADER SLIM -->
     <header class="master-header">
         <div class="header-inner-container">
-            <a class="brand-logo-wrap" onclick="switchView('compras')">
+            <a class="brand-logo-wrap" onclick="switchView('linea140')">
                 <svg class="logo-circle-svg" viewBox="0 0 482.94 482.94" xmlns="http://www.w3.org/2000/svg">
                     <circle fill="#231F20" cx="241.47" cy="241.47" r="241.47"/>
                     <g>
@@ -1340,11 +1277,10 @@
                 </svg>
             </a>
 
-            <!-- NAVEGACIÓN CORPORATIVA SUIZA -->
+            <!-- NAVEGACIÓN CORPORATIVA SUIZA (NOSOTROS ELIMINADO) -->
             <nav class="nav-tabs-bar">
-                <button class="nav-tab-btn active" id="tabBtn-compras" onclick="switchView('compras')">Empanadazas</button>
-                <button class="nav-tab-btn" id="tabBtn-chicas" onclick="switchView('chicas')">Empanadas 100gr</button>
-                <button class="nav-tab-btn" id="tabBtn-nosotros" onclick="switchView('nosotros')">Nosotros</button>
+                <button class="nav-tab-btn active" id="tabBtn-linea140" onclick="switchView('linea140')">Línea 140gr (x30)</button>
+                <button class="nav-tab-btn" id="tabBtn-linea100" onclick="switchView('linea100')">Línea 100gr (x40)</button>
                 <button class="nav-tab-btn" id="tabBtn-galeria" onclick="switchView('galeria')">Galería</button>
                 <button class="nav-tab-btn" id="tabBtn-contacto" onclick="switchView('contacto')">Contacto</button>
             </nav>
@@ -1355,149 +1291,113 @@
         </div>
     </header>
 
-    <!-- SECCIÓN 1: COMPRAS MAYORISTAS EN CAJAS DE 30 -->
-    <main class="view-section active" id="view-compras">
+    <!-- SECCIÓN 1: LÍNEA 140GR EN CAJAS X30 (SIN TOPPING) -->
+    <main class="view-section active" id="view-linea140">
         <div class="b2b-hero-banner">
-            <h2 class="b2b-hero-title">EMPANADAS CRUDAS <span>CONGELADAS</span></h2>
+            <h2 class="b2b-hero-title">LÍNEA 140 Gr <span>CONGELADAS</span></h2>
             <div class="b2b-hero-bullets">
                 <span>Cajas cerradas x <strong>30 unidades</strong></span>
                 <span class="bullet-dot">✦</span>
-                <span>Ultracongeladas IQF de fábrica</span>
+                <span class="highlight-notice-pill">100% SIN TOPPING</span>
                 <span class="bullet-dot">✦</span>
-                <span>Mínimo: <strong>10 cajas (300 u.)</strong></span>
+                <span>Mínimo general: <strong>10 cajas</strong></span>
             </div>
-        </div>
-
-        <!-- LINK RÁPIDO A SECCIÓN DE EMPANADAS CHICAS -->
-        <div class="cross-link-card" onclick="switchView('chicas')">
-            <span class="cross-link-text">¿Buscás empanadas <strong>chicas por caja?</strong></span>
-            <span class="cross-link-btn">Ver Línea Chicas ➔</span>
         </div>
 
         <div class="catalog-controls">
             <div class="search-bar-wrap">
-                <input type="text" id="b2bSearch" class="search-input" placeholder="Buscar sabor (ej. parrillera, roquefort, matambre, cheddar)..." autocomplete="off" oninput="handleSearchInput(this.value, 'boxes')" />
-                <button type="button" class="btn-clear-search" id="btnClearSearch" onclick="clearSearchInput('boxes')" title="Borrar búsqueda">✕</button>
+                <input type="text" id="b2bSearch140" class="search-input" placeholder="Buscar sabor (ej. parrillera, 5 quesos, vacía, chipá)..." autocomplete="off" oninput="handleSearchInput(this.value, 'linea140')" />
+                <button type="button" class="btn-clear-search" id="btnClearSearch140" onclick="clearSearchInput('linea140')" title="Borrar búsqueda">✕</button>
             </div>
 
             <div class="filter-header-bar">
-                <div class="category-chips-scroll">
-                    <button class="cat-chip active" onclick="filterCatBoxes('todas', this)">TODOS (40+)</button>
-                    <button class="cat-chip" onclick="filterCatBoxes('mitimiti', this)">MITI-MITI® XXL</button>
-                    <button class="cat-chip" onclick="filterCatBoxes('empanadazas', this)">EMPANADAZAS XL</button>
-                    <button class="cat-chip" onclick="filterCatBoxes('empapizzas', this)">EMPAPIZZAS</button>
-                    <button class="cat-chip" onclick="filterCatBoxes('empachipa', this)">EMPACHIPÁ</button>
-                    <button class="cat-chip" onclick="filterCatBoxes('empaparri', this)">EMPAPARRI</button>
+                <div class="category-chips-scroll" id="chipsScroll140">
+                    <button class="cat-chip active" onclick="filterCat('linea140', 'todas', this)">TODOS (30)</button>
+                    <button class="cat-chip" onclick="filterCat('linea140', 'super', this)">SUPER EMPANADAZAS</button>
+                    <button class="cat-chip" onclick="filterCat('linea140', 'asombrosas', this)">ASOMBROSAS</button>
+                    <button class="cat-chip" onclick="filterCat('linea140', 'empachipa', this)">EMPACHIPÁ</button>
                 </div>
 
                 <div class="view-mode-toggle">
-                    <button type="button" class="btn-view-mode active" id="btnModeGrid" onclick="setCatalogLayout('grid')">Grilla</button>
-                    <button type="button" class="btn-view-mode" id="btnModeList" onclick="setCatalogLayout('list')">Lista Rápida</button>
+                    <button type="button" class="btn-view-mode active" id="btnModeGrid140" onclick="setCatalogLayout('grid', 'linea140')">Grilla</button>
+                    <button type="button" class="btn-view-mode" id="btnModeList140" onclick="setCatalogLayout('list', 'linea140')">Lista Rápida</button>
                 </div>
             </div>
         </div>
 
-        <div class="products-b2b-grid" id="catalogGrid"></div>
+        <div class="products-b2b-grid" id="catalogGrid140"></div>
     </main>
 
-    <!-- SECCIÓN NUEVA: EMPANADAS CHICAS INDIVIDUALES -->
-    <section class="view-section" id="view-chicas">
+    <!-- SECCIÓN 2: LÍNEA 100GR EN CAJAS X40 (SIN TOPPING) -->
+    <section class="view-section" id="view-linea100">
         <div class="b2b-hero-banner" style="background: linear-gradient(135deg, rgba(30, 36, 26, 0.95) 0%, rgba(20, 24, 18, 0.95) 100%);">
-            <h2 class="b2b-hero-title">LÍNEA BLANCA <span>100 Gr</span></h2>
+            <h2 class="b2b-hero-title">LÍNEA 100 Gr <span>ROTISERAS</span></h2>
             <div class="b2b-hero-bullets">
-                <span>Venta directa por <strong>caja</strong></span>
+                <span>Cajas cerradas x <strong>40 unidades</strong></span>
                 <span class="bullet-dot">✦</span>
-                <span>Sin Topping</span>
+                <span class="highlight-notice-pill">100% SIN TOPPING</span>
                 <span class="bullet-dot">✦</span>
-                <span>Los sabores de siempre listos para hornear</span>
+                <span>Mínimo general: <strong>10 cajas</strong></span>
             </div>
         </div>
 
         <div class="catalog-controls">
             <div class="search-bar-wrap">
-                <input type="text" id="b2bSearchChicas" class="search-input" placeholder="Buscar empanada chica (ej. carne, jamón, choclo)..." autocomplete="off" oninput="handleSearchInput(this.value, 'chicas')" />
-                <button type="button" class="btn-clear-search" id="btnClearSearchChicas" onclick="clearSearchInput('chicas')" title="Borrar búsqueda">✕</button>
+                <input type="text" id="b2bSearch100" class="search-input" placeholder="Buscar sabor rotisera (ej. carne, jamón, choclo)..." autocomplete="off" oninput="handleSearchInput(this.value, 'linea100')" />
+                <button type="button" class="btn-clear-search" id="btnClearSearch100" onclick="clearSearchInput('linea100')" title="Borrar búsqueda">✕</button>
+            </div>
+
+            <div class="filter-header-bar">
+                <div class="category-chips-scroll" id="chipsScroll100">
+                    <button class="cat-chip active" onclick="filterCat('linea100', 'todas', this)">TODOS (30)</button>
+                    <button class="cat-chip" onclick="filterCat('linea100', 'super', this)">SUPER EMPANADAZAS</button>
+                    <button class="cat-chip" onclick="filterCat('linea100', 'asombrosas', this)">ASOMBROSAS</button>
+                    <button class="cat-chip" onclick="filterCat('linea100', 'empachipa', this)">EMPACHIPÁ</button>
+                </div>
+
+                <div class="view-mode-toggle">
+                    <button type="button" class="btn-view-mode active" id="btnModeGrid100" onclick="setCatalogLayout('grid', 'linea100')">Grilla</button>
+                    <button type="button" class="btn-view-mode" id="btnModeList100" onclick="setCatalogLayout('list', 'linea100')">Lista Rápida</button>
+                </div>
             </div>
         </div>
 
-        <div class="products-b2b-grid" id="chicasCatalogGrid"></div>
+        <div class="products-b2b-grid" id="catalogGrid100"></div>
     </section>
 
-    <!-- SECCIÓN 3: NOSOTROS -->
-    <section class="view-section" id="view-nosotros">
-        <div class="info-card-luxury">
-            <h2 class="info-card-title">PIONEROS EN VENDERTE <span>POR KILO</span></h2>
-            <p class="info-card-text">
-                En <strong>Empanadazas®</strong> transformamos el paradigma gastronómico argentino. Fuimos los primeros en formalizar el estándar de <strong>2 kg reales por docena</strong> y los únicos creadores patentados de la <strong>Miti-Miti®</strong>: dos recetas completas y diferenciadas dentro de una misma masa hojaldrada.
-            </p>
-            <p class="info-card-text">
-                Nuestra planta industrial centralizada abastece de forma constante a franquicias oficiales, cadenas de cervecerías, restaurantes y supermercados de todo el territorio nacional, garantizando costo fijo por porción y entrega estandarizada.
-            </p>
-        </div>
-
-        <div class="info-card-luxury">
-            <h3 class="info-card-title">VENTAJAS OPERATIVAS PARA <span>REVENDEDORES Y LOCALES</span></h3>
-            <div class="features-grid-b2b">
-                <div class="feature-box">
-                    <span class="feature-title">0% Merma y Desperdicio</span>
-                    <span class="feature-desc">Cada caja de unidades congeladas se hornea bajo demanda. Sin pérdidas de materia prima ni mermas en mostrador.</span>
-                </div>
-                <div class="feature-box">
-                    <span class="feature-title">Margen y Peso Estandarizado</span>
-                    <span class="feature-desc">Unidades con gramaje exacto de 170g a 240g. Permite calcular el costo exacto por plato y asegurar un margen neto previsible.</span>
-                </div>
-                <div class="feature-box">
-                    <span class="feature-title">Horneado sin Personal Calificado</span>
-                    <span class="feature-desc">Salen directo del freezer al horno durante 12 a 15 minutos a 220°C. Doradas, crujientes y sin abrirse.</span>
-                </div>
-                <div class="feature-box">
-                    <span class="feature-title">Ultracongelación IQF (-18°C)</span>
-                    <span class="feature-desc">Preserva al 100% la jugosidad de las carnes braseadas y la textura crocante de la masa criolla hasta por 6 meses.</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECCIÓN 4: GALERÍA -->
+    <!-- SECCIÓN 3: GALERÍA HD -->
     <section class="view-section" id="view-galeria">
         <div class="info-card-luxury" style="text-align:center;">
-            <h2 class="info-card-title">GALERÍA DE PRODUCTOS EN <span>ALTA DEFINICIÓN</span></h2>
-            <p class="info-card-text">Tocá cualquier imagen para ampliarla en pantalla completa.</p>
+            <h2 class="info-card-title">GALERÍA DE PRODUCTOS <span>SIN TOPPING</span></h2>
+            <p class="info-card-text">Línea 140gr y Línea 100gr listas para despacho ultracongelado. Tocá cualquier imagen para ampliar.</p>
         </div>
         <div class="gallery-grid" id="galleryGridContainer"></div>
     </section>
 
-    <!-- SECCIÓN 5: CONTACTO -->
+    <!-- SECCIÓN 4: CONTACTO COMERCIAL (SOLO ALBANO) -->
     <section class="view-section" id="view-contacto">
         <div class="info-card-luxury">
-            <h2 class="info-card-title">CANALES DE ATENCIÓN <span>B2B Y LOGÍSTICA</span></h2>
+            <h2 class="info-card-title">ATENCIÓN COMERCIAL <span>Y LOGÍSTICA B2B</span></h2>
             <p class="info-card-text">
-                Comunicate directamente con la dirección comercial para coordinar fechas de entrega, cuentas corrientes mayoristas o apertura de franquicias oficiales.
+                Comunicate directamente con la Gerencia Comercial para coordinar frecuencias de entrega, flete refrigerado, aperturas de cuenta corriente y compras de volumen.
             </p>
 
             <div class="contact-grid-row">
                 <div class="contact-card-agent">
-                    <span class="agent-role">DIRECCIÓN GENERAL & OPERACIONES</span>
-                    <h4 class="agent-name">Pablo</h4>
-                    <p style="font-size:0.78rem; color:var(--text-muted); flex: 1;">Decisiones corporativas, contratos de distribución y compras en gran escala.</p>
-                    <a href="https://wa.me/5491167699144?text=Hola%20Pablo,%20te%20contacto%20desde%20el%20Portal%20Mayorista%20Empanadazas." target="_blank" rel="noopener noreferrer" class="btn-wsp-direct">
-                        WhatsApp (+54 9 11 6769-9144)
-                    </a>
-                </div>
-
-                <div class="contact-card-agent">
-                    <span class="agent-role">VENTAS MAYORISTAS & FRANQUICIAS</span>
+                    <span class="agent-role">GERENCIA COMERCIAL OFICIAL</span>
                     <h4 class="agent-name">Albano</h4>
-                    <p style="font-size:0.78rem; color:var(--text-muted); flex: 1;">Apertura de cuentas comerciales, flete refrigerado y expansión de puntos de venta.</p>
+                    <p style="font-size:0.80rem; color:var(--text-muted); flex: 1; line-height:1.45;">
+                        Atención directa a comercios, rotiserías, franquicias y distribuidores mayoristas de todo el país.
+                    </p>
                     <a href="https://wa.me/5491138796688?text=Hola%20Albano,%20te%20contacto%20desde%20el%20Portal%20Mayorista%20Empanadazas." target="_blank" rel="noopener noreferrer" class="btn-wsp-direct">
-                        WhatsApp (+54 9 11 3879-6688)
+                        WhatsApp Albano (+54 9 11 3879-6688)
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- HUD INFERIOR FLOTANTE -->
+    <!-- HUD INFERIOR FLOTANTE CON CÁLCULO UNIFICADO DE CAJAS -->
     <footer class="b2b-bottom-hud">
         <div class="hud-content-wrap">
             <div class="hud-progress-col">
@@ -1521,7 +1421,7 @@
         </div>
     </footer>
 
-    <!-- MODAL DE CHECKOUT SIMPLIFICADO (COORDINACIÓN POR TELÉFONO) -->
+    <!-- MODAL DE CHECKOUT DIRECTO AL WHATSAPP DE ALBANO -->
     <div class="modal-overlay" id="checkoutModal">
         <div class="modal-sheet">
             <div class="modal-top">
@@ -1532,14 +1432,13 @@
                 </div>
             </div>
 
-            <!-- FORMULARIO DE CHECKOUT -->
             <form id="checkoutFormWrapper" style="display:flex; flex-direction:column; gap:14px;" onsubmit="event.preventDefault(); generateOrderAndPay();">
                 <div class="summary-recap-box" id="summaryRecapBox"></div>
 
                 <div class="form-grid-2">
                     <div class="f-group">
-                        <label class="f-label">Razón Social o Nombre del Local *</label>
-                        <input type="text" id="b2bClientName" class="f-input" placeholder="Ej: Bar Central / Pizzería Sol" required onfocus="clearFieldError(this)" />
+                        <label class="f-label">Razón Social o Nombre del Comercio *</label>
+                        <input type="text" id="b2bClientName" class="f-input" placeholder="Ej: Rotisería Central / Bar Sol" required onfocus="clearFieldError(this)" />
                     </div>
                     <div class="f-group">
                         <label class="f-label">CUIT o DNI *</label>
@@ -1563,28 +1462,25 @@
                 </div>
 
                 <div class="coordination-notice-box">
-                    <strong>Coordinación comercial directa:</strong>
-                    <span>Una vez enviada la orden, nos comunicaremos por teléfono para coordinar la facturación, los medios de pago disponibles y la fecha/dirección estimada de entrega.</span>
+                    <strong>Coordinación comercial con Albano:</strong>
+                    <span>Al generar el pedido se abrirá WhatsApp con el detalle estructurado para confirmar la facturación, los medios de pago y coordinar el despacho refrigerado.</span>
                 </div>
 
                 <button type="submit" class="btn-dispatch-order" id="btnConfirmOrder">
-                    Generar y Enviar Pedido
+                    Generar y Enviar Pedido a Albano ➔
                 </button>
             </form>
 
-            <!-- VOUCHER FINAL GENERADO -->
+            <!-- VOUCHER FINAL CONFIRMADO -->
             <div class="voucher-success-box" id="voucherSuccessBox">
                 <div style="font-family:'Outfit'; font-size:1.30rem; font-weight:900; color:var(--bronze-bright);" id="voucherCodeLabel">ORDEN CONFIRMADA</div>
                 <p style="font-size:0.82rem; color:var(--brand-cream-muted); line-height:1.5;">
-                    Orden registrada con éxito. Para coordinar despacho, facturación y pago, enviá el detalle por WhatsApp a tu asesor comercial:
+                    Orden registrada con éxito. Tocá el botón verde para enviar el detalle a la Gerencia Comercial:
                 </p>
                 <div style="background:rgba(14,15,13,0.9); padding:14px; border-radius:12px; border:1px solid var(--border-card); font-size:0.84rem; text-align:left;" id="voucherDetailsRecap"></div>
 
                 <div style="display:flex; flex-direction:column; gap:8px; margin-top:8px;">
-                    <button type="button" class="btn-dispatch-order" style="background:#22C55E;" onclick="sendOrderWhatsApp('pablo')">
-                        Enviar Pedido a Pablo (+54 9 11 6769-9144)
-                    </button>
-                    <button type="button" class="btn-dispatch-order" style="background:#16A34A;" onclick="sendOrderWhatsApp('albano')">
+                    <button type="button" class="btn-dispatch-order" style="background:#22C55E;" onclick="sendOrderWhatsApp()">
                         Enviar Pedido a Albano (+54 9 11 3879-6688)
                     </button>
                     <button type="button" class="btn-dispatch-order" style="background:transparent; border:1px solid var(--border-card); color:var(--brand-cream-muted); font-size:0.75rem; padding:10px;" onclick="closeCheckoutModal()">
@@ -1606,122 +1502,105 @@
         </div>
     </div>
 
-    <!-- SCRIPTS -->
+    <!-- MOTOR JAVASCRIPT CON MATEMÁTICA Y LÓGICA DE ALBANO -->
     <script>
-        const WSP_PABLO = "5491167699144";
         const WSP_ALBANO = "5491138796688";
-
         const MIN_BOXES = 10;
-        const BOX_UNITS = 30;
-        let currentCatalogLayout = 'grid';
+
+        let currentCatalogLayout140 = 'grid';
+        let currentCatalogLayout100 = 'grid';
         let generatedOrderData = null;
         let wholesaleCart = {};
 
-        // 1. CATÁLOGO DE CAJAS X30 (B2B PRINCIPAL)
-        const B2B_PRODUCTS = [
-            { id: 'm_jamon_choclo', cat: 'mitimiti', name: 'Miti Jamón del Medio / Choclo Deluxe', priceBox: 48000, desc: 'Jamón del medio y Choclo Deluxe con toppings. Dos empanadas unidas.', img: 'https://images.loveat.la/media/13083/images/plates/663366' },
-            { id: 'm_burger_salchicha', cat: 'mitimiti', name: 'Miti Burger Premium / Empanadaza X Salchicha', priceBox: 48000, desc: 'Burger Premium y Salchicha asada con queso Tybo y cheddar.', img: 'https://images.loveat.la/media/13083/images/plates/663367' },
-            { id: 'm_dubai', cat: 'mitimiti', name: 'Miti Empadubai Especial', priceBox: 48000, desc: 'Pollo tandoori y carne shawarma especiada con pickles y queso fundido.', img: 'https://images.loveat.la/media/13083/images/plates/664088' },
-            { id: 'm_parri_pollo', cat: 'mitimiti', name: 'Miti Parrillera / Empapollo', priceBox: 48000, desc: 'Carne desmechada parrillera y pollo con salsa blanca casera.', img: 'https://images.loveat.la/media/13083/images/plates/664505' },
+        // PRECIOS ESTÁNDAR POR LÍNEA Y CATEGORÍA
+        const PRICING_RULES = {
+            '140': {
+                'super': { priceBox: 66000, units: 30 },
+                'asombrosas': { priceBox: 78000, units: 30 }
+            },
+            '100': {
+                'super': { priceBox: 38000, units: 40 },
+                'asombrosas': { priceBox: 44000, units: 40 }
+            }
+        };
 
-            { id: 'e_parrillera', cat: 'empanadazas', name: 'Parrillera Criolla', priceBox: 45000, desc: 'Carne vacuna desmechada con cebolla caramelizada y morrones asados.', img: 'https://images.loveat.la/media/13083/images/plates/663332' },
-            { id: 'e_empafluo', cat: 'empanadazas', name: 'Empafluo Cheddar & Bacon', priceBox: 42000, desc: 'Carne picada seleccionada con salsa especial Empanadaza, panceta y cheddar.', img: 'https://images.loveat.la/media/13083/images/plates/663333' },
-            { id: 'e_panceta', cat: 'empanadazas', name: 'Empanadaza X Panceta', priceBox: 45000, desc: 'Puré de batata rústico, cebolla caramelizada y panceta ahumada braseada.', img: 'https://images.loveat.la/media/13083/images/plates/663334' },
-            { id: 'e_pollo', cat: 'empanadazas', name: 'Empanadaza X Pollo Mostaza', priceBox: 45000, desc: 'Cubos de pechuga de pollo marinados en suave crema de mostaza dulce.', img: 'https://images.loveat.la/media/13083/images/plates/663335' },
-            { id: 'e_salchicha', cat: 'empanadazas', name: 'Empanadaza X Salchicha & Savora', priceBox: 45000, desc: 'Salchichas parrilleras asadas con abundante muzzarella fundente y savora.', img: 'https://images.loveat.la/media/13083/images/plates/663336' },
-            { id: 'e_ortix', cat: 'empanadazas', name: 'Día del Ortix (Bondiola 4 Quesos)', priceBox: 42000, desc: 'Bondiola de cerdo braseada lentamente con salsa cremosa a los cuatro quesos.', img: 'https://images.loveat.la/media/13083/images/plates/663337' },
-            { id: 'e_finde', cat: 'empanadazas', name: 'Me La Di el Finde (BBQ & Panceta)', priceBox: 45000, desc: 'Carne y bondiola desmechada a la barbacoa con panceta crocante.', img: 'https://images.loveat.la/media/13083/images/plates/663338' },
-            { id: 'e_mancho', cat: 'empanadazas', name: 'Me Mancho Seguro (Cortada a Cuchillo)', priceBox: 45000, desc: 'Carne vacuna cortada a cuchillo con pimentón dulce, comino y salsa criolla.', img: 'https://images.loveat.la/media/13083/images/plates/663358' },
-            { id: 'e_cuchara', cat: 'empanadazas', name: 'Carne Cortada a Cuchara', priceBox: 45000, desc: 'Tiernísima carne vacuna braseada con vegetales cocidos en su propio jugo.', img: 'https://images.loveat.la/media/13083/images/plates/663359' },
-            { id: 'e_casera', cat: 'empanadazas', name: 'Empacasera Tradicional', priceBox: 42000, desc: 'Blend de carne criolla con huevo duro picado, verdeo y aceitunas verdes.', img: 'https://images.loveat.la/media/13083/images/plates/663360' },
-            { id: 'e_rompe', cat: 'empanadazas', name: 'La Rompe Toda (Matambre a la Pizza)', priceBox: 45000, desc: 'Matambre tiernizado a la leche con salsa de tomate y queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663361' },
-            { id: 'e_buena', cat: 'empanadazas', name: 'Carne de la Buena', priceBox: 45000, desc: 'Bondiola desmechada en cocción lenta con salsa barbacoa y panceta.', img: 'https://images.loveat.la/media/13083/images/plates/663362' },
-            { id: 'e_gold', cat: 'empanadazas', name: 'Chicken Gold', priceBox: 45000, desc: 'Pechuga tierna con queso cheddar fundido, panceta y barbacoa ahumada.', img: 'https://images.loveat.la/media/13083/images/plates/663363' },
-            { id: 'e_pollo_blanca', cat: 'empanadazas', name: 'Empapollo Clásica', priceBox: 42000, desc: 'Pechuga desmechada con suave salsa blanca casera y nuez moscada.', img: 'https://images.loveat.la/media/13083/images/plates/663364' },
-            { id: 'e_piden', cat: 'empanadazas', name: 'La Piden Todos (Albóndigas & Puré)', priceBox: 45000, desc: 'Albóndigas caseras de ternera con puré de papas cremoso y salsa de tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663343' },
-            { id: 'e_locura', cat: 'empanadazas', name: 'Empalocura (Revuelto Gramajo)', priceBox: 42000, desc: 'Revuelto gramajo clásico: jamón cocido, papas pay crocantes y huevo.', img: 'https://images.loveat.la/media/13083/images/plates/663342' },
+        // MATRIZ OFICIAL DE 30 SABORES DE LA FOTO DE ALBANO
+        const MASTER_FLAVORS = [
+            // SUPER EMPANADAZAS (14 SABORES)
+            { id: 'choclo_deluxe', name: 'Choclo Deluxe', cat: 'super', desc: 'Granos de choclo dulce con queso fundido suave.', img: 'https://images.loveat.la/media/13083/images/plates/663351' },
+            { id: 'choclo_cremoso', name: 'Choclo Cremoso', cat: 'super', desc: 'Humita tradicional norteña con salsa blanca perfumada.', img: 'https://images.loveat.la/media/13083/images/plates/663352' },
+            { id: 'espinacaza', name: 'Espinacaza', cat: 'super', desc: 'Hojas tiernas de espinaca con muzzarella y reggianito.', img: 'https://images.loveat.la/media/13083/images/plates/663353' },
+            { id: 'espinacaza_cremosa', name: 'Espinacaza Cremosa', cat: 'super', desc: 'Espinacas picadas con suave salsa bechamel casera.', img: 'https://images.loveat.la/media/13083/images/plates/663354' },
+            { id: 'tortilla', name: 'Tortilla', cat: 'super', desc: 'Papas doradas, cebollas caramelizadas y huevo cuajado.', img: 'https://images.loveat.la/media/13083/images/plates/663341' },
+            { id: 'empalocura', name: 'Empalocura', cat: 'super', desc: 'Revuelto gramajo clásico con jamón, papas pay y huevo.', img: 'https://images.loveat.la/media/13083/images/plates/663342' },
+            { id: 'calabaza_suprema', name: 'Calabaza Suprema', cat: 'super', desc: 'Calabaza horneada con suave queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663355' },
+            { id: 'jamon_queso', name: 'Jamón y Queso', cat: 'super', desc: 'Jamón cocido natural seleccionado y abundante queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663340' },
+            { id: 'empacasera', name: 'Empacasera', cat: 'super', desc: 'Carne criolla con huevo picado, verdeo y aceitunas.', img: 'https://images.loveat.la/media/13083/images/plates/663360' },
+            { id: 'empapollo_casera', name: 'Empapollo Casera', cat: 'super', desc: 'Pechuga desmechada con salsa blanca casera y nuez moscada.', img: 'https://images.loveat.la/media/13083/images/plates/663364' },
+            { id: 'dia_del_ortix', name: 'Día del Ortix', cat: 'super', desc: 'Bondiola de cerdo braseada lentamente con salsa a los cuatro quesos.', img: 'https://images.loveat.la/media/13083/images/plates/663337' },
+            { id: 'empafluo', name: 'Empafluo', cat: 'super', desc: 'Carne picada seleccionada con panceta y queso cheddar.', img: 'https://images.loveat.la/media/13083/images/plates/663333' },
+            { id: 'fit_vegetales', name: 'Fit Vegetales', cat: 'super', desc: 'Zanahoria, morrón, zucchini y berenjenas frescas al wok.', img: 'https://images.loveat.la/media/13083/images/plates/663356' },
+            { id: 'wok_rice', name: 'Wok Rice', cat: 'super', desc: 'Arroz salteado con vegetales crujientes y huevo.', img: 'https://images.loveat.la/media/13083/images/plates/663357' },
 
-            { id: 'e_5quesos', cat: 'empanadazas', name: '5 Quesos Fundentes', priceBox: 45000, desc: 'Mozzarella, parmesano, provoleta crocante, queso azul roquefort y cremoso.', img: 'https://images.loveat.la/media/13083/images/plates/663339' },
-            { id: 'e_jamon', cat: 'empanadazas', name: 'Jamón del Medio', priceBox: 42000, desc: 'El clásico infalible de jamón cocido natural y abundante queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663340' },
-            { id: 'e_tortilla', cat: 'empanadazas', name: 'Tortilla Española', priceBox: 42000, desc: 'Papas doradas, cebollas caramelizadas, pimientos y huevo cuajado en masa.', img: 'https://images.loveat.la/media/13083/images/plates/663341' },
-            { id: 'e_choclo_deluxe', cat: 'empanadazas', name: 'Choclo Deluxe Asado', priceBox: 42000, desc: 'Granos de choclo dulce asado envueltos en suave queso derretido.', img: 'https://images.loveat.la/media/13083/images/plates/663351' },
-            { id: 'e_choclo_cremoso', cat: 'empanadazas', name: 'Choclo Cremoso (Humita)', priceBox: 42000, desc: 'Humita tradicional norteña con maíz amarillo y salsa blanca perfumada.', img: 'https://images.loveat.la/media/13083/images/plates/663352' },
-            { id: 'e_espinacaza', cat: 'empanadazas', name: 'Espinacaza con Reggianito', priceBox: 42000, desc: 'Hojas tiernas de espinaca salteadas envueltas en muzzarella y reggianito.', img: 'https://images.loveat.la/media/13083/images/plates/663353' },
-            { id: 'e_espinacaza_crem', cat: 'empanadazas', name: 'Espinacaza Cremosa', priceBox: 42000, desc: 'Espinacas picadas con suave y cremosa salsa bechamel.', img: 'https://images.loveat.la/media/13083/images/plates/663354' },
-            { id: 'e_calabaza', cat: 'empanadazas', name: 'Calabaza Suprema & Queso', priceBox: 42000, desc: 'Calabaza cabutiá horneada con queso muzzarella suave y hierbas.', img: 'https://images.loveat.la/media/13083/images/plates/663355' },
-            { id: 'e_fit', cat: 'empanadazas', name: 'Fit de Vegetales Salteados', priceBox: 42000, desc: 'Zanahoria, morrón, zucchini y berenjenas frescas al wok.', img: 'https://images.loveat.la/media/13083/images/plates/663356' },
-            { id: 'e_wok', cat: 'empanadazas', name: 'Wok Rice Salteado', priceBox: 42000, desc: 'Arroz salteado con vegetales frescos crujientes y huevo al estilo oriental.', img: 'https://images.loveat.la/media/13083/images/plates/663357' },
-
-            { id: 'pz_muzza', cat: 'empapizzas', name: 'Empamuzza Especial', priceBox: 48000, desc: 'La clásica pizza de muzzarella en formato empapizza gigante.', img: 'https://images.loveat.la/media/13083/images/plates/663368' },
-            { id: 'pz_fuga', cat: 'empapizzas', name: 'Empazzeta Rellena', priceBox: 48000, desc: 'Cebolla caramelizada crujiente con doble porción de queso derretido.', img: 'https://images.loveat.la/media/13083/images/plates/663369' },
-            { id: 'pz_napo', cat: 'empapizzas', name: 'Empanapo con Ajo', priceBox: 48000, desc: 'Muzzarella fundente, rodajas de tomate natural y toque justo de ajo confitado.', img: 'https://images.loveat.la/media/13083/images/plates/663370' },
-            { id: 'pz_verdura', cat: 'empapizzas', name: 'Empaverdura Gratinada', priceBox: 48000, desc: 'Verduras seleccionadas de huerta con abundante queso fundido.', img: 'https://images.loveat.la/media/13083/images/plates/663371' },
-
-            { id: 'ch_jamon', cat: 'empachipa', name: 'Empachipá Jamón del Medio', priceBox: 46000, desc: 'Auténtica masa con almidón de mandioca y queso gouda rellena de jamón y muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663344' },
-            { id: 'ch_matambre', cat: 'empachipa', name: 'Empachipá Matambre al Horno', priceBox: 46000, desc: 'Masa de chipá horneada con matambre tiernizado, muzzarella y tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663365' },
-
-            { id: 'pa_chori', cat: 'empaparri', name: 'Empasánguche de Chori', priceBox: 48000, desc: 'Chorizo puro de cerdo parrillero con salsa criolla envuelto en masa crujiente.', img: 'https://images.loveat.la/media/13083/images/plates/663331' },
-            { id: 'pa_morci', cat: 'empaparri', name: 'Empasánguche de Morcilla', priceBox: 48000, desc: 'Morcilla parrillera bombón con muzzarella y toque aromático de curry.', img: 'https://images.loveat.la/media/13083/images/plates/663695' },
-            { id: 'pa_bondiola', cat: 'empaparri', name: 'Empasánguche de Bondiolita BBQ', priceBox: 48000, desc: 'Bondiola desmechada con barbacoa casera y queso en panificado.', img: 'https://images.loveat.la/media/13083/images/plates/663696' }
+            // ASOMBROSAS (16 SABORES)
+            { id: '5_quesos', name: '5 Quesos', cat: 'asombrosas', desc: 'Mozzarella, parmesano, provoleta, roquefort y cremoso.', img: 'https://images.loveat.la/media/13083/images/plates/663339' },
+            { id: 'empanadaza_x_salchicha', name: 'Empanadaza x Salchicha', cat: 'asombrosas', desc: 'Salchichas parrilleras asadas con muzzarella y savora.', img: 'https://images.loveat.la/media/13083/images/plates/663336' },
+            { id: 'empanadaza_x_pollo', name: 'Empanadaza x Pollo', cat: 'asombrosas', desc: 'Pechuga tierna marinada en suave crema de mostaza dulce.', img: 'https://images.loveat.la/media/13083/images/plates/663335' },
+            { id: 'empanadaza_x_panceta', name: 'Empanadaza x Panceta', cat: 'asombrosas', desc: 'Batata glaseada, cebolla caramelizada y panceta ahumada.', img: 'https://images.loveat.la/media/13083/images/plates/663334' },
+            { id: 'parrillera', name: 'Parrillera', cat: 'asombrosas', desc: 'Carne vacuna desmechada con cebolla caramelizada y morrones.', img: 'https://images.loveat.la/media/13083/images/plates/663332' },
+            { id: 'me_mancho_seguro', name: 'Me Mancho Seguro', cat: 'asombrosas', desc: 'Carne cortada a cuchillo con pimentón dulce y salsa criolla.', img: 'https://images.loveat.la/media/13083/images/plates/663358' },
+            { id: 'carne_cortada_cuchara', name: 'Carne Cortada a Cuchara', cat: 'asombrosas', desc: 'Tiernísima carne vacuna braseada con vegetales en su jugo.', img: 'https://images.loveat.la/media/13083/images/plates/663359' },
+            { id: 'la_rompe_toda', name: 'La Rompe Toda', cat: 'asombrosas', desc: 'Matambre tiernizado con salsa de tomate y queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663361' },
+            { id: 'burger_premium', name: 'Burger Premium', cat: 'asombrosas', desc: 'Carne de hamburguesa premium sazonada con queso cheddar.', img: 'https://images.loveat.la/media/13083/images/plates/663367' },
+            { id: 'carne_de_la_buena', name: 'Carne de la Buena', cat: 'asombrosas', desc: 'Bondiola desmechada en cocción lenta con barbacoa y panceta.', img: 'https://images.loveat.la/media/13083/images/plates/663362' },
+            { id: 'chicken_gold', name: 'Chicken Gold', cat: 'asombrosas', desc: 'Pechuga tierna con queso cheddar fundido y barbacoa ahumada.', img: 'https://images.loveat.la/media/13083/images/plates/663363' },
+            { id: 'me_la_di_el_finde', name: 'Me la di el Finde', cat: 'asombrosas', desc: 'Carne y bondiola a la barbacoa con panceta crocante.', img: 'https://images.loveat.la/media/13083/images/plates/663338' },
+            { id: 'la_piden_todos', name: 'La Piden Todos', cat: 'asombrosas', desc: 'Albóndigas caseras de ternera con puré cremoso y tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663343' },
+            { id: 'empachipa_jamon_queso', name: 'Empachipa Jamón y Queso', cat: 'asombrosas', isChipá: true, desc: 'Masa de chipá con mandioca y queso rellena de jamón y muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663344' },
+            { id: 'empachipa_matambre', name: 'Empachipa Matambre', cat: 'asombrosas', isChipá: true, desc: 'Masa de chipá horneada con matambre tiernizado y muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663365' },
+            { id: 'empachipa_x', name: 'Empachipa X', cat: 'asombrosas', isChipá: true, desc: 'Exclusiva masa de chipá artesanal con relleno especial asombroso.', img: 'https://images.loveat.la/media/13083/images/plates/663331' }
         ];
 
-        // 2. CATÁLOGO DE EMPANADAS CHICAS (INDIVIDUALES DE ROTISERÍA - CÓDIGOS Y PRECIOS REALES)
-        const CHICAS_PRODUCTS = [
-            { id: 'u_empafluo', name: 'Empafluo Chica', unitPrice: 4700, desc: 'Carne picada con salsa Empanadaza, panceta y cheddar.', img: 'https://images.loveat.la/media/13083/images/plates/663333' },
-            { id: 'u_ortix', name: 'Día del ortix Chica', unitPrice: 4700, desc: 'Bondiola braseada con salsa 4 quesos.', img: 'https://images.loveat.la/media/13083/images/plates/663337' },
-            { id: 'u_jamon', name: 'Jamón del Medio Chica', unitPrice: 4700, desc: 'Combinación clásica de jamón cocido y queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663340' },
-            { id: 'u_tortilla', name: 'Tortilla Española Chica', unitPrice: 4700, desc: 'Auténtica tortilla de papa, cebolla y morrón.', img: 'https://images.loveat.la/media/13083/images/plates/663341' },
-            { id: 'u_locura', name: 'Empalocura Chica', unitPrice: 4700, desc: 'Revuelto gramajo con papas fritas, jamón y huevo.', img: 'https://images.loveat.la/media/13083/images/plates/663342' },
-            { id: 'u_choclo_deluxe', name: 'Choclo Deluxe Chica', unitPrice: 4700, desc: 'Choclo asado envuelto en queso derretido.', img: 'https://images.loveat.la/media/13083/images/plates/663351' },
-            { id: 'u_choclo_cremoso', name: 'Choclo Cremoso Chica', unitPrice: 4700, desc: 'Humita clásica con choclo y suave salsa blanca.', img: 'https://images.loveat.la/media/13083/images/plates/663352' },
-            { id: 'u_espinacaza', name: 'Espinacaza Chica', unitPrice: 4700, desc: 'Espinacas tiernas envueltas en mozzarella y reggianito.', img: 'https://images.loveat.la/media/13083/images/plates/663353' },
-            { id: 'u_espinacaza_crem', name: 'Espinacaza Cremosa Chica', unitPrice: 4700, desc: 'Espinacas cocidas con suave y cremosa salsa blanca.', img: 'https://images.loveat.la/media/13083/images/plates/663354' },
-            { id: 'u_calabaza', name: 'Calabaza Suprema Chica', unitPrice: 4700, desc: 'Calabaza suave con queso muzzarella.', img: 'https://images.loveat.la/media/13083/images/plates/663355' },
-            { id: 'u_fit', name: 'Fit de Vegetales Chica', unitPrice: 4700, desc: 'Zanahoria, morrón, zucchini y berenjenas salteadas.', img: 'https://images.loveat.la/media/13083/images/plates/663356' },
-            { id: 'u_wok', name: 'Wok Rice Chica', unitPrice: 4700, desc: 'Arroz frito, vegetales frescos y huevo al wok.', img: 'https://images.loveat.la/media/13083/images/plates/663357' },
-            { id: 'u_casera', name: 'Empacasera Chica', unitPrice: 4700, desc: 'Blend de carne con huevo, verdeo y aceitunas.', img: 'https://images.loveat.la/media/13083/images/plates/663360' },
-            { id: 'u_pollo_blanca', name: 'Empapollo Chica', unitPrice: 4700, desc: 'Pechuga desmechada con salsa blanca casera.', img: 'https://images.loveat.la/media/13083/images/plates/663364' },
+        // GENERACIÓN AUTOMÁTICA DE LOS DOS CATÁLOGOS CON SU RESPECTIVO PESO
+        const PRODUCTS_140 = MASTER_FLAVORS.map(f => ({
+            id: `140_${f.id}`,
+            baseId: f.id,
+            line: '140',
+            unitsPerBox: 30,
+            priceBox: PRICING_RULES['140'][f.cat].priceBox,
+            cat: f.cat,
+            isChipá: !!f.isChipá,
+            name: `${f.name} (140g)`,
+            desc: f.desc,
+            img: f.img
+        }));
 
-            { id: 'u_parrillera', name: 'Parrillera Chica', unitPrice: 5200, desc: 'Carne desmechada, cebolla caramelizada y morrones.', img: 'https://images.loveat.la/media/13083/images/plates/663332' },
-            { id: 'u_panceta', name: 'Empanadaza X Panceta Chica', unitPrice: 5200, desc: 'Puré de batata, cebolla caramelizada y panceta braseada.', img: 'https://images.loveat.la/media/13083/images/plates/663334' },
-            { id: 'u_pollo', name: 'Empanadaza X Pollo Chica', unitPrice: 5200, desc: 'Cubos de pollo a la crema de mostaza suave.', img: 'https://images.loveat.la/media/13083/images/plates/663335' },
-            { id: 'u_salchicha', name: 'Empanadaza X Salchicha Chica', unitPrice: 5200, desc: 'Salchichas asadas con muzzarella y savora.', img: 'https://images.loveat.la/media/13083/images/plates/663336' },
-            { id: 'u_finde', name: 'Me la di el finde Chica', unitPrice: 5200, desc: 'Carne y bondiola a la barbacoa con panceta crocante.', img: 'https://images.loveat.la/media/13083/images/plates/663338' },
-            { id: 'u_5quesos', name: '5 Quesos Chica', unitPrice: 5200, desc: 'Mozzarella, parmesano, provoleta, roquefort y cremoso.', img: 'https://images.loveat.la/media/13083/images/plates/663339' },
-            { id: 'u_piden', name: 'La piden Todos Chica', unitPrice: 5200, desc: 'Albóndigas caseras, puré de papas y tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663343' },
-            { id: 'u_mancho', name: 'Me mancho seguro Chica', unitPrice: 5200, desc: 'Carne cortada a cuchillo con pimentón y criolla.', img: 'https://images.loveat.la/media/13083/images/plates/663358' },
-            { id: 'u_cuchara', name: 'Carne cortada a cuchara Chica', unitPrice: 5200, desc: 'Tierna carne vacuna con vegetales cocidos.', img: 'https://images.loveat.la/media/13083/images/plates/663359' },
-            { id: 'u_rompe', name: 'La rompe Toda Chica', unitPrice: 5200, desc: 'Matambre y queso fundido en salsa de tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663361' },
-            { id: 'u_buena', name: 'Carne de la buena Chica', unitPrice: 5200, desc: 'Bondiola desmechada con barbacoa y panceta.', img: 'https://images.loveat.la/media/13083/images/plates/663362' },
-            { id: 'u_gold', name: 'Chicken Gold Chica', unitPrice: 5200, desc: 'Pechuga, queso cheddar, panceta y barbacoa.', img: 'https://images.loveat.la/media/13083/images/plates/663363' },
-            { id: 'u_ch_jamon', name: 'Empachipá Jamón Chica', unitPrice: 5200, desc: 'Masa de chipá rellena de jamón y queso.', img: 'https://images.loveat.la/media/13083/images/plates/663344' },
-            { id: 'u_ch_matambre', name: 'Empachipá Matambre Chica', unitPrice: 5200, desc: 'Masa de chipá con matambre, queso y tomate.', img: 'https://images.loveat.la/media/13083/images/plates/663365' },
+        const PRODUCTS_100 = MASTER_FLAVORS.map(f => ({
+            id: `100_${f.id}`,
+            baseId: f.id,
+            line: '100',
+            unitsPerBox: 40,
+            priceBox: PRICING_RULES['100'][f.cat].priceBox,
+            cat: f.cat,
+            isChipá: !!f.isChipá,
+            name: `${f.name} (100g)`,
+            desc: f.desc,
+            img: f.img
+        }));
 
-            { id: 'u_m_jamon_choclo', name: 'Miti Jamón - Choclo Chica', unitPrice: 5500, desc: 'Jamón del medio y Choclo Deluxe unidos.', img: 'https://images.loveat.la/media/13083/images/plates/663366' },
-            { id: 'u_m_burger_salchicha', name: 'Miti Burger - Salchicha Chica', unitPrice: 5500, desc: 'Burger Premium y Salchicha Tybo unidas.', img: 'https://images.loveat.la/media/13083/images/plates/663367' },
-            { id: 'u_m_dubai', name: 'Empadubai Especial Chica', unitPrice: 5500, desc: 'Pollo tandoori y carne shawarma con queso.', img: 'https://images.loveat.la/media/13083/images/plates/664088' },
-            { id: 'u_m_parri_pollo', name: 'Miti Parrillera - Empapollo Chica', unitPrice: 5500, desc: 'Parrillera y Empapollo con salsa blanca.', img: 'https://images.loveat.la/media/13083/images/plates/664505' },
-            { id: 'u_pz_muzza', name: 'Empamuzza Chica', unitPrice: 5500, desc: 'Formato empapizza muzzarella individual.', img: 'https://images.loveat.la/media/13083/images/plates/663368' },
-            { id: 'u_pz_fuga', name: 'Empazzeta Chica', unitPrice: 5500, desc: 'Cebolla caramelizada y doble queso fundido.', img: 'https://images.loveat.la/media/13083/images/plates/663369' },
-            { id: 'u_pz_napo', name: 'Empanapo Chica', unitPrice: 5500, desc: 'Muzzarella, rodajas de tomate y toque de ajo.', img: 'https://images.loveat.la/media/13083/images/plates/663370' },
-            { id: 'u_pz_verdura', name: 'Empaverdura Chica', unitPrice: 5500, desc: 'Verduras seleccionadas y abundante queso.', img: 'https://images.loveat.la/media/13083/images/plates/663371' },
-            { id: 'u_pa_chori', name: 'Empasánguche Chori Chico', unitPrice: 5500, desc: 'Chorizo de cerdo con criolla en masa crocante.', img: 'https://images.loveat.la/media/13083/images/plates/663331' },
-            { id: 'u_pa_morci', name: 'Empasánguche Morci Chico', unitPrice: 5500, desc: 'Morcilla bombón con muzzarella y toque curry.', img: 'https://images.loveat.la/media/13083/images/plates/663695' },
-            { id: 'u_pa_bondiola', name: 'Empasánguche Bondiolita Chico', unitPrice: 5500, desc: 'Bondiola braseada a la barbacoa con queso.', img: 'https://images.loveat.la/media/13083/images/plates/663696' }
-        ];
+        const ALL_PRODUCTS = [...PRODUCTS_140, ...PRODUCTS_100];
 
         const GALLERY_ITEMS = [
-            { img: 'https://images.loveat.la/media/13083/images/plates/663366', title: 'Miti Jamón del Medio & Choclo Deluxe' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663332', title: 'Parrillera Criolla Braseada' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663367', title: 'Burger Premium & Salchicha Tybo' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663338', title: 'Me la di el Finde BBQ & Bacon' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663339', title: '5 Quesos Fundentes Dorados' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663340', title: 'Jamón del Medio Clásica' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663332', title: 'Parrillera Criolla (140g - Sin Topping)' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663339', title: '5 Quesos Fundentes (140g - Sin Topping)' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663340', title: 'Jamón del Medio Tradicional' },
             { img: 'https://images.loveat.la/media/13083/images/plates/663344', title: 'Empachipá de Queso & Jamón' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663331', title: 'Empasánguche de Chori Parrillero' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663368', title: 'Empamuzza Individual al Horno' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/663369', title: 'Empazzeta Rellena con Cebolla' },
-            { img: 'https://images.loveat.la/media/13083/images/plates/664088', title: 'Empadubai Pollo Shawarma & Pickles' }
+            { img: 'https://images.loveat.la/media/13083/images/plates/663338', title: 'Me la di el Finde BBQ' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663351', title: 'Choclo Deluxe Asado' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663364', title: 'Empapollo Casera con Bechamel' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663361', title: 'La Rompe Toda Matambre al Horno' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663333', title: 'Empafluo Cheddar & Bacon' },
+            { img: 'https://images.loveat.la/media/13083/images/plates/663365', title: 'Empachipá Matambre Especial' }
         ];
 
         let activeGalleryIndex = 0;
@@ -1729,7 +1608,6 @@
         let isImageZoomed = false;
         let alertTimeout = null;
 
-        // HELPERS
         function formatMoney(amount) {
             return '$' + Number(amount || 0).toLocaleString('es-AR');
         }
@@ -1747,9 +1625,8 @@
                 .replace(/'/g, "&#039;");
         }
 
-        // PRECARGADOR EN SEGUNDO PLANO PARA VISUALIZACIÓN INSTANTÁNEA
         function preloadAllCatalogImages() {
-            const allImgs = [...B2B_PRODUCTS, ...CHICAS_PRODUCTS, ...GALLERY_ITEMS].map(p => p.img);
+            const allImgs = [...MASTER_FLAVORS, ...GALLERY_ITEMS].map(p => p.img);
             const unique = [...new Set(allImgs)];
 
             const loadNext = (index) => {
@@ -1773,7 +1650,6 @@
             }
         }
 
-        // AVISOS VISUALES HTML SOFISTICADOS
         function showNotification(msg, type = 'warning') {
             const banner = document.getElementById('b2bAlertBanner');
             const iconEl = document.getElementById('alertIcon');
@@ -1805,21 +1681,20 @@
             inputEl.classList.remove('input-error');
         }
 
-        // PERSISTENCIA EN NAVEGADOR
         function saveCartToStorage() {
             try {
-                localStorage.setItem('empanadazas_b2b_cart', JSON.stringify(wholesaleCart));
+                localStorage.setItem('empanadazas_b2b_cart_v2', JSON.stringify(wholesaleCart));
             } catch (e) {}
         }
 
         function loadCartFromStorage() {
             try {
-                const saved = localStorage.getItem('empanadazas_b2b_cart');
+                const saved = localStorage.getItem('empanadazas_b2b_cart_v2');
                 wholesaleCart = {};
                 if (saved) {
                     const parsed = JSON.parse(saved);
                     for (const [k, v] of Object.entries(parsed)) {
-                        const exists = B2B_PRODUCTS.some(p => p.id === k) || CHICAS_PRODUCTS.some(p => p.id === k);
+                        const exists = ALL_PRODUCTS.some(p => p.id === k);
                         const num = parseInt(v, 10);
                         if (exists && !isNaN(num) && num > 0) {
                             wholesaleCart[k] = num;
@@ -1834,8 +1709,8 @@
         function resetWholeCart() {
             wholesaleCart = {};
             saveCartToStorage();
-            renderCatalog(B2B_PRODUCTS);
-            renderChicasCatalog(CHICAS_PRODUCTS);
+            renderCatalog('linea140', PRODUCTS_140);
+            renderCatalog('linea100', PRODUCTS_100);
             updateWholesaleHUD();
             closeCheckoutModal();
             showNotification("Carrito vaciado correctamente", "info");
@@ -1854,11 +1729,11 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
 
-        function setCatalogLayout(layout) {
-            currentCatalogLayout = layout;
-            const grid = document.getElementById('catalogGrid');
-            const btnGrid = document.getElementById('btnModeGrid');
-            const btnList = document.getElementById('btnModeList');
+        function setCatalogLayout(layout, line) {
+            const gridId = line === 'linea140' ? 'catalogGrid140' : 'catalogGrid100';
+            const btnGrid = document.getElementById(line === 'linea140' ? 'btnModeGrid140' : 'btnModeGrid100');
+            const btnList = document.getElementById(line === 'linea140' ? 'btnModeList140' : 'btnModeList100');
+            const grid = document.getElementById(gridId);
 
             if (layout === 'list') {
                 grid.classList.add('mode-list');
@@ -1871,9 +1746,11 @@
             }
         }
 
-        // RENDER CATÁLOGO CAJAS X30
-        function renderCatalog(items) {
-            const grid = document.getElementById('catalogGrid');
+        // RENDER UNIVERSAL PARA AMBAS LÍNEAS
+        function renderCatalog(line, items) {
+            const gridId = line === 'linea140' ? 'catalogGrid140' : 'catalogGrid100';
+            const grid = document.getElementById(gridId);
+            if (!grid) return;
             grid.innerHTML = '';
 
             items.forEach((prod, idx) => {
@@ -1882,13 +1759,14 @@
                 card.className = `product-b2b-card ${boxes > 0 ? 'has-selection' : ''}`;
                 card.id = `card_${prod.id}`;
 
-                // Primeras 4 con carga prioritaria, el resto asincrónica
                 const loadAttr = idx < 4 ? 'loading="eager"' : 'loading="lazy"';
+                const unitPriceEstimate = Math.round(prod.priceBox / prod.unitsPerBox);
+                const badgeLabel = `Caja x${prod.unitsPerBox} u. • Sin Topping`;
 
                 card.innerHTML = `
                     <div class="card-img-wrap" onclick="openProductLightbox('${prod.img}', '${prod.name.replace(/'/g, "\\'")}')">
                         <img src="${prod.img}" ${loadAttr} decoding="async" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" class="card-img" alt="${prod.name}" />
-                        <span class="box-badge-floating">Caja x30 u.</span>
+                        <span class="box-badge-floating">${badgeLabel}</span>
                     </div>
                     <div class="card-body">
                         <div>
@@ -1898,7 +1776,7 @@
                         <div class="card-footer-b2b">
                             <div class="pricing-wrap">
                                 <span class="price-box-val">${formatMoney(prod.priceBox)}</span>
-                                <span class="price-unit-sub">$${Math.round(prod.priceBox / BOX_UNITS)} / un.</span>
+                                <span class="price-unit-sub">$${unitPriceEstimate.toLocaleString('es-AR')} / un.</span>
                             </div>
                             <div class="b2b-stepper">
                                 <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', -1)">−</button>
@@ -1906,54 +1784,6 @@
                                        class="step-input-b2b" 
                                        id="input_${prod.id}" 
                                        value="${boxes}" 
-                                       min="0" 
-                                       max="999"
-                                       inputmode="numeric"
-                                       oninput="handleDirectInput('${prod.id}', this.value)"
-                                       onblur="handleInputBlur('${prod.id}', this)" />
-                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', 1)">+</button>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                grid.appendChild(card);
-            });
-        }
-
-        // RENDER CATÁLOGO EMPANADAS CHICAS INDIVIDUALES
-        function renderChicasCatalog(items) {
-            const grid = document.getElementById('chicasCatalogGrid');
-            grid.innerHTML = '';
-
-            items.forEach((prod, idx) => {
-                const qty = parseInt(wholesaleCart[prod.id], 10) || 0;
-                const card = document.createElement('div');
-                card.className = `product-b2b-card ${qty > 0 ? 'has-selection' : ''}`;
-                card.id = `card_${prod.id}`;
-
-                const loadAttr = idx < 4 ? 'loading="eager"' : 'loading="lazy"';
-
-                card.innerHTML = `
-                    <div class="card-img-wrap" onclick="openProductLightbox('${prod.img}', '${prod.name.replace(/'/g, "\\'")}')">
-                        <img src="${prod.img}" ${loadAttr} decoding="async" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" class="card-img" alt="${prod.name}" />
-                        <span class="box-badge-floating unit-mode">Por Unidad</span>
-                    </div>
-                    <div class="card-body">
-                        <div>
-                            <h4 class="product-name-b2b">${prod.name}</h4>
-                            <p class="product-desc-b2b">${prod.desc}</p>
-                        </div>
-                        <div class="card-footer-b2b">
-                            <div class="pricing-wrap">
-                                <span class="price-box-val">${formatMoney(prod.unitPrice)}</span>
-                                <span class="price-unit-sub">Precio unitario</span>
-                            </div>
-                            <div class="b2b-stepper">
-                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', -1)">−</button>
-                                <input type="number" 
-                                       class="step-input-b2b" 
-                                       id="input_${prod.id}" 
-                                       value="${qty}" 
                                        min="0" 
                                        max="999"
                                        inputmode="numeric"
@@ -1977,7 +1807,6 @@
             `).join('');
         }
 
-        // CONTROL DE CANTIDADES (CAJAS Y UNIDADES)
         function modifyQty(prodId, delta) {
             if ('vibrate' in navigator) navigator.vibrate(10);
 
@@ -2030,25 +1859,20 @@
             inputEl.value = val;
         }
 
-        // PROGRESIÓN Y ACTUALIZACIÓN DEL HUD
+        // CÁLCULO UNIFICADO DE CAJAS Y TOTALES
         function updateWholesaleHUD() {
             let totalBoxes = 0;
-            let totalChicasUnits = 0;
+            let totalEmpanadasUnits = 0;
             let totalPrice = 0;
 
             for (const [id, count] of Object.entries(wholesaleCart)) {
                 const qty = parseInt(count, 10) || 0;
                 if (qty > 0) {
-                    const boxProd = B2B_PRODUCTS.find(item => item.id === id);
-                    if (boxProd) {
+                    const prod = ALL_PRODUCTS.find(item => item.id === id);
+                    if (prod) {
                         totalBoxes += qty;
-                        totalPrice += (boxProd.priceBox * qty);
-                    } else {
-                        const chicaProd = CHICAS_PRODUCTS.find(item => item.id === id);
-                        if (chicaProd) {
-                            totalChicasUnits += qty;
-                            totalPrice += (chicaProd.unitPrice * qty);
-                        }
+                        totalEmpanadasUnits += (prod.unitsPerBox * qty);
+                        totalPrice += (prod.priceBox * qty);
                     }
                 }
             }
@@ -2059,94 +1883,84 @@
             const unitsText = document.getElementById('hudUnitsText');
             const moneyText = document.getElementById('hudTotalMoney');
 
-            // La condición de desbloqueo permite avanzar si hay al menos 10 cajas O si compraron empanadas chicas
-            const isUnlocked = totalBoxes >= MIN_BOXES || totalChicasUnits > 0;
+            const isUnlocked = totalBoxes >= MIN_BOXES;
 
-            if (totalBoxes === 0 && totalChicasUnits === 0) {
+            if (totalBoxes === 0) {
                 fill.className = 'track-fill tier-bronze';
                 fill.style.width = '0%';
                 boxText.innerText = '0 de 10 cajas mínimas';
                 btnTrigger.classList.remove('unlocked');
                 btnTrigger.disabled = true;
                 btnTrigger.innerText = 'Mínimo 10 Cajas';
-            } else if (totalBoxes < MIN_BOXES && totalChicasUnits === 0) {
-                const percent = Math.round((totalBoxes / MIN_BOXES) * 40);
+            } else if (totalBoxes < MIN_BOXES) {
+                const percent = Math.round((totalBoxes / MIN_BOXES) * 50);
                 fill.className = 'track-fill tier-bronze';
                 fill.style.width = `${percent}%`;
                 boxText.innerText = `${totalBoxes} de ${MIN_BOXES} cajas mínimas`;
                 btnTrigger.classList.remove('unlocked');
                 btnTrigger.disabled = true;
                 const missing = MIN_BOXES - totalBoxes;
-                btnTrigger.innerText = `Faltan ${missing} cajas para el mínimo`;
+                btnTrigger.innerText = `Faltan ${missing} cajas`;
             } else if (totalBoxes < 25) {
                 const progressFrom10 = Math.max(0, (totalBoxes - 10) / 15);
-                const percent = Math.round(40 + (progressFrom10 * 56));
+                const percent = Math.round(50 + (progressFrom10 * 50));
                 fill.className = 'track-fill tier-green';
                 fill.style.width = `${percent}%`;
-                const toVip = Math.max(0, 25 - totalBoxes);
-                boxText.innerText = `${totalBoxes} cajas ${totalChicasUnits > 0 ? `+ ${totalChicasUnits} u. chicas` : ''}`;
+                boxText.innerText = `${totalBoxes} cajas seleccionadas`;
                 btnTrigger.classList.add('unlocked');
                 btnTrigger.disabled = false;
                 btnTrigger.innerText = `Confirmar Pedido`;
             } else {
                 fill.className = 'track-fill tier-gold';
                 fill.style.width = '100%';
-                boxText.innerText = `${totalBoxes} cajas • Nivel Pleno ${totalChicasUnits > 0 ? `(+${totalChicasUnits} u.)` : ''}`;
+                boxText.innerText = `${totalBoxes} cajas • Nivel Pleno`;
                 btnTrigger.classList.add('unlocked');
                 btnTrigger.disabled = false;
                 btnTrigger.innerText = `Confirmar Pedido`;
             }
 
-            const totalEmpanadasUnits = (totalBoxes * BOX_UNITS) + totalChicasUnits;
-            unitsText.innerText = `${totalEmpanadasUnits} empanadas seleccionadas`;
+            unitsText.innerText = `${totalEmpanadasUnits.toLocaleString('es-AR')} empanadas sin topping`;
             moneyText.innerText = formatMoney(totalPrice);
         }
 
-        // BÚSQUEDA
-        function handleSearchInput(val, targetCatalog) {
+        // BÚSQUEDA Y FILTROS POR CATEGORÍA
+        function handleSearchInput(val, line) {
             const query = cleanString(val);
-            if (targetCatalog === 'boxes') {
-                const btnClear = document.getElementById('btnClearSearch');
-                btnClear.style.display = query ? 'flex' : 'none';
-                const filtered = B2B_PRODUCTS.filter(p => 
-                    cleanString(p.name).includes(query) || cleanString(p.desc).includes(query)
-                );
-                renderCatalog(filtered);
-            } else {
-                const btnClear = document.getElementById('btnClearSearchChicas');
-                btnClear.style.display = query ? 'flex' : 'none';
-                const filtered = CHICAS_PRODUCTS.filter(p => 
-                    cleanString(p.name).includes(query) || cleanString(p.desc).includes(query)
-                );
-                renderChicasCatalog(filtered);
-            }
+            const is140 = line === 'linea140';
+            const btnClear = document.getElementById(is140 ? 'btnClearSearch140' : 'btnClearSearch100');
+            btnClear.style.display = query ? 'flex' : 'none';
+
+            const baseList = is140 ? PRODUCTS_140 : PRODUCTS_100;
+            const filtered = baseList.filter(p => 
+                cleanString(p.name).includes(query) || cleanString(p.desc).includes(query)
+            );
+            renderCatalog(line, filtered);
         }
 
-        function clearSearchInput(targetCatalog) {
-            if (targetCatalog === 'boxes') {
-                const input = document.getElementById('b2bSearch');
-                input.value = '';
-                document.getElementById('btnClearSearch').style.display = 'none';
-                input.focus();
-                renderCatalog(B2B_PRODUCTS);
-            } else {
-                const input = document.getElementById('b2bSearchChicas');
-                input.value = '';
-                document.getElementById('btnClearSearchChicas').style.display = 'none';
-                input.focus();
-                renderChicasCatalog(CHICAS_PRODUCTS);
-            }
+        function clearSearchInput(line) {
+            const is140 = line === 'linea140';
+            const input = document.getElementById(is140 ? 'b2bSearch140' : 'b2bSearch100');
+            input.value = '';
+            document.getElementById(is140 ? 'btnClearSearch140' : 'btnClearSearch100').style.display = 'none';
+            input.focus();
+            renderCatalog(line, is140 ? PRODUCTS_140 : PRODUCTS_100);
         }
 
-        function filterCatBoxes(catName, btnEl) {
-            document.querySelectorAll('#view-compras .cat-chip').forEach(b => b.classList.remove('active'));
+        function filterCat(line, catName, btnEl) {
+            const containerId = line === 'linea140' ? 'chipsScroll140' : 'chipsScroll100';
+            document.querySelectorAll(`#${containerId} .cat-chip`).forEach(b => b.classList.remove('active'));
             btnEl.classList.add('active');
 
+            const baseList = line === 'linea140' ? PRODUCTS_140 : PRODUCTS_100;
+
             if (catName === 'todas') {
-                renderCatalog(B2B_PRODUCTS);
+                renderCatalog(line, baseList);
+            } else if (catName === 'empachipa') {
+                const filtered = baseList.filter(p => p.isChipá);
+                renderCatalog(line, filtered);
             } else {
-                const filtered = B2B_PRODUCTS.filter(p => p.cat === catName);
-                renderCatalog(filtered);
+                const filtered = baseList.filter(p => p.cat === catName);
+                renderCatalog(line, filtered);
             }
         }
 
@@ -2222,24 +2036,20 @@
             e.target.style.cursor = isImageZoomed ? 'zoom-out' : 'zoom-in';
         });
 
-        // CHECKOUT
+        // CHECKOUT A WHATSAPP
         function openCheckoutModal() {
             let totalBoxes = 0;
-            let totalChicas = 0;
-
-            for (const [id, count] of Object.entries(wholesaleCart)) {
-                const qty = parseInt(count, 10) || 0;
-                if (B2B_PRODUCTS.some(p => p.id === id)) totalBoxes += qty;
-                if (CHICAS_PRODUCTS.some(p => p.id === id)) totalChicas += qty;
+            for (const count of Object.values(wholesaleCart)) {
+                totalBoxes += (parseInt(count, 10) || 0);
             }
 
-            if (totalBoxes === 0 && totalChicas === 0) {
+            if (totalBoxes === 0) {
                 showNotification("Tu carrito está vacío. Agregá productos para continuar.", "warning");
                 return;
             }
 
-            if (totalBoxes > 0 && totalBoxes < MIN_BOXES && totalChicas === 0) {
-                showNotification(`El pedido mínimo de cajas cerradas es de ${MIN_BOXES} (llevás ${totalBoxes}).`, "warning");
+            if (totalBoxes < MIN_BOXES) {
+                showNotification(`El pedido mínimo es de ${MIN_BOXES} cajas (llevás ${totalBoxes}).`, "warning");
                 return;
             }
 
@@ -2256,37 +2066,21 @@
             recap.innerHTML = '';
 
             let subtotal = 0;
-            let countLines = 0;
 
             for (const [id, count] of Object.entries(wholesaleCart)) {
                 const qty = parseInt(count, 10) || 0;
                 if (qty > 0) {
-                    const boxProd = B2B_PRODUCTS.find(item => item.id === id);
-                    if (boxProd) {
-                        countLines++;
-                        const rowPrice = boxProd.priceBox * qty;
+                    const prod = ALL_PRODUCTS.find(item => item.id === id);
+                    if (prod) {
+                        const rowPrice = prod.priceBox * qty;
                         subtotal += rowPrice;
                         const div = document.createElement('div');
                         div.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:3px;';
                         div.innerHTML = `
-                            <span>${qty}x Caja ${boxProd.name} (${qty * BOX_UNITS}u)</span>
+                            <span>${qty}x Caja ${prod.name} (${qty * prod.unitsPerBox}u)</span>
                             <strong style="color:var(--bronze-bright);">${formatMoney(rowPrice)}</strong>
                         `;
                         recap.appendChild(div);
-                    } else {
-                        const chicaProd = CHICAS_PRODUCTS.find(item => item.id === id);
-                        if (chicaProd) {
-                            countLines++;
-                            const rowPrice = chicaProd.unitPrice * qty;
-                            subtotal += rowPrice;
-                            const div = document.createElement('div');
-                            div.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:3px;';
-                            div.innerHTML = `
-                                <span>${qty}x ${chicaProd.name}</span>
-                                <strong style="color:var(--bronze-bright);">${formatMoney(rowPrice)}</strong>
-                            `;
-                            recap.appendChild(div);
-                        }
                     }
                 }
             }
@@ -2298,7 +2092,7 @@
                     <span>TOTAL ESTIMADO:</span>
                     <span style="color:#4ADE80; font-size:1.05rem;">${formatMoney(subtotal)}</span>
                 </div>
-                <span style="font-size:0.68rem; color:var(--text-muted); font-weight:600;">(Facturación y medios de pago se coordinan telefónicamente)</span>
+                <span style="font-size:0.68rem; color:var(--text-muted); font-weight:600;">(Facturación y medios de pago se coordinan telefónicamente con Albano)</span>
             `;
             recap.appendChild(totalDiv);
         }
@@ -2337,41 +2131,31 @@
             }
 
             let structuredItems = [];
-            let totalBoxes = 0;
-            let totalChicas = 0;
+            let totalBoxes140 = 0;
+            let totalBoxes100 = 0;
             let subtotal = 0;
 
             for (const [id, count] of Object.entries(wholesaleCart)) {
                 const qty = parseInt(count, 10) || 0;
                 if (qty > 0) {
-                    const boxProd = B2B_PRODUCTS.find(item => item.id === id);
-                    if (boxProd) {
-                        totalBoxes += qty;
-                        subtotal += (boxProd.priceBox * qty);
+                    const prod = ALL_PRODUCTS.find(item => item.id === id);
+                    if (prod) {
+                        subtotal += (prod.priceBox * qty);
+                        if (prod.line === '140') totalBoxes140 += qty;
+                        else totalBoxes100 += qty;
+
                         structuredItems.push({
-                            type: 'box',
-                            name: boxProd.name,
+                            line: prod.line,
+                            name: prod.name,
                             boxes: qty,
-                            units: qty * BOX_UNITS,
-                            subtotal: boxProd.priceBox * qty
+                            units: qty * prod.unitsPerBox,
+                            subtotal: prod.priceBox * qty
                         });
-                    } else {
-                        const chicaProd = CHICAS_PRODUCTS.find(item => item.id === id);
-                        if (chicaProd) {
-                            totalChicas += qty;
-                            subtotal += (chicaProd.unitPrice * qty);
-                            structuredItems.push({
-                                type: 'unit',
-                                name: chicaProd.name,
-                                units: qty,
-                                subtotal: chicaProd.unitPrice * qty
-                            });
-                        }
                     }
                 }
             }
 
-            const orderNum = 'EMP-' + Math.floor(1000 + Math.random() * 9000);
+            const orderNum = 'B2B-' + Math.floor(1000 + Math.random() * 9000);
 
             generatedOrderData = {
                 orderNum,
@@ -2379,8 +2163,8 @@
                 cuit,
                 fiscalType,
                 phone,
-                totalBoxes,
-                totalChicas,
+                totalBoxes140,
+                totalBoxes100,
                 subtotal,
                 items: structuredItems
             };
@@ -2391,43 +2175,32 @@
             document.getElementById('voucherCodeLabel').innerText = `ORDEN #${orderNum} CONFIRMADA`;
 
             let volumeDetail = [];
-            if (totalBoxes > 0) volumeDetail.push(`${totalBoxes} Cajas (${totalBoxes * BOX_UNITS} unidades)`);
-            if (totalChicas > 0) volumeDetail.push(`${totalChicas} Unidades chicas`);
+            if (totalBoxes140 > 0) volumeDetail.push(`${totalBoxes140} Cajas 140g (${totalBoxes140 * 30} u.)`);
+            if (totalBoxes100 > 0) volumeDetail.push(`${totalBoxes100} Cajas 100g (${totalBoxes100 * 40} u.)`);
 
             const recapHtml = `
-                <div><strong>Comercio / Cliente:</strong> ${escapeHtml(name)}</div>
+                <div><strong>Comercio:</strong> ${escapeHtml(name)}</div>
                 <div><strong>Facturación:</strong> ${escapeHtml(fiscalType)} (CUIT/DNI: ${escapeHtml(cuit)})</div>
-                <div><strong>Teléfono:</strong> ${escapeHtml(phone)}</div>
-                <div><strong>Volumen Total:</strong> ${volumeDetail.join(' + ')}</div>
+                <div><strong>Contacto:</strong> ${escapeHtml(phone)}</div>
+                <div><strong>Volumen Total:</strong> ${volumeDetail.join(' + ')} (Sin Topping)</div>
                 <div style="margin-top:6px; font-weight:800; font-size:0.95rem; color:#4ADE80;">TOTAL ESTIMADO: ${formatMoney(subtotal)}</div>
                 <div style="margin-top:6px; font-size:0.75rem; color:var(--text-muted);">
-                    Pago y facturación se definirán en la llamada de coordinación con el asesor comercial.
+                    Se enviará a Albano (Gerencia Comercial) para coordinar entrega y pago.
                 </div>
             `;
             document.getElementById('voucherDetailsRecap').innerHTML = recapHtml;
         }
 
-        // =========================================================================
-        // ENVÍO LIMPIO Y ESTÉTICO A WHATSAPP
-        // =========================================================================
-        function sendOrderWhatsApp(contactPerson) {
+        // ENVÍO LIMPIO Y ESTÉTICO AL WHATSAPP DE ALBANO
+        function sendOrderWhatsApp() {
             if (!generatedOrderData || !generatedOrderData.items) return;
 
-            const targetNumber = contactPerson === 'pablo' ? WSP_PABLO : WSP_ALBANO;
-            const personName = contactPerson === 'pablo' ? 'Pablo' : 'Albano';
-
-            // Une todos los productos en una sola línea separados por ' + ' como pediste
             const itemsString = generatedOrderData.items.map(it => {
-                if (it.type === 'box') {
-                    return `${it.boxes} cajas (${it.units} u.) ${it.name}: ${formatMoney(it.subtotal)}`;
-                } else {
-                    return `${it.units} u. chicas ${it.name}: ${formatMoney(it.subtotal)}`;
-                }
+                return `${it.boxes} cj (${it.units}u) ${it.name}: ${formatMoney(it.subtotal)}`;
             }).join(' + ');
 
-            // Armamos el texto codificando línea por línea para que WhatsApp no lo junte nunca
             const textUrl = 
-                encodeURIComponent(`Hola ${personName}, qué tal, te paso el pedido mayorista:`) + "%0A" +
+                encodeURIComponent(`Hola Albano, qué tal, te paso el pedido mayorista:`) + "%0A" +
                 encodeURIComponent(`*Pedido:* #${generatedOrderData.orderNum}`) + "%0A" +
                 encodeURIComponent(`*Comercio:* ${generatedOrderData.name}`) + "%0A" +
                 encodeURIComponent(`*CUIT / DNI:* ${generatedOrderData.cuit}`) + "%0A" +
@@ -2437,15 +2210,14 @@
                 encodeURIComponent(`*Total:* ${formatMoney(generatedOrderData.subtotal)}.`) + "%0A%0A" +
                 encodeURIComponent(`Quedo a la espera para coordinar pago y entrega, ¡muchas gracias!`);
 
-            const url = `https://wa.me/${targetNumber}?text=${textUrl}`;
+            const url = `https://wa.me/${WSP_ALBANO}?text=${textUrl}`;
             window.open(url, '_blank');
         }
 
-        // INICIALIZACIÓN
         window.addEventListener('DOMContentLoaded', () => {
             loadCartFromStorage();
-            renderCatalog(B2B_PRODUCTS);
-            renderChicasCatalog(CHICAS_PRODUCTS);
+            renderCatalog('linea140', PRODUCTS_140);
+            renderCatalog('linea100', PRODUCTS_100);
             renderGallery();
             updateWholesaleHUD();
             preloadAllCatalogImages();
