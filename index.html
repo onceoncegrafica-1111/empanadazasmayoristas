@@ -12,11 +12,9 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="icon" href="./empanadazas-icon.png" type="image/png">
 
-    <!-- ACELERADORES DE CARGA INMEDIATA DE IMÁGENES -->
+    <!-- FUENTES CORPORATIVAS OFICIALES -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- TIPOGRAFÍAS CORPORATIVAS OFICIALES -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;800&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@500;600;700;800;900&display=block" rel="stylesheet">
 
     <style>
@@ -65,7 +63,7 @@
             background: transparent;
             color: var(--text-light);
             min-height: 100vh;
-            padding-bottom: 150px;
+            padding-bottom: 155px;
             overflow-x: hidden;
             position: relative;
             letter-spacing: -0.015em;
@@ -117,7 +115,7 @@
             100% { background-position: 1000px 1000px; }
         }
 
-        /* HEADER RESPONSIVE */
+        /* HEADER RESPONSIVE SUIZO */
         .master-header {
             position: sticky;
             top: 0;
@@ -135,37 +133,74 @@
             width: 100%;
             max-width: 1120px;
             display: flex;
-            flex-wrap: wrap;
             align-items: center;
             justify-content: space-between;
-            row-gap: 8px;
+            gap: 12px;
         }
 
         .brand-logo-wrap {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 8px;
             text-decoration: none;
             cursor: pointer;
-            order: 1;
+            flex-shrink: 0;
         }
 
         .logo-circle-svg {
-            width: 38px;
-            height: 38px;
+            width: 36px;
+            height: 36px;
             filter: drop-shadow(0 4px 10px rgba(0,0,0,0.8));
             flex-shrink: 0;
         }
 
         .brand-title-vector {
-            height: 20px;
+            height: 19px;
             width: auto;
-            max-width: 170px;
+            max-width: 160px;
             filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6));
         }
 
+        /* NAVEGACIÓN DESKTOP Y TABLET (OCULTA EN MÓVILES) */
+        .nav-tabs-bar {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 4px;
+            background: rgba(26, 28, 23, 0.95);
+            border: 1px solid var(--border-card);
+            border-radius: 999px;
+            padding: 3px;
+        }
+
+        .nav-tab-btn {
+            background: transparent;
+            border: none;
+            color: var(--text-muted);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.76rem;
+            font-weight: 800;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+            padding: 7px 12px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: all 0.2s var(--spring);
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .nav-tab-btn.active {
+            background: var(--bronze-bright);
+            color: #12130F;
+            box-shadow: 0 2px 8px rgba(247, 194, 104, 0.35);
+        }
+
         .header-tag-wrap {
-            order: 2;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
         }
 
         .b2b-pill-tag {
@@ -181,57 +216,93 @@
             white-space: nowrap;
         }
 
-        /* NAVEGACIÓN CORPORATIVA SUIZA (SIN DESBORDES) */
-        .nav-tabs-bar {
-            order: 3;
-            display: flex;
+        /* BOTÓN HAMBURGUESA MÓVIL (COMPACTO Y RÁPIDO) */
+        .btn-hamburger-menu {
+            display: none;
             align-items: center;
-            justify-content: flex-start;
-            gap: 4px;
-            width: 100%;
-            max-width: 580px;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
             background: rgba(26, 28, 23, 0.95);
-            border: 1px solid var(--border-card);
-            border-radius: 999px;
-            padding: 3px;
-            margin: 0 auto;
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-            scrollbar-width: none;
+            border: 1.5px solid var(--border-card);
+            color: var(--bronze-bright);
+            cursor: pointer;
+            font-size: 18px;
+            transition: all 0.2s ease;
         }
-        .nav-tabs-bar::-webkit-scrollbar { display: none; }
+        .btn-hamburger-menu:active { transform: scale(0.95); }
 
-        .nav-tab-btn {
-            flex: 1 0 auto;
+        /* MENÚ FLOTANTE MÓVIL (ESTILO ELEGANTE SUIZO, SIN EMOJIS INFANTILES) */
+        .mobile-menu-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.65);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            z-index: 2500;
+            display: none;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 58px 14px 14px;
+        }
+        .mobile-menu-overlay.show { display: flex; }
+
+        .mobile-menu-box {
+            background: rgba(20, 22, 17, 0.98);
+            border: 1.5px solid var(--border-hover);
+            border-radius: 18px;
+            padding: 10px;
+            width: 240px;
+            box-shadow: 0 16px 40px rgba(0, 0, 0, 0.9), 0 0 20px var(--neon-glow);
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            animation: slideDownMenu 0.18s ease-out;
+        }
+
+        @keyframes slideDownMenu {
+            from { opacity: 0; transform: translateY(-8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .mobile-menu-item {
             background: transparent;
             border: none;
-            color: var(--text-muted);
+            color: var(--brand-cream);
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(0.68rem, 2.3vw, 0.76rem);
+            font-size: 0.84rem;
             font-weight: 800;
-            letter-spacing: 0.03em;
             text-transform: uppercase;
-            padding: 7px 11px;
-            border-radius: 999px;
+            letter-spacing: 0.04em;
+            padding: 10px 14px;
+            border-radius: 10px;
+            text-align: left;
             cursor: pointer;
-            transition: all 0.2s var(--spring);
-            text-align: center;
-            user-select: none;
-            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: background 0.15s ease;
         }
-
-        .nav-tab-btn.active {
-            background: var(--bronze-bright);
-            color: #12130F;
-            box-shadow: 0 2px 8px rgba(247, 194, 104, 0.35);
+        .mobile-menu-item .m-subtag {
+            font-size: 0.70rem;
+            color: var(--bronze-mid);
+            font-weight: 600;
+            text-transform: none;
         }
+        .mobile-menu-item .m-chevron {
+            color: var(--bronze-bright);
+            font-size: 1.1rem;
+        }
+        .mobile-menu-item.active {
+            background: rgba(247, 194, 104, 0.18);
+            color: var(--bronze-bright);
+        }
+        .mobile-menu-item:active { background: rgba(247, 194, 104, 0.28); }
 
-        @media (min-width: 900px) {
-            .master-header { padding: 8px 24px; }
-            .header-inner-container { flex-wrap: nowrap; gap: 16px; }
-            .brand-logo-wrap { order: 1; flex: 0 0 auto; }
-            .nav-tabs-bar { order: 2; flex: 0 1 540px; margin: 0; }
-            .header-tag-wrap { order: 3; flex: 0 0 auto; }
+        @media (max-width: 767px) {
+            .nav-tabs-bar { display: none; }
+            .btn-hamburger-menu { display: flex; }
         }
 
         /* CONTENEDOR DE VISTAS */
@@ -241,9 +312,8 @@
             max-width: 1080px;
             margin: 0 auto;
             padding: 16px 12px;
-            animation: fadeInView 0.28s var(--spring) forwards;
+            animation: fadeInView 0.25s var(--spring) forwards;
         }
-
         .view-section.active { display: block; }
 
         @keyframes fadeInView {
@@ -305,7 +375,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
         }
 
         .search-bar-wrap {
@@ -354,11 +424,12 @@
             cursor: pointer;
         }
 
-        /* FILA SEPARADA PARA LOS CHIPS (100% ANCHO, NUNCA SE CORTAN) */
+        /* FILA DE FILTROS: EN PC QUEDAN ALINEADOS EN LA MISMA LÍNEA */
         .filter-header-bar {
             display: flex;
-            flex-direction: column;
-            gap: 8px;
+            align-items: center;
+            justify-content: space-between;
+            gap: 10px;
             width: 100%;
         }
 
@@ -367,22 +438,18 @@
             gap: 6px;
             overflow-x: auto;
             -webkit-overflow-scrolling: touch;
-            padding-bottom: 6px;
-            width: 100%;
+            padding-bottom: 4px;
+            flex: 1;
             scrollbar-width: thin;
             scrollbar-color: rgba(247, 194, 104, 0.4) transparent;
         }
 
-        .category-chips-scroll::-webkit-scrollbar {
-            height: 4px;
-        }
+        .category-chips-scroll::-webkit-scrollbar { height: 4px; }
         .category-chips-scroll::-webkit-scrollbar-thumb {
             background: rgba(247, 194, 104, 0.4);
             border-radius: 999px;
         }
-        .category-chips-scroll::-webkit-scrollbar-track {
-            background: transparent;
-        }
+        .category-chips-scroll::-webkit-scrollbar-track { background: transparent; }
 
         .cat-chip {
             background: rgba(28, 30, 24, 0.90);
@@ -398,6 +465,7 @@
             letter-spacing: 0.04em;
             transition: all 0.2s ease;
             flex-shrink: 0;
+            user-select: none;
         }
 
         .cat-chip.active, .cat-chip:hover {
@@ -406,19 +474,20 @@
             border-color: var(--bronze-bright);
         }
 
-        .view-mode-row {
+        /* SELECTOR GRILLA / LISTA */
+        .view-mode-bar-wrap {
             display: flex;
-            justify-content: flex-end;
-            width: 100%;
+            align-items: center;
+            flex-shrink: 0;
         }
 
         .view-mode-toggle {
             display: inline-flex;
             background: rgba(20, 22, 18, 0.95);
             border: 1px solid var(--border-card);
-            border-radius: 8px;
-            padding: 2px;
-            gap: 2px;
+            border-radius: 999px;
+            padding: 2px 4px;
+            gap: 3px;
         }
 
         .btn-view-mode {
@@ -427,22 +496,37 @@
             color: var(--text-muted);
             font-size: 0.68rem;
             font-weight: 800;
-            padding: 4px 8px;
-            border-radius: 6px;
+            padding: 5px 12px;
+            border-radius: 999px;
             cursor: pointer;
             text-transform: uppercase;
+            transition: all 0.15s ease;
+            white-space: nowrap;
         }
 
         .btn-view-mode.active {
-            background: rgba(247, 194, 104, 0.2);
+            background: rgba(247, 194, 104, 0.25);
             color: var(--bronze-bright);
         }
 
-        /* GRILLA DE PRODUCTOS */
+        @media (max-width: 767px) {
+            .filter-header-bar {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .view-mode-bar-wrap {
+                align-self: center;
+            }
+        }
+
+        /* GRILLA DE PRODUCTOS - BLOQUEO DE SELECCIÓN INVOLUNTARIA */
         .products-b2b-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
             gap: 14px;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         .product-b2b-card {
@@ -455,6 +539,8 @@
             box-shadow: var(--shadow-card);
             transition: all 0.22s var(--spring);
             position: relative;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         .product-b2b-card:hover {
@@ -475,6 +561,7 @@
             background: #181916;
             overflow: hidden;
             cursor: zoom-in;
+            user-select: none;
         }
 
         .card-img {
@@ -483,11 +570,10 @@
             object-fit: cover;
             transition: transform 0.3s ease;
             background-color: #1b1d19;
+            pointer-events: none;
         }
 
-        .product-b2b-card:hover .card-img {
-            transform: scale(1.04);
-        }
+        .product-b2b-card:hover .card-img { transform: scale(1.04); }
 
         .box-badge-floating {
             position: absolute;
@@ -512,6 +598,8 @@
             justify-content: space-between;
             flex: 1;
             gap: 8px;
+            user-select: none;
+            -webkit-user-select: none;
         }
 
         .product-name-b2b {
@@ -520,6 +608,7 @@
             font-weight: 800;
             color: var(--brand-cream);
             line-height: 1.2;
+            user-select: none;
         }
 
         .product-desc-b2b {
@@ -532,6 +621,7 @@
             -webkit-box-orient: vertical;
             overflow: hidden;
             min-height: 30px;
+            user-select: none;
         }
 
         .card-footer-b2b {
@@ -546,6 +636,7 @@
         .pricing-wrap {
             display: flex;
             flex-direction: column;
+            user-select: none;
         }
 
         .price-box-val {
@@ -565,30 +656,32 @@
             margin-top: 2px;
         }
 
-        /* STEPPER B2B */
+        /* STEPPER ERGONÓMICO */
         .b2b-stepper {
             display: flex;
             align-items: center;
             background: rgba(14, 15, 13, 0.95);
             border: 1.5px solid var(--border-card);
-            border-radius: 9px;
+            border-radius: 10px;
             overflow: hidden;
-            height: 34px;
+            height: 38px;
+            min-width: 108px;
         }
 
         .step-btn-b2b {
             background: transparent;
             border: none;
             color: var(--brand-cream);
-            width: 32px;
+            width: 36px;
             height: 100%;
-            font-size: 17px;
+            font-size: 20px;
             font-weight: 900;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: background 0.15s ease;
+            user-select: none;
         }
 
         .step-btn-b2b:hover {
@@ -596,13 +689,13 @@
             color: var(--bronze-bright);
         }
 
-        .step-btn-b2b:active { filter: brightness(0.85); }
+        .step-btn-b2b:active { background: rgba(247, 194, 104, 0.35); }
 
         .step-input-b2b {
-            width: 38px;
+            width: 36px;
             text-align: center;
             font-family: 'Plus Jakarta Sans', sans-serif;
-            font-size: 0.90rem;
+            font-size: 0.95rem;
             font-weight: 900;
             color: var(--brand-cream);
             border: none;
@@ -617,9 +710,7 @@
             -webkit-appearance: none;
             margin: 0;
         }
-        .step-input-b2b:focus {
-            background: rgba(247, 194, 104, 0.16);
-        }
+        .step-input-b2b:focus { background: rgba(247, 194, 104, 0.16); }
 
         /* MODO LISTA RÁPIDA */
         .products-b2b-grid.mode-list {
@@ -659,25 +750,21 @@
             gap: 12px;
         }
 
-        /* ADAPTACIÓN MÓVIL EXACTA */
         @media (max-width: 680px) {
-            .products-b2b-grid {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 8px;
-            }
+            .products-b2b-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
             .card-img-wrap { height: 110px; }
             .card-body { padding: 8px; gap: 6px; }
             .product-name-b2b { font-size: 0.88rem; }
             .product-desc-b2b { font-size: 0.68rem; min-height: 26px; }
             .price-box-val { font-size: 1.05rem; }
             .price-unit-sub { font-size: 0.58rem; }
-            .b2b-stepper { height: 30px; }
-            .step-btn-b2b { width: 26px; }
-            .step-input-b2b { width: 30px; font-size: 0.82rem; }
+            .b2b-stepper { height: 35px; min-width: 100px; }
+            .step-btn-b2b { width: 33px; font-size: 18px; }
+            .step-input-b2b { width: 34px; font-size: 0.88rem; }
             .box-badge-floating { font-size: 0.55rem; padding: 2px 5px; }
         }
 
-        /* HUD INFERIOR FLOTANTE RE-INGENIADO (CERO AMONTONAMIENTO EN MÓVILES) */
+        /* HUD INFERIOR FLOTANTE */
         .b2b-bottom-hud {
             position: fixed;
             bottom: 0;
@@ -701,7 +788,6 @@
             gap: 6px;
         }
 
-        /* FILA SUPERIOR DEL HUD: ESTADO + BARRA PROGRESS */
         .hud-top-status-row {
             display: flex;
             align-items: center;
@@ -713,14 +799,8 @@
             white-space: nowrap;
         }
 
-        .hud-top-status-row .hud-box-count {
-            color: var(--brand-cream);
-        }
-
-        .hud-top-status-row .hud-units-count {
-            color: var(--bronze-bright);
-            font-size: 0.70rem;
-        }
+        .hud-top-status-row .hud-box-count { color: var(--brand-cream); }
+        .hud-top-status-row .hud-units-count { color: var(--bronze-bright); font-size: 0.70rem; }
 
         .track-bar {
             width: 100%;
@@ -754,7 +834,6 @@
             50% { filter: brightness(1.25); }
         }
 
-        /* FILA INFERIOR DEL HUD: TOTAL Y BOTÓN DE COMPRA */
         .hud-bottom-action-row {
             display: flex;
             align-items: center;
@@ -794,14 +873,14 @@
             font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            padding: 10px 18px;
+            padding: 11px 18px;
             border-radius: 11px;
             border: none;
             cursor: not-allowed;
             white-space: nowrap;
             transition: all 0.25s var(--spring);
             flex: 1;
-            max-width: 260px;
+            max-width: 250px;
             text-align: center;
         }
 
@@ -861,12 +940,12 @@
             box-shadow: 0 0 10px rgba(245, 158, 11, 0.35) !important;
         }
 
-        /* SECCIONES GALERÍA Y CONTACTO */
+        /* SECCIONES: RESTAURADA LA ESTÉTICA ORIGINAL DE LUJO CON SPAN DORADO */
         .info-card-luxury {
             background: var(--bg-card);
             border: 1.5px solid var(--border-card);
-            border-radius: 18px;
-            padding: 20px;
+            border-radius: 20px;
+            padding: 24px;
             box-shadow: var(--shadow-card);
             display: flex;
             flex-direction: column;
@@ -876,7 +955,7 @@
 
         .info-card-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             font-weight: 900;
             color: var(--brand-cream);
             text-transform: uppercase;
@@ -884,23 +963,48 @@
         .info-card-title span { color: var(--bronze-bright); }
 
         .info-card-text {
-            font-size: 0.84rem;
-            line-height: 1.55;
+            font-size: 0.86rem;
+            line-height: 1.6;
             color: var(--brand-cream-muted);
             font-weight: 500;
         }
 
+        /* GALERÍA EN GRILLA Y LISTA (RESTAURADA A FILA HORIZONTAL GRANDE) */
+        .gallery-controls-bar {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-bottom: 14px;
+        }
+
         .gallery-grid {
             display: grid;
+            gap: 12px;
+            transition: all 0.2s ease;
+        }
+
+        /* Modo Grilla: mosaico cuadrado */
+        .gallery-grid.mode-grid {
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 10px;
+        }
+        .gallery-grid.mode-grid .gallery-item {
+            aspect-ratio: 1/1;
+            height: auto;
+        }
+
+        /* Modo Lista: fila horizontal ancha como antes */
+        .gallery-grid.mode-list {
+            grid-template-columns: 1fr;
+        }
+        .gallery-grid.mode-list .gallery-item {
+            height: 220px;
+            width: 100%;
         }
 
         .gallery-item {
             border-radius: 14px;
             overflow: hidden;
             border: 1.5px solid var(--border-card);
-            height: 170px;
             background: #181916;
             box-shadow: var(--shadow-card);
             cursor: zoom-in;
@@ -913,24 +1017,36 @@
             object-fit: cover;
             transition: transform 0.3s ease;
         }
-        .gallery-item:hover img { transform: scale(1.05); }
+        .gallery-item:hover img { transform: scale(1.04); }
 
-        .contact-grid-row {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 14px;
-            align-items: stretch;
+        .gallery-caption-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+            padding: 10px 14px;
+            color: var(--brand-cream);
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 800;
         }
 
-        .contact-card-agent {
-            background: rgba(22, 24, 19, 0.94);
+        /* SECCIÓN CONTACTO INTEGRADA Y SIN SCROLL INÚTIL */
+        #view-contacto {
+            padding-bottom: 10px;
+        }
+
+        .contact-card-agent-box {
+            background: rgba(20, 22, 17, 0.95);
             border: 1.5px solid var(--border-card);
-            border-radius: 18px;
-            padding: 22px;
+            border-radius: 16px;
+            padding: 18px 20px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
-            height: 100%;
+            gap: 10px;
+            margin-top: 6px;
+            box-shadow: var(--shadow-card);
         }
 
         .agent-role {
@@ -963,7 +1079,7 @@
             gap: 8px;
             text-transform: uppercase;
             box-shadow: 0 4px 14px var(--accent-green-glow);
-            margin-top: auto;
+            margin-top: 4px;
         }
 
         /* MODAL DE CHECKOUT */
@@ -1199,7 +1315,7 @@
         <button type="button" class="alert-close-btn" onclick="dismissAlert(event)">✕</button>
     </div>
 
-    <!-- MASTER HEADER SLIM -->
+    <!-- MASTER HEADER -->
     <header class="master-header">
         <div class="header-inner-container">
             <a class="brand-logo-wrap" onclick="switchView('linea140')">
@@ -1220,12 +1336,12 @@
                     <path fill="#FEFAE4" d="M275.26,1.21c7.65,0,11.47,0,19.12,0,9.94,0,16.68,5.86,16.54,15.99,0,14.67.02,29.34.03,44.01.15,10.48-7.33,15.82-17.32,15.62-7.34-.12-11.01-.17-18.34-.24,0-25.13-.02-50.26-.02-75.4M287.68,11.95c0,18.02.01,36.04.02,54.06,2.18.03,3.27.04,5.44.07,3.6.05,5.4-1.63,5.39-5.05,0-14.63-.01-29.25-.02-43.88,0-3.45-1.8-5.18-5.4-5.19-2.18,0-3.26,0-5.44-.01"/>
                     <path fill="#FEFAE4" d="M354.83,51.04c1.36,9.18,2.71,18.35,4.06,27.53-5.02-.18-7.53-.27-12.55-.44-.97-6.55-1.46-9.83-2.43-16.37-5.07-.13-7.61-.19-12.68-.3-.98,6.46-1.47,9.69-2.44,16.14-5-.14-7.5-.2-12.51-.32,1.34-8.93,2.68-17.87,4.02-26.81,2.92-16.42,5.83-32.84,8.74-49.26,6.81,0,10.21,0,17.02,0,2.93,16.6,5.86,33.2,8.77,49.81M342.29,50.77c-1.59-10.65-3.17-21.31-4.76-31.96-1.57,10.59-3.14,21.19-4.71,31.78,3.79.07,5.69.11,9.48.18"/>
                     <path fill="#FEFAE4" d="M396.27,8.1c-5.55,20.07-11.15,40.13-16.79,60.18,7.04.26,10.55.4,17.59.7,0,4.49,0,6.74.01,11.23-10.52-.5-21.05-.96-31.58-1.39,0-2.69,0-4.03,0-6.72,5.63-19.89,11.23-39.8,16.79-59.71-6.51-.05-9.76-.07-16.27-.11,0-4.41,0-6.62-.01-11.04,10.09,0,20.17.01,30.26.02,0,2.73,0,4.1,0,6.84"/>
-                    <path fill="#FEFAE4" d="M442.2,53.85c1.35,9.71,2.71,19.43,4.05,29.15-5.01-.32-7.52-.48-12.53-.79-.97-6.92-1.45-10.38-2.42-17.27-5.07-.24-7.6-.36-12.67-.58-.98,6.75-1.47,10.11-2.44,16.84-5-.28-7.5-.41-12.5-.66,1.34-9.29,2.68-18.57,4.01-27.86,2.92-17.13,5.83-34.26,8.73-51.4,6.81,0,10.21,0,17.02,0.02,2.94,17.52,5.86,35.04,8.76,52.56M429.67,53.35c-1.58-11.21-3.17-22.42-4.76-33.62-1.57,11.09-3.14,22.18-4.71,33.27,3.79.14,5.68.21,9.47.36"/>
+                    <path fill="#FEFAE4" d="M442.2,53.85c1.35,9.71,2.71,19.43,4.05,29.15-5.01-.32-7.52-.48-12.53-.79-.97-6.92-1.45-10.38-2.42-17.27-5.07-.24-7.6-.36-12.67-.58-.98,6.75-1.47,10.11-2.44,16.84-5-.28-7.5-.41-12.5-.66,1.34-9.29,2.68-18.57,4.01-27.86,2.92-17.13,5.83-34.26,8.73-51.4,6.81,0,10.21,0,17.02,0,2.94,17.52,5.86,35.04,8.76,52.56M429.67,53.35c-1.58-11.21-3.17-22.42-4.76-33.62-1.57,11.09-3.14,22.18-4.71,33.27,3.79.14,5.68.21,9.47.36"/>
                     <path fill="#FEFAE4" d="M450.55,17.23c-.02-10.27,7.5-17.62,17.8-17.21,9.87.39,18.79,6.7,17.85,17.74v11.37c-4.96-.13-7.44-.19-12.41-.32,0-4.5,0-6.75,0-11.24,0-3.75-1.8-5.65-5.4-5.72-.03,0-.05,0-.09,0-3.57-.04-5.35,1.82-5.35,5.56,0,3,0,4.51,0,7.51,0,3.69,3.9,8.42,11.62,13.93,6.46,4.61,11.6,11.65,11.61,19.91v10.68c1.02,11.04-7.96,16.82-17.78,16.44-10.35-.41-17.82-8.12-17.84-18.5,0-4.41,0-6.62,0-11.03,4.96.22,7.44.33,12.4.57,0,4.46,0,6.68,0,11.14,0,3.74,1.81,5.72,5.43,5.95,3.59.23,5.39-1.54,5.39-5.32,0-3.82,0-5.73,0-9.54,0-4.03-3.9-9.12-11.62-14.58-6.4-4.53-11.61-11.44-11.63-19.64,0-3.07,0-4.61,0-7.69"/>
                 </svg>
             </a>
 
-            <!-- NAVEGACIÓN CORPORATIVA SUIZA (SIN NOSOTROS) -->
+            <!-- NAVEGACIÓN DESKTOP (CENTRADAS Y ENTERAS) -->
             <nav class="nav-tabs-bar">
                 <button class="nav-tab-btn active" id="tabBtn-linea140" onclick="switchView('linea140')">Línea 140g (x30)</button>
                 <button class="nav-tab-btn" id="tabBtn-linea100" onclick="switchView('linea100')">Línea 100g (x40)</button>
@@ -1235,14 +1351,39 @@
 
             <div class="header-tag-wrap">
                 <span class="b2b-pill-tag">PEDIDOS 24/7</span>
+                <button type="button" class="btn-hamburger-menu" onclick="toggleMobileMenu()" aria-label="Abrir Menú">
+                    ☰
+                </button>
             </div>
         </div>
     </header>
 
-    <!-- SECCIÓN 1: LÍNEA 140GR EN CAJAS X30 (SIN TOPPING) -->
+    <!-- MENÚ FLOTANTE MÓVIL (100% PROFESIONAL, SIN EMOJIS INFANTILES) -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay" onclick="closeMobileMenuOnClick(event)">
+        <div class="mobile-menu-box" id="mobileMenuBox">
+            <button type="button" class="mobile-menu-item active" id="mTab-linea140" onclick="handleMobileNav('linea140')">
+                <span>Línea 140g <span class="m-subtag">(x30)</span></span>
+                <span class="m-chevron">›</span>
+            </button>
+            <button type="button" class="mobile-menu-item" id="mTab-linea100" onclick="handleMobileNav('linea100')">
+                <span>Línea 100g <span class="m-subtag">(x40)</span></span>
+                <span class="m-chevron">›</span>
+            </button>
+            <button type="button" class="mobile-menu-item" id="mTab-galeria" onclick="handleMobileNav('galeria')">
+                <span>Galería HD</span>
+                <span class="m-chevron">›</span>
+            </button>
+            <button type="button" class="mobile-menu-item" id="mTab-contacto" onclick="handleMobileNav('contacto')">
+                <span>Contacto</span>
+                <span class="m-chevron">›</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- SECCIÓN 1: LÍNEA 140GR (27 SABORES, SIN CHIPÁ/PIZZA/MITI/PARRI) -->
     <main class="view-section active" id="view-linea140">
         <div class="b2b-hero-banner">
-            <h2 class="b2b-hero-title">LÍNEA 140 Gr <span>CONGELADAS</span></h2>
+            <h2 class="b2b-hero-title">LÍNEA 140 Gr</span></h2>
             <div class="b2b-hero-bullets">
                 <span>Cajas cerradas x <strong>30 unidades</strong></span>
                 <span class="bullet-dot">✦</span>
@@ -1254,20 +1395,19 @@
 
         <div class="catalog-controls">
             <div class="search-bar-wrap">
-                <input type="text" id="b2bSearch140" class="search-input" placeholder="Buscar sabor (ej. parrillera, 5 quesos, chipá)..." autocomplete="off" oninput="handleSearchInput(this.value, 'linea140')" />
+                <input type="text" id="b2bSearch140" class="search-input" placeholder="Buscar sabor (ej. parrillera, 5 quesos, vacía)..." autocomplete="off" oninput="handleSearchInput(this.value, 'linea140')" />
                 <button type="button" class="btn-clear-search" id="btnClearSearch140" onclick="clearSearchInput('linea140')" title="Borrar búsqueda">✕</button>
             </div>
 
-            <!-- CHIPS EN SU PROPIA FILA CON SCROLL COMPLETO -->
+            <!-- EN PC: CHIPS A LA IZQUIERDA Y SELECTOR GRILLA/LISTA AL COSTADO DERECHO -->
             <div class="filter-header-bar">
                 <div class="category-chips-scroll" id="chipsScroll140">
-                    <button class="cat-chip active" onclick="filterCat('linea140', 'todas', this)">TODOS (30)</button>
+                    <button class="cat-chip active" onclick="filterCat('linea140', 'todas', this)">TODOS (27)</button>
                     <button class="cat-chip" onclick="filterCat('linea140', 'super', this)">SUPER EMPANADAZAS</button>
                     <button class="cat-chip" onclick="filterCat('linea140', 'asombrosas', this)">ASOMBROSAS</button>
-                    <button class="cat-chip" onclick="filterCat('linea140', 'empachipa', this)">EMPACHIPÁ</button>
                 </div>
 
-                <div class="view-mode-row">
+                <div class="view-mode-bar-wrap">
                     <div class="view-mode-toggle">
                         <button type="button" class="btn-view-mode active" id="btnModeGrid140" onclick="setCatalogLayout('grid', 'linea140')">Grilla</button>
                         <button type="button" class="btn-view-mode" id="btnModeList140" onclick="setCatalogLayout('list', 'linea140')">Lista Rápida</button>
@@ -1279,10 +1419,10 @@
         <div class="products-b2b-grid" id="catalogGrid140"></div>
     </main>
 
-    <!-- SECCIÓN 2: LÍNEA 100GR EN CAJAS X40 (SIN TOPPING) -->
+    <!-- SECCIÓN 2: LÍNEA 100GR (27 SABORES, SIN CHIPÁ/PIZZA/MITI/PARRI) -->
     <section class="view-section" id="view-linea100">
         <div class="b2b-hero-banner" style="background: linear-gradient(135deg, rgba(30, 36, 26, 0.95) 0%, rgba(20, 24, 18, 0.95) 100%);">
-            <h2 class="b2b-hero-title">LÍNEA 100 Gr <span>ROTISERAS</span></h2>
+            <h2 class="b2b-hero-title">LÍNEA 100 Gr</span></h2>
             <div class="b2b-hero-bullets">
                 <span>Cajas cerradas x <strong>40 unidades</strong></span>
                 <span class="bullet-dot">✦</span>
@@ -1298,16 +1438,15 @@
                 <button type="button" class="btn-clear-search" id="btnClearSearch100" onclick="clearSearchInput('linea100')" title="Borrar búsqueda">✕</button>
             </div>
 
-            <!-- CHIPS EN SU PROPIA FILA CON SCROLL COMPLETO -->
+            <!-- EN PC: CHIPS A LA IZQUIERDA Y SELECTOR GRILLA/LISTA AL COSTADO DERECHO -->
             <div class="filter-header-bar">
                 <div class="category-chips-scroll" id="chipsScroll100">
-                    <button class="cat-chip active" onclick="filterCat('linea100', 'todas', this)">TODOS (30)</button>
+                    <button class="cat-chip active" onclick="filterCat('linea100', 'todas', this)">TODOS (27)</button>
                     <button class="cat-chip" onclick="filterCat('linea100', 'super', this)">SUPER EMPANADAZAS</button>
                     <button class="cat-chip" onclick="filterCat('linea100', 'asombrosas', this)">ASOMBROSAS</button>
-                    <button class="cat-chip" onclick="filterCat('linea100', 'empachipa', this)">EMPACHIPÁ</button>
                 </div>
 
-                <div class="view-mode-row">
+                <div class="view-mode-bar-wrap">
                     <div class="view-mode-toggle">
                         <button type="button" class="btn-view-mode active" id="btnModeGrid100" onclick="setCatalogLayout('grid', 'linea100')">Grilla</button>
                         <button type="button" class="btn-view-mode" id="btnModeList100" onclick="setCatalogLayout('list', 'linea100')">Lista Rápida</button>
@@ -1319,42 +1458,47 @@
         <div class="products-b2b-grid" id="catalogGrid100"></div>
     </section>
 
-    <!-- SECCIÓN 3: GALERÍA HD CON LOS 30 SABORES REALES -->
+    <!-- SECCIÓN 3: GALERÍA HD (RESTAURADA CON CONTENEDOR DE LUJO Y LISTA HORIZONTAL) -->
     <section class="view-section" id="view-galeria">
         <div class="info-card-luxury" style="text-align:center;">
             <h2 class="info-card-title">GALERÍA DE PRODUCTOS <span>SIN TOPPING</span></h2>
-            <p class="info-card-text">Las 30 variedades completas listas para despacho congelado. Tocá cualquier foto para verla en pantalla completa.</p>
+            <p class="info-card-text">Explorá nuestras 30 variedades completas. Tocá cualquier foto para verla en pantalla completa.</p>
         </div>
-        <div class="gallery-grid" id="galleryGridContainer"></div>
+
+        <div class="gallery-controls-bar">
+            <div class="view-mode-toggle">
+                <button type="button" class="btn-view-mode active" id="btnGalGrid" onclick="setGalleryLayout('grid')">Grilla</button>
+                <button type="button" class="btn-view-mode" id="btnGalList" onclick="setGalleryLayout('list')">Lista Fila</button>
+            </div>
+        </div>
+
+        <div class="gallery-grid mode-grid" id="galleryGridContainer"></div>
     </section>
 
-    <!-- SECCIÓN 4: CONTACTO COMERCIAL (SOLO ALBANO) -->
+    <!-- SECCIÓN 4: CONTACTO (RESTAURADO CON SU ESTÉTICA DE LUJO ORIGINAL Y CERO SCROLL) -->
     <section class="view-section" id="view-contacto">
         <div class="info-card-luxury">
             <h2 class="info-card-title">ATENCIÓN COMERCIAL <span>Y LOGÍSTICA B2B</span></h2>
             <p class="info-card-text">
-                Comunicate directamente con la Gerencia Comercial para coordinar frecuencias de entrega, flete refrigerado, aperturas de cuenta corriente y compras de volumen.
+                Comunicate directamente con la Gerencia Comercial para coordinar frecuencias de entrega, medios de pago, y compras en volumen.
             </p>
 
-            <div class="contact-grid-row">
-                <div class="contact-card-agent">
-                    <span class="agent-role">GERENCIA COMERCIAL OFICIAL</span>
-                    <h4 class="agent-name">Albano</h4>
-                    <p style="font-size:0.80rem; color:var(--text-muted); flex: 1; line-height:1.45;">
-                        Atención directa a comercios, rotiserías, franquicias y distribuidores mayoristas de todo el país.
-                    </p>
-                    <a href="https://wa.me/5491138796688?text=Hola%20Albano,%20te%20contacto%20desde%20el%20Portal%20Mayorista%20Empanadazas." target="_blank" rel="noopener noreferrer" class="btn-wsp-direct">
-                        WhatsApp Albano (+54 9 11 3879-6688)
-                    </a>
-                </div>
+            <div class="contact-card-agent-box">
+                <span class="agent-role">GERENCIA COMERCIAL OFICIAL</span>
+                <h4 class="agent-name">Albano</h4>
+                <p style="font-size:0.80rem; color:var(--text-muted); line-height:1.45;">
+                    Atención directa a comercios, supermercados, franquicias y distribuidores mayoristas de todo el país.
+                </p>
+                <a href="https://wa.me/5491138796688?text=Hola%20Albano,%20te%20contacto%20desde%20el%20Portal%20Mayorista%20Empanadazas." target="_blank" rel="noopener noreferrer" class="btn-wsp-direct">
+                    WhatsApp Albano (+54 9 11 3879-6688)
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- HUD INFERIOR FLOTANTE RE-INGENIADO (A PRUEBA DE DESBORDES EN CUALQUIER PANTALLA) -->
+    <!-- HUD INFERIOR FLOTANTE RE-INGENIADO -->
     <footer class="b2b-bottom-hud">
         <div class="hud-content-wrap">
-            <!-- FILA SUPERIOR: ESTADO EN UNA SOLA LÍNEA + BARRA COMPLETA -->
             <div class="hud-top-status-row">
                 <span class="hud-box-count" id="hudBoxText">0 de 10 cajas mínimas</span>
                 <span class="hud-units-count" id="hudUnitsText">0 empanadas</span>
@@ -1362,8 +1506,6 @@
             <div class="track-bar">
                 <div class="track-fill tier-bronze" id="hudProgressFill"></div>
             </div>
-
-            <!-- FILA INFERIOR: TOTAL BIEN LEGIBLE Y BOTÓN CÓMODO -->
             <div class="hud-bottom-action-row">
                 <div class="hud-money-block">
                     <span class="total-amount-b2b" id="hudTotalMoney">$0</span>
@@ -1393,7 +1535,7 @@
                 <div class="form-grid-2">
                     <div class="f-group">
                         <label class="f-label">Razón Social o Nombre del Comercio *</label>
-                        <input type="text" id="b2bClientName" class="f-input" placeholder="Ej: Rotisería Central / Bar Sol" required onfocus="clearFieldError(this)" />
+                        <input type="text" id="b2bClientName" class="f-input" placeholder="Ej: SERIGRETTI ASOC / Bar Sol" required onfocus="clearFieldError(this)" />
                     </div>
                     <div class="f-group">
                         <label class="f-label">CUIT o DNI *</label>
@@ -1418,7 +1560,7 @@
 
                 <div class="coordination-notice-box">
                     <strong>Coordinación comercial con Albano:</strong>
-                    <span>Al generar el pedido se abrirá WhatsApp con el detalle estructurado para confirmar la facturación, los medios de pago y coordinar el despacho refrigerado.</span>
+                    <span>Al generar el pedido, se abrirá tu WhatsApp con el detalle estructurado para confirmar la facturación, los medios de pago y coordinar la entrega.</span>
                 </div>
 
                 <button type="submit" class="btn-dispatch-order" id="btnConfirmOrder">
@@ -1457,17 +1599,17 @@
         </div>
     </div>
 
-    <!-- SCRIPTS CON RUTAS REALES A GITHUB Y MATEMÁTICA B2B -->
+    <!-- SCRIPTS -->
     <script>
         const WSP_ALBANO = "5491138796688";
         const MIN_BOXES = 10;
 
         let currentCatalogLayout140 = 'grid';
         let currentCatalogLayout100 = 'grid';
+        let currentGalleryLayout = 'grid';
         let generatedOrderData = null;
         let wholesaleCart = {};
 
-        // PRECIOS OFICIALES POR LÍNEA Y CATEGORÍA
         const PRICING_RULES = {
             '140': {
                 'super': { priceBox: 66000, units: 30 },
@@ -1479,7 +1621,7 @@
             }
         };
 
-        // MATRIZ OFICIAL DE LOS 30 SABORES CON SUS RUTAS EXACTAS A TU GITHUB
+        // 27 SABORES OFICIALES PARA LÍNEA 140g Y 100g (EXCLUYENDO CHIPÁ, PIZZAS, MITI Y PARRI SEGÚN ORDEN)
         const MASTER_FLAVORS = [
             // SUPER EMPANADAZAS (14 SABORES)
             { id: 'choclo_deluxe', name: 'Choclo Deluxe', cat: 'super', desc: 'Granos de choclo dulce con queso fundido suave.', img: './img/Fotos%20Empanadazas/FIT/CHOCLO%20DELUXE.webp' },
@@ -1497,7 +1639,7 @@
             { id: 'fit_vegetales', name: 'Fit de Vegetales', cat: 'super', desc: 'Zanahoria, morrón, zucchini y berenjenas frescas al wok.', img: './img/Fotos%20Empanadazas/FIT/FIT%20DE%20VEGETALES.webp' },
             { id: 'wok_rice', name: 'Wok Rice', cat: 'super', desc: 'Arroz salteado con vegetales crujientes y huevo.', img: './img/Fotos%20Empanadazas/FIT/WOK%20RICE.webp' },
 
-            // ASOMBROSAS (16 SABORES, INCLUYE EMPACHIPÁ)
+            // ASOMBROSAS (13 SABORES - EXCLUYENDO CHIPÁS)
             { id: '5_quesos', name: '5 Quesos', cat: 'asombrosas', desc: 'Mozzarella, parmesano, provoleta, roquefort y cremoso.', img: './img/Fotos%20Empanadazas/ALTA%20CREACION/5%20QUESOS.webp' },
             { id: 'empanadaza_x_salchicha', name: 'Empanadaza x Salchicha', cat: 'asombrosas', desc: 'Salchichas parrilleras asadas con muzzarella y savora.', img: './img/Fotos%20Empanadazas/ASOMBROSAS/EMPANADAZA%20X%20SALCHICHA.webp' },
             { id: 'empanadaza_x_pollo', name: 'Empanada x Pollo', cat: 'asombrosas', desc: 'Pechuga tierna marinada en suave crema de mostaza dulce.', img: './img/Fotos%20Empanadazas/ASOMBROSAS/EMPANADA%20X%20POLLO.webp' },
@@ -1510,13 +1652,9 @@
             { id: 'carne_de_la_buena', name: 'Carne de la Buena', cat: 'asombrosas', desc: 'Bondiola desmechada en cocción lenta con barbacoa y panceta.', img: './img/Fotos%20Empanadazas/CARNE/CARNE%20DE%20LA%20BUENA.webp' },
             { id: 'chicken_gold', name: 'Chicken Gold', cat: 'asombrosas', desc: 'Pechuga tierna con queso cheddar fundido y barbacoa ahumada.', img: './img/Fotos%20Empanadazas/CARNE/CHICKEN%20GOLD.webp' },
             { id: 'me_la_di_el_finde', name: 'Me la di el Finde', cat: 'asombrosas', desc: 'Carne y bondiola a la barbacoa con panceta crocante.', img: './img/Fotos%20Empanadazas/CARNE/ME%20LA%20D%C3%8D%20EL%20FINDE.webp' },
-            { id: 'la_piden_todos', name: 'La Piden Todos', cat: 'asombrosas', desc: 'Albóndigas caseras de ternera con puré cremoso y tomate.', img: './img/Fotos%20Empanadazas/ASOMBROSAS/LA%20PIDEN%20TODOS.webp' },
-            { id: 'empachipa_jamon_queso', name: 'Empachipá Jamón del Medio', cat: 'asombrosas', isChipá: true, desc: 'Masa de chipá con mandioca y queso rellena de jamón y muzzarella.', img: './img/Fotos%20Empanadazas/ALTA%20CREACION/EMPACHIP%C3%81%20JAM%C3%93N%20DEL%20MEDIO.webp' },
-            { id: 'empachipa_matambre', name: 'Empachipá Matambre', cat: 'asombrosas', isChipá: true, desc: 'Masa de chipá horneada con matambre tiernizado y muzzarella.', img: './img/Fotos%20Empanadazas/ALTA%20CREACION/EMPACHIP%C3%81%20MATAMBRE.webp' },
-            { id: 'empachipa_x', name: 'Empachipá X', cat: 'asombrosas', isChipá: true, desc: 'Exclusiva masa de chipá artesanal con relleno especial.', img: './img/Fotos%20Empanadazas/ALTA%20CREACION/EMPACHIP%C3%81%20X.webp' }
+            { id: 'la_piden_todos', name: 'La Piden Todos', cat: 'asombrosas', desc: 'Albóndigas caseras de ternera con puré cremoso y tomate.', img: './img/Fotos%20Empanadazas/ASOMBROSAS/LA%20PIDEN%20TODOS.webp' }
         ];
 
-        // LÍNEAS
         const PRODUCTS_140 = MASTER_FLAVORS.map(f => ({
             id: `140_${f.id}`,
             baseId: f.id,
@@ -1524,8 +1662,8 @@
             unitsPerBox: 30,
             priceBox: PRICING_RULES['140'][f.cat].priceBox,
             cat: f.cat,
-            isChipá: !!f.isChipá,
             name: `${f.name} (140g)`,
+            pureName: f.name,
             desc: f.desc,
             img: f.img
         }));
@@ -1537,19 +1675,21 @@
             unitsPerBox: 40,
             priceBox: PRICING_RULES['100'][f.cat].priceBox,
             cat: f.cat,
-            isChipá: !!f.isChipá,
             name: `${f.name} (100g)`,
+            pureName: f.name,
             desc: f.desc,
             img: f.img
         }));
 
         const ALL_PRODUCTS = [...PRODUCTS_140, ...PRODUCTS_100];
 
-        // GALERÍA COMPLETA CON LOS 30 SABORES
-        const GALLERY_ITEMS = MASTER_FLAVORS.map(f => ({
-            img: f.img,
-            title: `${f.name} • Sin Topping`
-        }));
+        // GALERÍA: CONSERVA LAS 30 FOTOS EN ALTA DEFINICIÓN
+        const GALLERY_ITEMS = [
+            ...MASTER_FLAVORS.map(f => ({ img: f.img, title: `${f.name} • Sin Topping` })),
+            { img: './img/Fotos%20Empanadazas/ALTA%20CREACION/EMPACHIP%C3%81%20JAM%C3%93N%20DEL%20MEDIO.webp', title: 'Empachipá Jamón del Medio' },
+            { img: './img/Fotos%20Empanadazas/ALTA%20CREACION/EMPACHIP%C3%81%20MATAMBRE.webp', title: 'Empachipá Matambre' },
+            { img: './img/Fotos%20Empanadazas/ALTA%20CREACION/EMPACHIP%C3%81%20X.webp', title: 'Empachipá X' }
+        ];
 
         let activeGalleryIndex = 0;
         let isGalleryModeActive = false;
@@ -1562,6 +1702,47 @@
 
         function cleanString(str) {
             return (str || '').normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+        }
+
+        // BÚSQUEDA TOLERANTE A ERRORES (FUZZY SEARCH: "jamun" -> "jamón", "canre cotrada" -> "carne cortada")
+        function levenshtein(a, b) {
+            const matrix = [];
+            for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+            for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+            for (let i = 1; i <= b.length; i++) {
+                for (let j = 1; j <= a.length; j++) {
+                    if (b.charAt(i - 1) === a.charAt(j - 1)) {
+                        matrix[i][j] = matrix[i - 1][j - 1];
+                    } else {
+                        matrix[i][j] = Math.min(
+                            matrix[i - 1][j - 1] + 1,
+                            matrix[i][j - 1] + 1,
+                            matrix[i - 1][j] + 1
+                        );
+                    }
+                }
+            }
+            return matrix[b.length][a.length];
+        }
+
+        function isFuzzyMatch(targetText, query) {
+            const cleanTarget = cleanString(targetText);
+            const cleanQ = cleanString(query);
+            if (!cleanQ) return true;
+            if (cleanTarget.includes(cleanQ)) return true;
+
+            const qTokens = cleanQ.split(/\s+/).filter(t => t.length > 0);
+            const targetTokens = cleanTarget.split(/\s+/).filter(t => t.length > 0);
+
+            return qTokens.every(qToken => {
+                if (cleanTarget.includes(qToken)) return true;
+                return targetTokens.some(tToken => {
+                    if (tToken.includes(qToken)) return true;
+                    if (qToken.includes(tToken) && tToken.length >= 3) return true;
+                    const maxDist = qToken.length <= 4 ? 1 : 2;
+                    return levenshtein(qToken, tToken) <= maxDist;
+                });
+            });
         }
 
         function escapeHtml(str) {
@@ -1604,15 +1785,16 @@
             inputEl.classList.remove('input-error');
         }
 
+        // CARRITO BASADO EN SESSION STORAGE
         function saveCartToStorage() {
             try {
-                localStorage.setItem('empanadazas_b2b_cart_v3', JSON.stringify(wholesaleCart));
+                sessionStorage.setItem('empanadazas_b2b_cart_v3', JSON.stringify(wholesaleCart));
             } catch (e) {}
         }
 
         function loadCartFromStorage() {
             try {
-                const saved = localStorage.getItem('empanadazas_b2b_cart_v3');
+                const saved = sessionStorage.getItem('empanadazas_b2b_cart_v3');
                 wholesaleCart = {};
                 if (saved) {
                     const parsed = JSON.parse(saved);
@@ -1639,15 +1821,35 @@
             showNotification("Carrito vaciado correctamente", "info");
         }
 
+        // MENÚ MÓVIL
+        function toggleMobileMenu() {
+            const overlay = document.getElementById('mobileMenuOverlay');
+            overlay.classList.toggle('show');
+        }
+
+        function closeMobileMenuOnClick(e) {
+            if (e.target.id === 'mobileMenuOverlay') {
+                document.getElementById('mobileMenuOverlay').classList.remove('show');
+            }
+        }
+
+        function handleMobileNav(viewId) {
+            document.getElementById('mobileMenuOverlay').classList.remove('show');
+            switchView(viewId);
+        }
+
         function switchView(viewId) {
             document.querySelectorAll('.view-section').forEach(el => el.classList.remove('active'));
             document.querySelectorAll('.nav-tab-btn').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.mobile-menu-item').forEach(el => el.classList.remove('active'));
 
             const targetSection = document.getElementById(`view-${viewId}`);
-            const targetButton = document.getElementById(`tabBtn-${viewId}`);
+            const targetDesktopBtn = document.getElementById(`tabBtn-${viewId}`);
+            const targetMobileBtn = document.getElementById(`mTab-${viewId}`);
 
             if (targetSection) targetSection.classList.add('active');
-            if (targetButton) targetButton.classList.add('active');
+            if (targetDesktopBtn) targetDesktopBtn.classList.add('active');
+            if (targetMobileBtn) targetMobileBtn.classList.add('active');
 
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
@@ -1664,6 +1866,25 @@
                 btnGrid.classList.remove('active');
             } else {
                 grid.classList.remove('mode-list');
+                btnGrid.classList.add('active');
+                btnList.classList.remove('active');
+            }
+        }
+
+        function setGalleryLayout(layout) {
+            currentGalleryLayout = layout;
+            const grid = document.getElementById('galleryGridContainer');
+            const btnGrid = document.getElementById('btnGalGrid');
+            const btnList = document.getElementById('btnGalList');
+
+            if (layout === 'list') {
+                grid.classList.remove('mode-grid');
+                grid.classList.add('mode-list');
+                btnList.classList.add('active');
+                btnGrid.classList.remove('active');
+            } else {
+                grid.classList.remove('mode-list');
+                grid.classList.add('mode-grid');
                 btnGrid.classList.add('active');
                 btnList.classList.remove('active');
             }
@@ -1701,7 +1922,7 @@
                                 <span class="price-unit-sub">$${unitPriceEstimate.toLocaleString('es-AR')} / un.</span>
                             </div>
                             <div class="b2b-stepper">
-                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', -1)">−</button>
+                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', -1)" aria-label="Restar">−</button>
                                 <input type="number" 
                                        class="step-input-b2b" 
                                        id="input_${prod.id}" 
@@ -1711,7 +1932,7 @@
                                        inputmode="numeric"
                                        oninput="handleDirectInput('${prod.id}', this.value)"
                                        onblur="handleInputBlur('${prod.id}', this)" />
-                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', 1)">+</button>
+                                <button type="button" class="step-btn-b2b" onclick="modifyQty('${prod.id}', 1)" aria-label="Sumar">+</button>
                             </div>
                         </div>
                     </div>
@@ -1725,6 +1946,7 @@
             container.innerHTML = GALLERY_ITEMS.map((item, index) => `
                 <div class="gallery-item" onclick="openGalleryLightbox(${index})">
                     <img src="${item.img}" loading="lazy" decoding="async" onerror="this.onerror=null; this.src='./empanadazas-icon.png';" alt="${item.title}" />
+                    <div class="gallery-caption-overlay">${item.title}</div>
                 </div>
             `).join('');
         }
@@ -1781,7 +2003,6 @@
             inputEl.value = val;
         }
 
-        // CÁLCULO UNIFICADO DEL HUD CON 10 CAJAS MÍNIMAS
         function updateWholesaleHUD() {
             let totalBoxes = 0;
             let totalEmpanadasUnits = 0;
@@ -1809,6 +2030,7 @@
                 fill.className = 'track-fill tier-bronze';
                 fill.style.width = '0%';
                 boxText.innerText = '0 de 10 cajas mínimas';
+                unitsText.innerText = '0 empanadas';
                 btnTrigger.classList.remove('unlocked');
                 btnTrigger.disabled = true;
                 btnTrigger.innerText = 'Mínimo 10 Cajas';
@@ -1816,7 +2038,8 @@
                 const percent = Math.round((totalBoxes / MIN_BOXES) * 50);
                 fill.className = 'track-fill tier-bronze';
                 fill.style.width = `${percent}%`;
-                boxText.innerText = `${totalBoxes} de ${MIN_BOXES} cajas mínimas`;
+                boxText.innerText = `${totalBoxes} de ${MIN_BOXES} cajas`;
+                unitsText.innerText = `${totalEmpanadasUnits} u. sin topping`;
                 btnTrigger.classList.remove('unlocked');
                 btnTrigger.disabled = true;
                 const missing = MIN_BOXES - totalBoxes;
@@ -1827,23 +2050,23 @@
                 fill.className = 'track-fill tier-green';
                 fill.style.width = `${percent}%`;
                 boxText.innerText = `${totalBoxes} cajas seleccionadas`;
+                unitsText.innerText = `${totalEmpanadasUnits} u. sin topping`;
                 btnTrigger.classList.add('unlocked');
                 btnTrigger.disabled = false;
                 btnTrigger.innerText = `Confirmar Pedido`;
             } else {
                 fill.className = 'track-fill tier-gold';
                 fill.style.width = '100%';
-                boxText.innerText = `${totalBoxes} cajas • Nivel Pleno`;
+                boxText.innerText = `${totalBoxes} cajas (Pleno)`;
+                unitsText.innerText = `${totalEmpanadasUnits} u. sin topping`;
                 btnTrigger.classList.add('unlocked');
                 btnTrigger.disabled = false;
                 btnTrigger.innerText = `Confirmar Pedido`;
             }
 
-            unitsText.innerText = `${totalEmpanadasUnits.toLocaleString('es-AR')} empanadas sin topping`;
             moneyText.innerText = formatMoney(totalPrice);
         }
 
-        // BÚSQUEDA Y FILTROS POR CATEGORÍA
         function handleSearchInput(val, line) {
             const query = cleanString(val);
             const is140 = line === 'linea140';
@@ -1852,7 +2075,7 @@
 
             const baseList = is140 ? PRODUCTS_140 : PRODUCTS_100;
             const filtered = baseList.filter(p => 
-                cleanString(p.name).includes(query) || cleanString(p.desc).includes(query)
+                isFuzzyMatch(p.name, query) || isFuzzyMatch(p.desc, query)
             );
             renderCatalog(line, filtered);
         }
@@ -1875,9 +2098,6 @@
 
             if (catName === 'todas') {
                 renderCatalog(line, baseList);
-            } else if (catName === 'empachipa') {
-                const filtered = baseList.filter(p => p.isChipá);
-                renderCatalog(line, filtered);
             } else {
                 const filtered = baseList.filter(p => p.cat === catName);
                 renderCatalog(line, filtered);
@@ -1956,7 +2176,7 @@
             e.target.style.cursor = isImageZoomed ? 'zoom-out' : 'zoom-in';
         });
 
-        // CHECKOUT Y ENVÍO A WHATSAPP
+        // CHECKOUT
         function openCheckoutModal() {
             let totalBoxes = 0;
             for (const count of Object.values(wholesaleCart)) {
@@ -1994,10 +2214,11 @@
                     if (prod) {
                         const rowPrice = prod.priceBox * qty;
                         subtotal += rowPrice;
+                        const boxWord = qty === 1 ? 'Caja' : 'Cajas';
                         const div = document.createElement('div');
                         div.style.cssText = 'display:flex; justify-content:space-between; border-bottom:1px dashed rgba(255,255,255,0.08); padding-bottom:3px;';
                         div.innerHTML = `
-                            <span>${qty}x Caja ${prod.name} (${qty * prod.unitsPerBox}u)</span>
+                            <span>${qty}x ${boxWord} ${prod.name} (${qty * prod.unitsPerBox}u)</span>
                             <strong style="color:var(--bronze-bright);">${formatMoney(rowPrice)}</strong>
                         `;
                         recap.appendChild(div);
@@ -2012,13 +2233,35 @@
                     <span>TOTAL ESTIMADO:</span>
                     <span style="color:#4ADE80; font-size:1.05rem;">${formatMoney(subtotal)}</span>
                 </div>
-                <span style="font-size:0.68rem; color:var(--text-muted); font-weight:600;">(Facturación y flete refrigerado se coordinan con Albano)</span>
+                <span style="font-size:0.68rem; color:var(--text-muted); font-weight:600;">(Facturación, pagos y entrega a coordinar con Albano)</span>
             `;
             recap.appendChild(totalDiv);
         }
 
         function closeCheckoutModal() {
             document.getElementById('checkoutModal').classList.remove('active');
+        }
+
+        // GENERADOR DE CÓDIGO INTELIGENTE: #SERIG_ASOC-001 EN MAYÚSCULAS
+        function generateClientOrderCode(clientName) {
+            const clean = cleanString(clientName).toUpperCase().replace(/[^A-Z0-9\s]/g, '');
+            const parts = clean.split(/\s+/).filter(p => p.length > 0);
+
+            let prefix = "EMP";
+            if (parts.length >= 2) {
+                const p1 = parts[0].substring(0, 5);
+                const p2 = parts[1].substring(0, 4);
+                prefix = `${p1}_${p2}`;
+            } else if (parts.length === 1) {
+                prefix = parts[0].substring(0, 8);
+            }
+
+            const counterKey = `emp_seq_${prefix}`;
+            let currentSeq = parseInt(localStorage.getItem(counterKey) || '0', 10) + 1;
+            localStorage.setItem(counterKey, currentSeq);
+
+            const seqFormatted = String(currentSeq).padStart(3, '0');
+            return `#${prefix}-${seqFormatted}`;
         }
 
         function generateOrderAndPay() {
@@ -2066,7 +2309,7 @@
 
                         structuredItems.push({
                             line: prod.line,
-                            name: prod.name,
+                            name: prod.pureName,
                             boxes: qty,
                             units: qty * prod.unitsPerBox,
                             subtotal: prod.priceBox * qty
@@ -2075,11 +2318,11 @@
                 }
             }
 
-            const orderNum = 'B2B-' + Math.floor(1000 + Math.random() * 9000);
+            const orderNum = generateClientOrderCode(name);
 
             generatedOrderData = {
                 orderNum,
-                name,
+                name: name.toUpperCase(),
                 cuit,
                 fiscalType,
                 phone,
@@ -2092,14 +2335,14 @@
             document.getElementById('checkoutFormWrapper').style.display = 'none';
             document.getElementById('voucherSuccessBox').style.display = 'flex';
             document.getElementById('checkoutModalTitle').innerText = 'Orden Registrada';
-            document.getElementById('voucherCodeLabel').innerText = `ORDEN #${orderNum} CONFIRMADA`;
+            document.getElementById('voucherCodeLabel').innerText = `ORDEN ${orderNum} CONFIRMADA`;
 
             let volumeDetail = [];
             if (totalBoxes140 > 0) volumeDetail.push(`${totalBoxes140} Cajas 140g (${totalBoxes140 * 30} u.)`);
             if (totalBoxes100 > 0) volumeDetail.push(`${totalBoxes100} Cajas 100g (${totalBoxes100 * 40} u.)`);
 
             const recapHtml = `
-                <div><strong>Comercio:</strong> ${escapeHtml(name)}</div>
+                <div><strong>Comercio:</strong> ${escapeHtml(generatedOrderData.name)}</div>
                 <div><strong>Facturación:</strong> ${escapeHtml(fiscalType)} (CUIT/DNI: ${escapeHtml(cuit)})</div>
                 <div><strong>Contacto:</strong> ${escapeHtml(phone)}</div>
                 <div><strong>Volumen Total:</strong> ${volumeDetail.join(' + ')} (Sin Topping)</div>
@@ -2110,25 +2353,28 @@
             `;
             document.getElementById('voucherDetailsRecap').innerHTML = recapHtml;
 
-            // DISPARO AUTOMÁTICO DEL PEDIDO A WHATSAPP
             sendOrderWhatsApp();
         }
 
+        // MENSAJE DE WHATSAPP FORMATEADO SEGÚN EL EJEMPLO EXACTO
         function sendOrderWhatsApp() {
             if (!generatedOrderData || !generatedOrderData.items) return;
 
-            const itemsString = generatedOrderData.items.map(it => {
-                return `${it.boxes} cj (${it.units}u) ${it.name}: ${formatMoney(it.subtotal)}`;
-            }).join(' + ');
+            const itemsFormatted = generatedOrderData.items.map(it => {
+                const boxText = it.boxes === 1 ? 'Caja' : 'Cajas';
+                const lineTag = it.line === '100' ? 'x100g' : 'x140g';
+                return `* x${it.boxes} ${boxText} (${it.units}u) de _${it.name}_ (${lineTag}). ${formatMoney(it.subtotal)}`;
+            }).join("%0A");
 
             const textUrl = 
-                encodeURIComponent(`Hola Albano, qué tal, te paso el pedido mayorista:`) + "%0A" +
-                encodeURIComponent(`*Pedido:* #${generatedOrderData.orderNum}`) + "%0A" +
+                encodeURIComponent(`Hola Albano, qué tal, te paso el pedido mayorista:`) + "%0A%0A" +
+                encodeURIComponent(`*Pedido:* ${generatedOrderData.orderNum}`) + "%0A" +
                 encodeURIComponent(`*Comercio:* ${generatedOrderData.name}`) + "%0A" +
                 encodeURIComponent(`*CUIT / DNI:* ${generatedOrderData.cuit}`) + "%0A" +
                 encodeURIComponent(`*Factura:* ${generatedOrderData.fiscalType}`) + "%0A" +
                 encodeURIComponent(`*Contacto:* ${generatedOrderData.phone}`) + "%0A%0A" +
-                encodeURIComponent(`*Detalle (Sin Toppings):* - ${itemsString}`) + "%0A" +
+                encodeURIComponent(`*Detalle (Sin Toppings):*`) + "%0A" +
+                itemsFormatted + "%0A" +
                 encodeURIComponent(`*Total:* ${formatMoney(generatedOrderData.subtotal)}.`) + "%0A%0A" +
                 encodeURIComponent(`Quedo a la espera para coordinar pago y entrega, ¡muchas gracias!`);
 
@@ -2142,7 +2388,6 @@
             renderCatalog('linea100', PRODUCTS_100);
             renderGallery();
             updateWholesaleHUD();
-            preloadAllCatalogImages();
         });
     </script>
 </body>
